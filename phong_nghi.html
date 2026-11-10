@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html lang="vi">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Montserrat:ital,wght@0,300..900;1,300..900&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-container":"#16382e","on-tertiary":"#ffffff","surface-bright":"#fdf9f3","on-tertiary-fixed-variant":"#234e41","on-primary":"#ffffff","inverse-primary":"#aacec0","on-tertiary-fixed":"#002118","surface-container-highest":"#e6e2dc","outline":"#717975","surface-container":"#f1ede7","secondary":"#775a19","tertiary-fixed":"#beedda","primary":"#00221a","tertiary":"#002219","primary-fixed":"#c5ebdc","on-primary-fixed-variant":"#2c4d42","inverse-on-surface":"#f4f0ea","on-secondary-fixed-variant":"#5d4201","on-tertiary-container":"#77a393","on-background":"#1c1c18","on-surface":"#1c1c18","on-secondary-container":"#785a1a","tertiary-container":"#09392d","primary-fixed-dim":"#aacec0","surface-container-lowest":"#ffffff","surface-container-low":"#f7f3ed","secondary-fixed-dim":"#e9c176","surface-variant":"#e6e2dc","on-primary-container":"#7ea294","error-container":"#ffdad6","surface-dim":"#dddad4","on-error-container":"#93000a","inverse-surface":"#31302d","tertiary-fixed-dim":"#a2d0bf","on-primary-fixed":"#002018","secondary-container":"#fed488","on-surface-variant":"#414845","secondary-fixed":"#ffdea5","outline-variant":"#c1c8c4","surface-tint":"#436559","on-error":"#ffffff","surface":"#fdf9f3","on-secondary-fixed":"#261900","surface-container-high":"#ebe8e2","background":"#fdf9f3","on-secondary":"#ffffff","error":"#ba1a1a","gold":"#C5A059","gold-dark":"#A68037","deep-emerald":"#16382E","alabaster":"#FAF6F0"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","2xl":"1rem","full":"9999px"},spacing:{"margin-mobile":"1.25rem","space-sm":"0.75rem","space-xl":"3.5rem","gutter-mobile":"1rem","gutter":"1.5rem","margin-tablet":"2rem","margin":"3rem","space-md":"1.25rem","space-xs":"0.375rem","space-lg":"2rem"},fontFamily:{"headline-lg":["EB Garamond"],"body-md":["Montserrat"],"display-lg":["EB Garamond"],"label-sm":["Montserrat"],"title-lg":["Montserrat"],"body-lg":["Montserrat"],"label-lg":["Montserrat"],"headline-sm":["EB Garamond"],"display-lg-mobile":["EB Garamond"],"headline-lg-mobile":["EB Garamond"],"title-sm":["Montserrat"],"headline-md":["EB Garamond"]},fontSize:{"headline-lg":["44px",{"lineHeight":"52px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0.01em","fontWeight":"400"}],"display-lg":["64px",{"lineHeight":"72px","letterSpacing":"-0.01em","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.15em","fontWeight":"600"}],"title-lg":["18px",{"lineHeight":"26px","letterSpacing":"0.02em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0.01em","fontWeight":"400"}],"label-lg":["12px",{"lineHeight":"16px","letterSpacing":"0.12em","fontWeight":"600"}],"headline-sm":["24px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"500"}],"display-lg-mobile":["40px",{"lineHeight":"48px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"0em","fontWeight":"400"}],"title-sm":["14px",{"lineHeight":"20px","letterSpacing":"0.05em","fontWeight":"600"}],"headline-md":["32px",{"lineHeight":"40px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script>
+ </head>
+ <body class="bg-background font-body-md text-on-surface antialiased">
+  <header class="fixed top-0 left-0 w-full z-40 shadow-[0_4px_24px_rgba(0,34,26,0.18)]">
+   <div class="h-24 bg-primary px-margin flex items-center justify-between">
+    <div class="flex items-center gap-space-md">
+    <img src="./img/phoenix-bird.png"
+     alt="The Phoenix"
+     class="h-28 w-28 object-contain">
+     <div class="flex flex-col">
+      <span class="font-headline-md text-headline-md tracking-wider text-secondary-fixed">
+       The Phoenix
+      </span>
+      <span class="font-label-sm text-label-sm uppercase tracking-widest text-on-tertiary-container">
+       Hotel &middot; Saigon
+      </span>
+     </div>
+    </div>
+    <div class="flex-1 max-w-xl mx-space-lg">
+     <div class="relative flex items-center w-full">
+      <span class="material-symbols-outlined absolute left-4 text-on-tertiary-container">
+       search
+      </span>
+      <input class="w-full bg-primary-container text-on-primary pl-12 pr-4 py-2.5 rounded-full font-body-md text-body-md placeholder:text-on-tertiary-container focus:outline-none focus:ring-1 focus:ring-secondary-container transition-all" placeholder="T&igrave;m kiếm ph&ograve;ng nghỉ, nh&agrave; h&agrave;ng, dịch vụ..." type="text"/>
+     </div>
+    </div>
+    <div class="flex items-center gap-space-md">
+     <button class="flex items-center gap-2 bg-secondary text-on-secondary px-space-md py-2.5 rounded-lg hover:bg-secondary-container hover:text-on-secondary-container transition-all cursor-pointer" onclick="openReserveModal('Phòng Deluxe Tiêu Chuẩn', '2.500.000 VNĐ')" type="button">
+      <span class="material-symbols-outlined text-secondary-fixed">
+       calendar_month
+      </span>
+      <span class="font-title-sm text-title-sm tracking-wide uppercase">
+       Lịch &Dstrok;ặt
+      </span>
+     </button>
+     <img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-secondary-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUarHO2jTqBdRel5MnSbWVmqEkTJKb7TJiY1A0eikUMb7f-7R5WRjkUVFPAUpA3JetkZWzvOxY3_k0vIP28cTorm6mUND5-gwB-0VyQ0dS023KNCbotEx92IkfrPaNtlOY3UhZlmdzCoJMCVXuCplZe4Y0RiAWNAnh1hrI4tfvJ3aV1pantKhfJrexz8MmAwIATAamM_Z8ZBeAvVVuBT0Nyaymxg99JZv3cKuka0pQMY4TwvnPR2Zv"/>
+    </div>
+   </div>
+   <div class="h-[60px] bg-primary-container px-margin flex items-center justify-center">
+    <nav class="flex items-center gap-space-xl" data-active-classes="text-secondary-fixed border-b-2 border-secondary-fixed pb-1">
+     <a class="font-label-lg text-label-lg uppercase tracking-wider text-on-tertiary-container hover:text-on-primary transition-colors" data-path="trang-chu" href="index.html">
+      Trang Chủ
+     </a>
+     <a class="font-label-lg text-label-lg uppercase tracking-wider text-on-tertiary-container hover:text-on-primary transition-colors" data-path="dich-vu" href="dich_vu.html">
+      Dịch Vụ
+     </a>
+     <a class="font-label-lg text-label-lg uppercase tracking-wider text-secondary-fixed border-b-2 border-secondary-fixed pb-1 transition-colors" data-path="phong-nghi" href="phong_nghi.html">
+      Ph&ograve;ng Nghỉ
+     </a>
+     <a class="font-label-lg text-label-lg uppercase tracking-wider text-on-tertiary-container hover:text-on-primary transition-colors" data-path="an-uong" href="an_uong.html">
+      &Abreve;n Uống
+     </a>
+     <a class="font-label-lg text-label-lg uppercase tracking-wider text-on-tertiary-container hover:text-on-primary transition-colors" data-path="lien-he" href="lien_he.html">
+      Li&ecirc;n Hệ
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main class="w-full pt-[156px] min-h-screen bg-background">
+   <div class="flex flex-col w-full">
+    <!-- 1. POETIC EDITORIAL HEADER BANNER -->
+    <section class="w-full bg-surface-container-low py-[76px] px-6 text-center relative overflow-hidden">
+     <div class="absolute inset-0 pointer-events-none opacity-25 flex items-center justify-between px-12">
+      <span class="material-symbols-outlined text-[140px] text-primary select-none -translate-x-10">
+       spa
+      </span>
+      <span class="material-symbols-outlined text-[140px] text-primary select-none translate-x-10">
+       nest_cam_outdoor
+      </span>
+     </div>
+     <div class="max-w-4xl mx-auto relative z-10 flex flex-col items-center">
+      <div class="flex items-center gap-2 mb-3">
+       <span class="material-symbols-outlined text-secondary text-lg">
+        potted_plant
+       </span>
+       <span class="font-label-lg text-label-lg uppercase tracking-[0.2em] text-secondary font-semibold">
+        Luxury Accommodation
+       </span>
+       <span class="material-symbols-outlined text-secondary text-lg">
+        eco
+       </span>
+      </div>
+      <h1 class="font-headline-lg text-headline-lg md:text-[50px] md:leading-[58px] text-primary tracking-tight uppercase mb-4">
+       Hệ Thống Ph&ograve;ng Nghỉ &amp; Suite
+      </h1>
+      <div class="w-20 h-0.5 bg-secondary mx-auto mb-6">
+      </div>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed italic">
+       &ldquo;Tọa lạc giữa trung t&acirc;m S&agrave;i G&ograve;n phồn hoa, mỗi gian ph&ograve;ng tại The Phoenix Hotel l&agrave; một tuyệt t&aacute;c kết h&ograve;a giữa di sản &Dstrok;&ocirc;ng Dương lộng lẫy v&agrave; tiện nghi vương giả &dstrok;ương &dstrok;ại, mang &dstrok;ến chốn nghỉ dưỡng thanh b&igrave;nh v&agrave; trải nghiệm thượng lưu tuyệt &dstrok;ối.&rdquo;
+      </p>
+      <div class="mt-8 flex items-center gap-6 text-secondary font-label-sm uppercase tracking-widest">
+       <span>
+        Heritage Woodwork
+       </span>
+       <span class="text-outline-variant">
+        &bull;
+       </span>
+       <span>
+        Artisan Marble
+       </span>
+       <span class="text-outline-variant">
+        &bull;
+       </span>
+       <span>
+        Indochine Serenity
+       </span>
+      </div>
+     </div>
+    </section>
+    <!-- 2. HẠNG PHÒNG NỔI BẬT (HOT) -->
+    <section class="w-full bg-surface py-[60px] px-6 md:px-12">
+     <div class="max-w-[1320px] mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+       <div>
+        <span class="font-label-lg text-label-lg uppercase tracking-[0.18em] text-secondary font-semibold block mb-2">
+         Signature Collections
+        </span>
+        <h2 class="font-headline-md text-headline-md text-primary">
+         Hạng Ph&ograve;ng Nổi Bật &Dstrok;ược Y&ecirc;u Th&iacute;ch Nhất
+        </h2>
+       </div>
+       <p class="font-body-md text-body-md text-on-surface-variant mt-2 md:mt-0 max-w-md">
+        Tuyển chọn những kh&ocirc;ng gian lưu tr&uacute; tinh hoa bậc nhất &dstrok;ược t&ocirc;n vinh bởi c&aacute;c chuy&ecirc;n gia nghệ thuật sống v&agrave; du kh&aacute;ch quốc tế.
+       </p>
+      </div>
+      <!-- 3 Featured Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+       <!-- Hot Room 1 -->
+       <div class="group relative h-[450px] rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-end p-6">
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Indochine luxury deluxe bedroom in Ho Chi Minh City, dark teak wood furniture, warm golden ambient lamps, linen bedsheets, subtle brass fittings, colonial French window overlooking lush tropical garden" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmETVvsOnvqx1eO9YmNhPEOBVF8dFhAWpjcPzxhAoG_RM1MLLv2_pvhqbjaavBZwGtGmvoIbuj_DASXEzVOwRBN16PDvEm1iRvWC4PQZ9NYVAjEQbc28xeLswBwN_KiL_hzCjoXXw-VPGemY9z3vGmqzacNHsEDq-Fk1mnbfPUYH2txIOSCoZg-i8cYb7FrXsLhcOM09ga_GytfFL3ipk1Xmt3r3-a1-OADD-6fIcHxPRTkkD1wTnV')">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent">
+        </div>
+        <div class="absolute top-5 left-5">
+         <span class="bg-secondary text-on-secondary font-label-sm text-label-sm uppercase tracking-widest px-3 py-1.5 rounded shadow">
+          B&aacute;n Chạy Nhất
+         </span>
+        </div>
+        <div class="relative z-10 flex flex-col">
+         <div class="flex items-center gap-2 text-secondary-fixed mb-1 text-sm">
+          <span class="material-symbols-outlined text-base">
+           star
+          </span>
+          <span class="material-symbols-outlined text-base">
+           star
+          </span>
+          <span class="material-symbols-outlined text-base">
+           star
+          </span>
+          <span class="material-symbols-outlined text-base">
+           star
+          </span>
+          <span class="material-symbols-outlined text-base">
+           star
+          </span>
+          <span class="font-label-sm text-label-sm text-on-primary ml-1">
+           (482 &dstrok;&aacute;nh gi&aacute;)
+          </span>
+         </div>
+         <h3 class="font-headline-sm text-headline-sm text-on-primary font-medium mb-1">
+          Ph&ograve;ng Deluxe Ti&ecirc;u Chuẩn
+         </h3>
+         <p class="font-body-md text-body-md text-secondary-fixed mb-3">
+          2 Kh&aacute;ch &bull; 38m&sup2; &bull; Hướng Phố
+         </p>
+         <div class="flex items-baseline gap-2 mb-4">
+          <span class="font-title-lg text-title-lg font-bold text-on-primary">
+           2.500.000 VN&Dstrok;
+          </span>
+          <span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-wider">
+           / &Dstrok;&ecirc;m
+          </span>
+         </div>
+         <div class="grid grid-cols-2 gap-3 pt-2">
+          <button class="w-full bg-surface-container-low/20 backdrop-blur-md text-on-primary hover:bg-surface-container-low/30 py-2.5 rounded text-center font-title-sm text-title-sm transition-all uppercase tracking-wider cursor-pointer" onclick="openDetailModal('deluxe-tieu-chuan')">
+           Chi Tiết
+          </button>
+          <button class="w-full bg-secondary text-on-secondary hover:bg-secondary-container hover:text-on-secondary-container py-2.5 rounded text-center font-title-sm text-title-sm transition-all uppercase tracking-wider shadow cursor-pointer" onclick="openReserveModal('Ph&ograve;ng Deluxe Ti&ecirc;u Chuẩn', '2.500.000 VN&Dstrok;')">
+           &Dstrok;ặt Ph&ograve;ng
+          </button>
+         </div>
+        </div>
+       </div>
+       <!-- Hot Room 2 -->
+       <div class="group relative h-[450px] rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-end p-6">
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="French colonial Indochine royal royal double room interior, king four-poster teak wood bed, intricate rattan headboard, velvet pillows, champagne gold chandelier, floor-to-ceiling balcony view of Saigon river" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXk2jK6cgajPuXnUTINdE4XtpvDAhWvmaXN8EbuqxMCbn6lfkdVsla5GB92w1TdgZ3jPYGXWdCI02lNDTJtcp6oNTIqtTBXUKv3UvL5zGGtVmW_sgBmDP60_vRMyQrJIQ5GIgIwuxkaiJR_ffq2kIVX4LGqkXJrtHuf4ic7vssw9acHyoLDxDiCyHR5I8fXFDDG7uK6fT-W2W1KNOsLa1QXi5HjwR6c5hKY7iX0wBl8Rboinn3Ka_T')">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent">
+        </div>
+        <div class="absolute top-5 left-5">
+         <span class="bg-primary-container text-secondary-fixed font-label-sm text-label-sm uppercase tracking-widest px-3 py-1.5 rounded shadow">
+          Signature Suite
+         </span>
+        </div>
+        <div class="relative z-10 flex flex-col">
+         <div class="flex items-center gap-2 text-secondary-fixed mb-1 text-sm">
+          <span class="material-symbols-outlined text-base">
+           star
+          </span>
+          <span class="material-symbols-outlined text-base">
+           star
+          </span>
+          <span class="material-symbols-outlined text-base">
+           star
+          </span>
+          <span class="material-symbols-outlined text-base">
+           star
+          </span>
+          <span class="material-symbols-outlined text-base">
+           star
+          </span>
+          <span class="font-label-sm text-label-sm text-on-primary ml-1">
+           (620 &dstrok;&aacute;nh gi&aacute;)
+          </span>
+         </div>
+         <h3 class="font-headline-sm text-headline-sm text-on-primary font-medium mb-1">
+          Ph&ograve;ng &Dstrok;&ocirc;i Ho&agrave;ng Gia
+         </h3>
+         <p class="font-body-md text-body-md text-secondary-fixed mb-3">
+          2 Kh&aacute;ch &bull; 55m&sup2; &bull; Ban C&ocirc;ng To&agrave;n Cảnh
+         </p>
+         <div class="flex items-baseline gap-2 mb-4">
+          <span class="font-title-lg text-title-lg font-bold text-on-primary">
+           4.200.000 VN&Dstrok;
+          </span>
+          <span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-wider">
+           / &Dstrok;&ecirc;m
+          </span>
+         </div>
+         <div class="grid grid-cols-2 gap-3 pt-2">
+          <button class="w-full bg-surface-container-low/20 backdrop-blur-md text-on-primary hover:bg-surface-container-low/30 py-2.5 rounded text-center font-title-sm text-title-sm transition-all uppercase tracking-wider cursor-pointer" onclick="openDetailModal('doi-hoang-gia')">
+           Chi Tiết
+          </button>
+          <button class="w-full bg-secondary text-on-secondary hover:bg-secondary-container hover:text-on-secondary-container py-2.5 rounded text-center font-title-sm text-title-sm transition-all uppercase tracking-wider shadow cursor-pointer" onclick="openReserveModal('Ph&ograve;ng &Dstrok;&ocirc;i Ho&agrave;ng Gia', '4.200.000 VN&Dstrok;')">
+           &Dstrok;ặt Ph&ograve;ng
+          </button>
+         </div>
+        </div>
+       </div>
+       <!-- Hot Room 3 -->
+       <div class="group relative h-[450px] rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-end p-6">
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Luxury Penthouse Suite balcony with private plunge pool, overlooking Ho Chi Minh city skyline at twilight, deep emerald ceramic tiles, brushed brass sun loungers, opulent Indochine architecture aesthetic" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDx3yDWYJY8Ati9tBG3DFDPhuM15sxh9sBNtlfLxyHuPPwT1Ez9WYfy0j_c4no8Rz-il-9AJ9YmSj3g8Sbh2Zs6hUyX07ZHiU6OrogqccZvf_1HKwLK-Ke5yLeN1F8glxc3Ty8-iTTmZ7Xpd4DmpKycbB5RKAiLwcHYwelEsoe9HY2UsGzXleAqCIVuHUqRO_joPGrL-ElrPlU6k-mTwQjuZqSkmBt2lSVi5bAWfAb_lqAZUmpC0kY')">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent">
+        </div>
+        <div class="absolute top-5 left-5">
+         <span class="bg-secondary text-on-secondary font-label-sm text-label-sm uppercase tracking-widest px-3 py-1.5 rounded shadow">
+          VIP Penthouse
+         </span>
+        </div>
+        <div class="relative z-10 flex flex-col">
+         <div class="flex items-center gap-2 text-secondary-fixed mb-1 text-sm">
+          <span class="material-symbols-outlined text-base">
+           star
+          </span>
+          <span class="material-symbols-outlined text-base">
+           star
+          </span>
+          <span class="material-symbols-outlined text-base">
+           star
+          </span>
+          <span class="material-symbols-outlined text-base">
+           star
+          </span>
+          <span class="material-symbols-outlined text-base">
+           star
+          </span>
+          <span class="font-label-sm text-label-sm text-on-primary ml-1">
+           (315 &dstrok;&aacute;nh gi&aacute;)
+          </span>
+         </div>
+         <h3 class="font-headline-sm text-headline-sm text-on-primary font-medium mb-1">
+          Phoenix Penthouse Suite
+         </h3>
+         <p class="font-body-md text-body-md text-secondary-fixed mb-3">
+          4 Kh&aacute;ch &bull; 95m&sup2; &bull; Hồ Bơi Ri&ecirc;ng
+         </p>
+         <div class="flex items-baseline gap-2 mb-4">
+          <span class="font-title-lg text-title-lg font-bold text-on-primary">
+           6.800.000 VN&Dstrok;
+          </span>
+          <span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-wider">
+           / &Dstrok;&ecirc;m
+          </span>
+         </div>
+         <div class="grid grid-cols-2 gap-3 pt-2">
+          <button class="w-full bg-surface-container-low/20 backdrop-blur-md text-on-primary hover:bg-surface-container-low/30 py-2.5 rounded text-center font-title-sm text-title-sm transition-all uppercase tracking-wider cursor-pointer" onclick="openDetailModal('phoenix-penthouse')">
+           Chi Tiết
+          </button>
+          <button class="w-full bg-secondary text-on-secondary hover:bg-secondary-container hover:text-on-secondary-container py-2.5 rounded text-center font-title-sm text-title-sm transition-all uppercase tracking-wider shadow cursor-pointer" onclick="openReserveModal('Phoenix Penthouse Suite', '6.800.000 VN&Dstrok;')">
+           &Dstrok;ặt Ph&ograve;ng
+          </button>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <!-- 3. THANH BỘ LỌC TƯƠNG TÁC (INTERACTIVE FILTER BAR) -->
+    <section class="w-full bg-primary-container py-9 px-6 md:px-12 relative shadow-inner">
+     <div class="max-w-[1320px] mx-auto">
+      <div class="bg-primary/70 backdrop-blur-md p-6 rounded-xl shadow-xl flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+       <!-- Controls -->
+       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 flex-1">
+        <!-- Dropdown 1: Loại phòng -->
+        <div class="flex flex-col gap-1.5">
+         <label class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed font-semibold">
+          Loại Ph&ograve;ng
+         </label>
+         <div class="relative">
+          <select class="w-full bg-surface-container-low/10 text-on-primary text-body-md font-body-md px-3.5 py-2.5 rounded appearance-none focus:outline-none focus:bg-surface-container-low/20 transition-all cursor-pointer" id="filterType">
+           <option class="text-on-surface bg-surface-container" value="all">
+            Tất Cả Loại Ph&ograve;ng
+           </option>
+           <option class="text-on-surface bg-surface-container" value="tieu-chuan">
+            Ti&ecirc;u Chuẩn
+           </option>
+           <option class="text-on-surface bg-surface-container" value="gia-dinh">
+            Gia &Dstrok;&igrave;nh
+           </option>
+           <option class="text-on-surface bg-surface-container" value="cao-cap">
+            Cao Cấp
+           </option>
+          </select>
+          <span class="material-symbols-outlined absolute right-3 top-3 text-secondary-fixed pointer-events-none text-base">
+           expand_more
+          </span>
+         </div>
+        </div>
+        <!-- Dropdown 2: Sức chứa -->
+        <div class="flex flex-col gap-1.5">
+         <label class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed font-semibold">
+          Sức Chứa
+         </label>
+         <div class="relative">
+          <select class="w-full bg-surface-container-low/10 text-on-primary text-body-md font-body-md px-3.5 py-2.5 rounded appearance-none focus:outline-none focus:bg-surface-container-low/20 transition-all cursor-pointer" id="filterCapacity">
+           <option class="text-on-surface bg-surface-container" value="all">
+            Mọi Sức Chứa
+           </option>
+           <option class="text-on-surface bg-surface-container" value="2">
+            2 Người
+           </option>
+           <option class="text-on-surface bg-surface-container" value="4">
+            4 Người
+           </option>
+           <option class="text-on-surface bg-surface-container" value="6">
+            6 Người
+           </option>
+          </select>
+          <span class="material-symbols-outlined absolute right-3 top-3 text-secondary-fixed pointer-events-none text-base">
+           expand_more
+          </span>
+         </div>
+        </div>
+        <!-- Dropdown 3: Hạng sao -->
+        <div class="flex flex-col gap-1.5">
+         <label class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed font-semibold">
+          Hạng Sao
+         </label>
+         <div class="relative">
+          <select class="w-full bg-surface-container-low/10 text-on-primary text-body-md font-body-md px-3.5 py-2.5 rounded appearance-none focus:outline-none focus:bg-surface-container-low/20 transition-all cursor-pointer" id="filterRating">
+           <option class="text-on-surface bg-surface-container" value="all">
+            Tất Cả Ti&ecirc;u Chuẩn
+           </option>
+           <option class="text-on-surface bg-surface-container" value="5">
+            5 Sao &Dstrok;ẳng Cấp
+           </option>
+           <option class="text-on-surface bg-surface-container" value="4">
+            4 Sao Sang Trọng
+           </option>
+          </select>
+          <span class="material-symbols-outlined absolute right-3 top-3 text-secondary-fixed pointer-events-none text-base">
+           expand_more
+          </span>
+         </div>
+        </div>
+       </div>
+       <!-- Action CTA -->
+       <div class="flex items-center gap-3 pt-2 lg:pt-5">
+        <button class="flex items-center gap-2 bg-secondary text-on-secondary hover:bg-secondary-container hover:text-on-secondary-container px-6 py-2.5 rounded font-title-sm text-title-sm uppercase tracking-wider transition-all shadow cursor-pointer" onclick="applyFilters()">
+         <span class="material-symbols-outlined text-base">
+          tune
+         </span>
+         <span>
+          Lọc Ph&ograve;ng
+         </span>
+        </button>
+        <button class="bg-surface-container-low/10 text-secondary-fixed hover:bg-surface-container-low/20 px-4 py-2.5 rounded font-title-sm text-title-sm uppercase tracking-wider transition-all cursor-pointer" onclick="resetFilters()">
+         &Dstrok;ặt Lại
+        </button>
+       </div>
+      </div>
+      <!-- Realtime Status Banner -->
+      <div class="mt-4 flex items-center justify-between text-on-tertiary-container font-body-md text-body-md px-2">
+       <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-secondary-fixed animate-ping">
+        </span>
+        <span id="filterStatusText">
+         &Dstrok;ang hiển thị: 15 hạng ph&ograve;ng cao cấp sẵn s&agrave;ng phục vụ
+        </span>
+       </div>
+       <div class="hidden sm:flex items-center gap-4 text-xs tracking-wider uppercase text-secondary-fixed">
+        <span>
+         Cam Kết Gi&aacute; Tốt Nhất
+        </span>
+        <span>
+         &bull;
+        </span>
+        <span>
+         &Dstrok;ặc Quyền Concierge 24/7
+        </span>
+       </div>
+      </div>
+     </div>
+    </section>
+    <!-- 4. DANH SÁCH TOÀN BỘ PHÒNG NGHỈ MASTER CATALOG (15 PHÒNG) -->
+    <section class="w-full bg-surface-container-low py-[70px] px-6 md:px-12">
+     <div class="max-w-[1320px] mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+       <span class="font-label-lg text-label-lg uppercase tracking-[0.2em] text-secondary font-semibold block mb-2">
+        All Accommodations
+       </span>
+       <h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+        Danh S&aacute;ch Ph&ograve;ng Nghỉ &amp; Biệt Thự
+       </h2>
+       <div class="w-16 h-0.5 bg-secondary mx-auto mt-4 mb-3">
+       </div>
+       <p class="font-body-md text-body-md text-on-surface-variant">
+        Kh&ocirc;ng gian nghỉ dưỡng kiến tạo trải nghiệm sống thi vị với từng chi tiết gỗ tếch chạm khắc, &dstrok;&aacute; cẩm thạch trắng v&agrave; ban c&ocirc;ng ngắm nh&igrave;n S&agrave;i G&ograve;n diễm lệ.
+       </p>
+      </div>
+      <!-- 15 Room Grid (3 col x 5 rows) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="roomContainer">
+       <!-- Room 1 -->
+       <div class="room-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-capacity="2" data-rating="5" data-type="tieu-chuan">
+        <div class="relative h-60 overflow-hidden">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Classic Indochine deluxe street view room, dark polished mahogany bed, emerald curtains, elegant French balcony looking over tree-lined Saigon street" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyi8nt9iO0JbizNhnLZi9SJtKBhjlyxGpKCdTzhsDjLbHmp08HPtfEoBJqGE4xN5dIC8lMMHmPuIxKYBuKhqWxpYanJ7MxQSRCA_eexuZk3ifi9lEcbD2SoBTKfVWc4BRs2kgKH45uQFLk8JbueikAIm1C3FRcT2nBRjg8w34wsiCYUvKSax7HoduWr6YvZrR4U_9WSZYI6LR-Wr4iJw_eZ0XfEi6DJt4VntYntfEE60fQbDGGRL6V')">
+         </div>
+         <div class="absolute top-4 left-4 bg-primary text-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider px-2.5 py-1 rounded">
+          5 Sao
+         </div>
+         <div class="absolute bottom-3 right-3 bg-surface/90 backdrop-blur-sm text-primary font-title-sm text-title-sm px-3 py-1 rounded shadow-sm">
+          38 m&sup2;
+         </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+         <div>
+          <div class="flex items-center justify-between mb-2">
+           <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
+            2 Kh&aacute;ch &bull; Hướng Phố
+           </span>
+           <div class="flex text-secondary text-xs">
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+           </div>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-2">
+           Ph&ograve;ng Deluxe Hướng Phố
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+           Kh&ocirc;ng gian ấm c&uacute;ng ngập tr&agrave;n nắng mai với thiết kế cửa v&ograve;m kiểu Ph&aacute;p v&agrave; s&agrave;n gỗ tự nhi&ecirc;n qu&yacute; hiếm.
+          </p>
+         </div>
+         <div>
+          <div class="flex items-baseline justify-between mb-4 pt-3 bg-surface-container-low px-3 py-2 rounded">
+           <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">
+            Gi&aacute; ưu &dstrok;&atilde;i
+           </span>
+           <span class="font-title-lg text-title-lg font-bold text-secondary">
+            2.500.000 VN&Dstrok;
+            <span class="text-xs font-normal text-on-surface-variant">
+             / &dstrok;&ecirc;m
+            </span>
+           </span>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+           <button class="w-full bg-surface-container text-primary hover:bg-surface-container-high py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openDetailModal('deluxe-tieu-chuan')">
+            Chi Tiết
+           </button>
+           <button class="w-full bg-primary text-on-primary hover:bg-primary-container py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openReserveModal('Ph&ograve;ng Deluxe Hướng Phố', '2.500.000 VN&Dstrok;')">
+            &Dstrok;ặt Ph&ograve;ng
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- Room 2 -->
+       <div class="room-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-capacity="2" data-rating="4" data-type="tieu-chuan">
+        <div class="relative h-60 overflow-hidden">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Superior double bedroom with French colonial artwork, teak wardrobe, crisp white linen bed, morning light through slatted wooden blinds" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDS-6GeYCI7Z8FFTMYSMFR4c9AtsrPRNzQbLbyMdDBKMCU42YWIEQ3iryhDM8PP474ZLXMcXT2IjIZ_Ld_ncxGwL5mtu5W4DQdDXFmCCCZSoGciX6FB9IKKxRNshvRSPp2QymFVvUOdsyClazwAUOFvrzdsKQoZNkfWKvSlv7Bt-eQGfJHo9d7XgBN_I-oEobZX9OEXERyxyRH1caXloey2Urc9w1ywDdn4i5yPvSXi_rMtCXScJq5e')">
+         </div>
+         <div class="absolute top-4 left-4 bg-primary text-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider px-2.5 py-1 rounded">
+          4 Sao
+         </div>
+         <div class="absolute bottom-3 right-3 bg-surface/90 backdrop-blur-sm text-primary font-title-sm text-title-sm px-3 py-1 rounded shadow-sm">
+          35 m&sup2;
+         </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+         <div>
+          <div class="flex items-center justify-between mb-2">
+           <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
+            2 Kh&aacute;ch &bull; Giường &Dstrok;&ocirc;i
+           </span>
+           <div class="flex text-secondary text-xs">
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+           </div>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-2">
+           Ph&ograve;ng Superior Giường &Dstrok;&ocirc;i
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+           Sự h&ograve;a trộn tinh tế giữa sắc xanh lục bảo v&agrave; t&ocirc;ng gỗ sậm, l&yacute; tưởng cho những chuyến c&ocirc;ng t&aacute;c hay nghỉ ngơi thanh lịch.
+          </p>
+         </div>
+         <div>
+          <div class="flex items-baseline justify-between mb-4 pt-3 bg-surface-container-low px-3 py-2 rounded">
+           <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">
+            Gi&aacute; ưu &dstrok;&atilde;i
+           </span>
+           <span class="font-title-lg text-title-lg font-bold text-secondary">
+            2.200.000 VN&Dstrok;
+            <span class="text-xs font-normal text-on-surface-variant">
+             / &dstrok;&ecirc;m
+            </span>
+           </span>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+           <button class="w-full bg-surface-container text-primary hover:bg-surface-container-high py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openDetailModal('superior-giuong-doi')">
+            Chi Tiết
+           </button>
+           <button class="w-full bg-primary text-on-primary hover:bg-primary-container py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openReserveModal('Ph&ograve;ng Superior Giường &Dstrok;&ocirc;i', '2.200.000 VN&Dstrok;')">
+            &Dstrok;ặt Ph&ograve;ng
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- Room 3 -->
+       <div class="room-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-capacity="2" data-rating="5" data-type="tieu-chuan">
+        <div class="relative h-60 overflow-hidden">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Deluxe room with private heritage iron balcony, potted bougainvillea flowers, rattan reading chair, view of colonial architecture in Saigon" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCkeszRXuwdECwATD8E7edrFlBsoCb4qni-Xzum3xH6LWyByXY6DDbKHMBkOf7XH-tk7ChPwhyYbFKDkke-ac4-XLprXxro80nS5R_clb3UZF0cQRhwN-ivy7ZfKm4DqviYokw8XVcRTH3jmVdeijl5rFjg-Ao1dPyvhHhw-I6K6FHFv2wuoqqV_VcEuFP1Zu2v0_jSPOQrR_RBugK3VWrW4Akflq44XqcByiudcO0AWk0hADc8u0Ty')">
+         </div>
+         <div class="absolute top-4 left-4 bg-primary text-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider px-2.5 py-1 rounded">
+          5 Sao
+         </div>
+         <div class="absolute bottom-3 right-3 bg-surface/90 backdrop-blur-sm text-primary font-title-sm text-title-sm px-3 py-1 rounded shadow-sm">
+          42 m&sup2;
+         </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+         <div>
+          <div class="flex items-center justify-between mb-2">
+           <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
+            2 Kh&aacute;ch &bull; Ban C&ocirc;ng Ri&ecirc;ng
+           </span>
+           <div class="flex text-secondary text-xs">
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+           </div>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-2">
+           Ph&ograve;ng Deluxe Ban C&ocirc;ng Di Sản
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+           Thư th&aacute;i tận hưởng t&aacute;ch tr&agrave; chiều b&ecirc;n ban c&ocirc;ng sắt hoa v&abreve;n r&egrave;n nghệ thuật nh&igrave;n xuống h&agrave;ng me xanh mướt.
+          </p>
+         </div>
+         <div>
+          <div class="flex items-baseline justify-between mb-4 pt-3 bg-surface-container-low px-3 py-2 rounded">
+           <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">
+            Gi&aacute; ưu &dstrok;&atilde;i
+           </span>
+           <span class="font-title-lg text-title-lg font-bold text-secondary">
+            2.800.000 VN&Dstrok;
+            <span class="text-xs font-normal text-on-surface-variant">
+             / &dstrok;&ecirc;m
+            </span>
+           </span>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+           <button class="w-full bg-surface-container text-primary hover:bg-surface-container-high py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openDetailModal('deluxe-ban-cong')">
+            Chi Tiết
+           </button>
+           <button class="w-full bg-primary text-on-primary hover:bg-primary-container py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openReserveModal('Ph&ograve;ng Deluxe Ban C&ocirc;ng Di Sản', '2.800.000 VN&Dstrok;')">
+            &Dstrok;ặt Ph&ograve;ng
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- Room 4 -->
+       <div class="room-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-capacity="2" data-rating="5" data-type="cao-cap">
+        <div class="relative h-60 overflow-hidden">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="High-end Premier city view bedroom with large panoramic windows looking over vibrant Saigon skyline, luxurious velvet armchair, gold leaf ceiling details" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLhu_4vCgJmy5BMk77rm-MXgvVbtD_D2V2oWg337dcNYArA0bRWQ8bqtHrxTXe_Xp8w6SSUwBWR9UqjdlrukhsE--_4Tzdd8_-Dh62db9-s8Kq3rEOIb7jedCVIImahUA5BfC1lYQrkrwg1HhsheF5YK0EuaPb_1gEWnRChLPKw_iPepx8ULyvuBwsnQSTyBPesUEgeJix0rdh5u-hZaXffrl0LDeVjFJ5Cys2CRxk-CMlwhhSk9br')">
+         </div>
+         <div class="absolute top-4 left-4 bg-primary text-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider px-2.5 py-1 rounded">
+          5 Sao
+         </div>
+         <div class="absolute bottom-3 right-3 bg-surface/90 backdrop-blur-sm text-primary font-title-sm text-title-sm px-3 py-1 rounded shadow-sm">
+          45 m&sup2;
+         </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+         <div>
+          <div class="flex items-center justify-between mb-2">
+           <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
+            2 Kh&aacute;ch &bull; Cao Tầng
+           </span>
+           <div class="flex text-secondary text-xs">
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+           </div>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-2">
+           Ph&ograve;ng Premier City View
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+           Vị tr&iacute; tầng cao kho&aacute;ng &dstrok;ạt với tầm nh&igrave;n &ocirc;m trọn &aacute;nh s&aacute;ng hoa lệ của trung t&acirc;m S&agrave;i G&ograve;n mỗi khi ho&agrave;ng h&ocirc;n bu&ocirc;ng.
+          </p>
+         </div>
+         <div>
+          <div class="flex items-baseline justify-between mb-4 pt-3 bg-surface-container-low px-3 py-2 rounded">
+           <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">
+            Gi&aacute; ưu &dstrok;&atilde;i
+           </span>
+           <span class="font-title-lg text-title-lg font-bold text-secondary">
+            3.200.000 VN&Dstrok;
+            <span class="text-xs font-normal text-on-surface-variant">
+             / &dstrok;&ecirc;m
+            </span>
+           </span>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+           <button class="w-full bg-surface-container text-primary hover:bg-surface-container-high py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openDetailModal('premier-city-view')">
+            Chi Tiết
+           </button>
+           <button class="w-full bg-primary text-on-primary hover:bg-primary-container py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openReserveModal('Ph&ograve;ng Premier City View', '3.200.000 VN&Dstrok;')">
+            &Dstrok;ặt Ph&ograve;ng
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- Room 5 -->
+       <div class="room-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-capacity="2" data-rating="5" data-type="cao-cap">
+        <div class="relative h-60 overflow-hidden">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Executive business hotel suite with dedicated mahogany desk, leather executive chair, vintage table lamp, seamless Indochine partition wall" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDD8SE9x0s261PIUM-AOW6LVIP3jzr_6CTQYhB6dCRd_ksUivPXgxn6_hbSZz-lFT9dILbh0P0sYGHAkafhjcdXzUkSqMokoDHHpaWe0HBkPFc-ACcmPpdca9o5iWkZJCymogaVD5QjUwO0QUxmUpauoCKewd-tVX4XcMZILGrG5ou26QFOQNsZIYqMCLmSab9-AfZivMFXS52Y8JAF16l7L_CjjTnG2F6dWgUvwltSlcBtJ1ef4Po_')">
+         </div>
+         <div class="absolute top-4 left-4 bg-primary text-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider px-2.5 py-1 rounded">
+          5 Sao
+         </div>
+         <div class="absolute bottom-3 right-3 bg-surface/90 backdrop-blur-sm text-primary font-title-sm text-title-sm px-3 py-1 rounded shadow-sm">
+          50 m&sup2;
+         </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+         <div>
+          <div class="flex items-center justify-between mb-2">
+           <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
+            2 Kh&aacute;ch &bull; B&agrave;n L&agrave;m Việc VIP
+           </span>
+           <div class="flex text-secondary text-xs">
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+           </div>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-2">
+           Ph&ograve;ng Executive Business Suite
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+           Trang bị kh&ocirc;ng gian l&agrave;m việc chuy&ecirc;n biệt &dstrok;ẳng cấp c&ugrave;ng c&aacute;c &dstrok;ặc quyền kết nối thương vụ quốc tế &dstrok;ộc t&ocirc;n.
+          </p>
+         </div>
+         <div>
+          <div class="flex items-baseline justify-between mb-4 pt-3 bg-surface-container-low px-3 py-2 rounded">
+           <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">
+            Gi&aacute; ưu &dstrok;&atilde;i
+           </span>
+           <span class="font-title-lg text-title-lg font-bold text-secondary">
+            3.600.000 VN&Dstrok;
+            <span class="text-xs font-normal text-on-surface-variant">
+             / &dstrok;&ecirc;m
+            </span>
+           </span>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+           <button class="w-full bg-surface-container text-primary hover:bg-surface-container-high py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openDetailModal('executive-business')">
+            Chi Tiết
+           </button>
+           <button class="w-full bg-primary text-on-primary hover:bg-primary-container py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openReserveModal('Ph&ograve;ng Executive Business Suite', '3.600.000 VN&Dstrok;')">
+            &Dstrok;ặt Ph&ograve;ng
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- Room 6 -->
+       <div class="room-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-capacity="2" data-rating="5" data-type="cao-cap">
+        <div class="relative h-60 overflow-hidden">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Royal Indochine bedroom suite with king size canopy bed, gold embroidered cushions, intricate handmade ceramic vase, warm ambient light" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnV0mUV-UIZ7kgow4sH-llnOqBw6HszxyMHYC1u9dZ6MNAAyh4lIy6atkdZbw3BTC_pBgy5I7GQNVFeyV6dsVzQJXInEwj6kkcmyBnQqTUwgWCenae8FUlNP9tfNRimtqYfmgjfO3nreup60pmmtpmYJLFtoWwqtFYu0yETpzjBxVAA5NBviIa9ol2N9Oiylrl5-_Kc1Wy3nbCFq8f8z8703jWrde9V08HsIB_6Y3UV8DSkcbf30Pl')">
+         </div>
+         <div class="absolute top-4 left-4 bg-primary text-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider px-2.5 py-1 rounded">
+          5 Sao
+         </div>
+         <div class="absolute bottom-3 right-3 bg-surface/90 backdrop-blur-sm text-primary font-title-sm text-title-sm px-3 py-1 rounded shadow-sm">
+          55 m&sup2;
+         </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+         <div>
+          <div class="flex items-center justify-between mb-2">
+           <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
+            2 Kh&aacute;ch &bull; Ho&agrave;ng Gia
+           </span>
+           <div class="flex text-secondary text-xs">
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+           </div>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-2">
+           Ph&ograve;ng &Dstrok;&ocirc;i Ho&agrave;ng Gia Indochine
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+           &Dstrok;iểm nhấn xa hoa mang &dstrok;ậm hồn cốt cung &dstrok;&igrave;nh với giường bốn cọc gỗ g&otilde; &dstrok;ỏ v&agrave; chi tiết mạ &dstrok;ồng cổ &dstrok;iển.
+          </p>
+         </div>
+         <div>
+          <div class="flex items-baseline justify-between mb-4 pt-3 bg-surface-container-low px-3 py-2 rounded">
+           <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">
+            Gi&aacute; ưu &dstrok;&atilde;i
+           </span>
+           <span class="font-title-lg text-title-lg font-bold text-secondary">
+            4.200.000 VN&Dstrok;
+            <span class="text-xs font-normal text-on-surface-variant">
+             / &dstrok;&ecirc;m
+            </span>
+           </span>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+           <button class="w-full bg-surface-container text-primary hover:bg-surface-container-high py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openDetailModal('doi-hoang-gia')">
+            Chi Tiết
+           </button>
+           <button class="w-full bg-primary text-on-primary hover:bg-primary-container py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openReserveModal('Ph&ograve;ng &Dstrok;&ocirc;i Ho&agrave;ng Gia Indochine', '4.200.000 VN&Dstrok;')">
+            &Dstrok;ặt Ph&ograve;ng
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- Room 7 -->
+       <div class="room-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-capacity="4" data-rating="5" data-type="gia-dinh">
+        <div class="relative h-60 overflow-hidden">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Family connecting hotel suite with double bedroom communicating through arched doorway to second twin bedroom, elegant French colonial decor" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOoeGCikZGtQUV2rV6lanU5Kcach37ZYw9wIMzv1VSqUqqYfu7HI4xnnoTyIuTNu7MQnYB1X6XGwPTPU_Ddownw04uvkHwfEerEYSL3CpiEghxP6lJW9YAHGYx4JaH-3H1FASUw0K1gzfNeFWWqUGDJalN8AwpHK7X9yihzsppJMQ0gCdCB7lvAhzInAa_FwwSn44to3ur5GAMk5Zt7Gj_SAlU6P7oWbmnUL0as2-9V_jJ-hheayZT')">
+         </div>
+         <div class="absolute top-4 left-4 bg-primary text-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider px-2.5 py-1 rounded">
+          5 Sao
+         </div>
+         <div class="absolute bottom-3 right-3 bg-surface/90 backdrop-blur-sm text-primary font-title-sm text-title-sm px-3 py-1 rounded shadow-sm">
+          65 m&sup2;
+         </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+         <div>
+          <div class="flex items-center justify-between mb-2">
+           <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
+            4 Kh&aacute;ch &bull; Th&ocirc;ng Cửa
+           </span>
+           <div class="flex text-secondary text-xs">
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+           </div>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-2">
+           Family Connecting Room
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+           Hai gian ph&ograve;ng th&ocirc;ng nhau thuận tiện, g&igrave;n giữ sự ri&ecirc;ng tư m&agrave; vẫn gắn kết trọn vẹn t&igrave;nh cảm gia &dstrok;&igrave;nh.
+          </p>
+         </div>
+         <div>
+          <div class="flex items-baseline justify-between mb-4 pt-3 bg-surface-container-low px-3 py-2 rounded">
+           <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">
+            Gi&aacute; ưu &dstrok;&atilde;i
+           </span>
+           <span class="font-title-lg text-title-lg font-bold text-secondary">
+            3.500.000 VN&Dstrok;
+            <span class="text-xs font-normal text-on-surface-variant">
+             / &dstrok;&ecirc;m
+            </span>
+           </span>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+           <button class="w-full bg-surface-container text-primary hover:bg-surface-container-high py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openDetailModal('family-connecting')">
+            Chi Tiết
+           </button>
+           <button class="w-full bg-primary text-on-primary hover:bg-primary-container py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openReserveModal('Family Connecting Room', '3.500.000 VN&Dstrok;')">
+            &Dstrok;ặt Ph&ograve;ng
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- Room 8 -->
+       <div class="room-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-capacity="4" data-rating="5" data-type="gia-dinh">
+        <div class="relative h-60 overflow-hidden">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Grand Family Suite with expansive garden view, tropical palms framed by white arched windows, comfortable bespoke sofa set, teak dining table" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCnan1EmaQYmbcDL3mQLwhugTG_nEQwtyTdAIZTugwVvjSE0j1n6cTDcx5adV0upKvV_ve21jWg_yFgDXSBLlHxbo8BrtBw_jFjpRKnwUotFKgMcMqc5Px0vijV6qUIt-CRK5shXN7UHgd4d9DuBSLpcXHyu6vrXxez5U_Wqc85hrhh-DjF3X0yCY2PP_0AQiLU9faK4FaOuqJqWgu2nZpnehoZOBz9T5XqHg685mLJZ_WOPql36uHd')">
+         </div>
+         <div class="absolute top-4 left-4 bg-primary text-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider px-2.5 py-1 rounded">
+          5 Sao
+         </div>
+         <div class="absolute bottom-3 right-3 bg-surface/90 backdrop-blur-sm text-primary font-title-sm text-title-sm px-3 py-1 rounded shadow-sm">
+          72 m&sup2;
+         </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+         <div>
+          <div class="flex items-center justify-between mb-2">
+           <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
+            4 Kh&aacute;ch &bull; Hướng Vườn
+           </span>
+           <div class="flex text-secondary text-xs">
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+           </div>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-2">
+           Grand Family Suite Garden
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+           Kh&ocirc;ng gian ngập tr&agrave;n sắc xanh thanh b&igrave;nh nh&igrave;n ra hoa vi&ecirc;n rợp b&oacute;ng dừa v&agrave; tiểu cảnh nước Indochine.
+          </p>
+         </div>
+         <div>
+          <div class="flex items-baseline justify-between mb-4 pt-3 bg-surface-container-low px-3 py-2 rounded">
+           <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">
+            Gi&aacute; ưu &dstrok;&atilde;i
+           </span>
+           <span class="font-title-lg text-title-lg font-bold text-secondary">
+            4.500.000 VN&Dstrok;
+            <span class="text-xs font-normal text-on-surface-variant">
+             / &dstrok;&ecirc;m
+            </span>
+           </span>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+           <button class="w-full bg-surface-container text-primary hover:bg-surface-container-high py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openDetailModal('family-garden')">
+            Chi Tiết
+           </button>
+           <button class="w-full bg-primary text-on-primary hover:bg-primary-container py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openReserveModal('Grand Family Suite Garden', '4.500.000 VN&Dstrok;')">
+            &Dstrok;ặt Ph&ograve;ng
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- Room 9 -->
+       <div class="room-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-capacity="4" data-rating="5" data-type="gia-dinh">
+        <div class="relative h-60 overflow-hidden">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Luxury two-level duplex suite with wooden spiral staircase, soaring double height ceiling, plush emerald sofa, private mezzanine master bedroom" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBHpvz75-IefTr2N2UWCFEULpeDy9XL9cvpfjXwKfhePzgCZluvSrmwyZlfFydfqNz9G-iiePpx3ar5hBi6qmgs0c7eSVlLE1cKuE9Nf5ee7SzkTnWAd1JfqEVJAyHGIG3LrI8kWzBAtXwfjJ9HLN2VRlOraFMd9jfY2oCiMbPaPr03bUQ_jejIPWw69tyWoB2wW7UL-yBFNBMYG6IIQKJC1DgrMB2fOhMgk1GTM3GAnNPjD9Tdu-O')">
+         </div>
+         <div class="absolute top-4 left-4 bg-primary text-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider px-2.5 py-1 rounded">
+          5 Sao
+         </div>
+         <div class="absolute bottom-3 right-3 bg-surface/90 backdrop-blur-sm text-primary font-title-sm text-title-sm px-3 py-1 rounded shadow-sm">
+          80 m&sup2;
+         </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+         <div>
+          <div class="flex items-center justify-between mb-2">
+           <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
+            4 Kh&aacute;ch &bull; Th&ocirc;ng Tầng
+           </span>
+           <div class="flex text-secondary text-xs">
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+           </div>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-2">
+           Family Duplex Suite
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+           Kiến tr&uacute;c 2 tầng th&ocirc;ng tầng tr&aacute;ng lệ mang lại trải nghiệm nghỉ dưỡng như một dinh thự tư gia &dstrok;ộc bản.
+          </p>
+         </div>
+         <div>
+          <div class="flex items-baseline justify-between mb-4 pt-3 bg-surface-container-low px-3 py-2 rounded">
+           <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">
+            Gi&aacute; ưu &dstrok;&atilde;i
+           </span>
+           <span class="font-title-lg text-title-lg font-bold text-secondary">
+            5.200.000 VN&Dstrok;
+            <span class="text-xs font-normal text-on-surface-variant">
+             / &dstrok;&ecirc;m
+            </span>
+           </span>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+           <button class="w-full bg-surface-container text-primary hover:bg-surface-container-high py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openDetailModal('family-duplex')">
+            Chi Tiết
+           </button>
+           <button class="w-full bg-primary text-on-primary hover:bg-primary-container py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openReserveModal('Family Duplex Suite', '5.200.000 VN&Dstrok;')">
+            &Dstrok;ặt Ph&ograve;ng
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- Room 10 -->
+       <div class="room-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-capacity="4" data-rating="5" data-type="gia-dinh">
+        <div class="relative h-60 overflow-hidden">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Spacious family residence suite with wide shaded terrace, outdoor dining table, ornate wrought iron railings, panoramic city garden view" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCpAjoO-bzuykHC2xJnoayxUN9S1KMRfeocwCc_POdHzm6evss3yhInAHdhyguO11kWIaOxnP7NxGgE4Vdd8a2eyENIbxoiYukWYw5R43stIH70xnyh_1MSgsEUmZC2P2UXSxq_7bdaiyDr-Ty1PTMN4UASNkJWEhX7MJgHEVH1KGXiVFoPTFZLor5X4m-8DHhL-lWHtV9pBea_aiZg9s5ynZSr-udq_NgP0qC3bmg-kpIPFiwBrjDF')">
+         </div>
+         <div class="absolute top-4 left-4 bg-primary text-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider px-2.5 py-1 rounded">
+          5 Sao
+         </div>
+         <div class="absolute bottom-3 right-3 bg-surface/90 backdrop-blur-sm text-primary font-title-sm text-title-sm px-3 py-1 rounded shadow-sm">
+          85 m&sup2;
+         </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+         <div>
+          <div class="flex items-center justify-between mb-2">
+           <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
+            4 Kh&aacute;ch &bull; Terrace Ri&ecirc;ng
+           </span>
+           <div class="flex text-secondary text-xs">
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+           </div>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-2">
+           Family Balcony Residence
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+           Sở hữu khu&ocirc;n vi&ecirc;n ban c&ocirc;ng ngo&agrave;i trời rộng lớn, ho&agrave;n hảo cho những bữa tối &dstrok;ầm ấm dưới bầu trời l&atilde;ng &dstrok;&atilde;ng.
+          </p>
+         </div>
+         <div>
+          <div class="flex items-baseline justify-between mb-4 pt-3 bg-surface-container-low px-3 py-2 rounded">
+           <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">
+            Gi&aacute; ưu &dstrok;&atilde;i
+           </span>
+           <span class="font-title-lg text-title-lg font-bold text-secondary">
+            5.800.000 VN&Dstrok;
+            <span class="text-xs font-normal text-on-surface-variant">
+             / &dstrok;&ecirc;m
+            </span>
+           </span>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+           <button class="w-full bg-surface-container text-primary hover:bg-surface-container-high py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openDetailModal('family-balcony')">
+            Chi Tiết
+           </button>
+           <button class="w-full bg-primary text-on-primary hover:bg-primary-container py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openReserveModal('Family Balcony Residence', '5.800.000 VN&Dstrok;')">
+            &Dstrok;ặt Ph&ograve;ng
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- Room 11 -->
+       <div class="room-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-capacity="2" data-rating="5" data-type="cao-cap">
+        <div class="relative h-60 overflow-hidden">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Junior suite overlooking Saigon river at sunset, freestanding brass soaking tub near window, silk curtains, Indochine tile accents" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDd8bk9uy4vbz_dpQEi5yQjE9bWT7Wq8xq5xPAPEF1vKKSNJ8Yh_XBcHGSXfIVRmP_8m2aMlv_kFBWSo3SKXtBA6A8C3O7TbHpTHLCT2S-22xldtCxKADltKWCJXuV2b9y6q5IofpL-pUwL-zYRTCdYNuaY9cF5v5fpl-ZB4MQ6ng4YowbxAp-DsNrP-I3RR7E9cyEzqQzPMh_8Z0k3dfLZYnEpWyLD_rmACFtnklQCqu8hcveuQ_2k')">
+         </div>
+         <div class="absolute top-4 left-4 bg-primary text-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider px-2.5 py-1 rounded">
+          5 Sao
+         </div>
+         <div class="absolute bottom-3 right-3 bg-surface/90 backdrop-blur-sm text-primary font-title-sm text-title-sm px-3 py-1 rounded shadow-sm">
+          58 m&sup2;
+         </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+         <div>
+          <div class="flex items-center justify-between mb-2">
+           <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
+            2 Kh&aacute;ch &bull; Hướng S&ocirc;ng
+           </span>
+           <div class="flex text-secondary text-xs">
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+           </div>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-2">
+           Junior Suite River View
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+           Bồn tắm &dstrok;ồng phong c&aacute;ch thuộc &dstrok;ịa &dstrok;ặt cạnh cửa k&iacute;nh ngắm nh&igrave;n d&ograve;ng s&ocirc;ng S&agrave;i G&ograve;n lấp l&aacute;nh &aacute;nh &dstrok;&egrave;n &dstrok;&ecirc;m.
+          </p>
+         </div>
+         <div>
+          <div class="flex items-baseline justify-between mb-4 pt-3 bg-surface-container-low px-3 py-2 rounded">
+           <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">
+            Gi&aacute; ưu &dstrok;&atilde;i
+           </span>
+           <span class="font-title-lg text-title-lg font-bold text-secondary">
+            4.800.000 VN&Dstrok;
+            <span class="text-xs font-normal text-on-surface-variant">
+             / &dstrok;&ecirc;m
+            </span>
+           </span>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+           <button class="w-full bg-surface-container text-primary hover:bg-surface-container-high py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openDetailModal('junior-river')">
+            Chi Tiết
+           </button>
+           <button class="w-full bg-primary text-on-primary hover:bg-primary-container py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openReserveModal('Junior Suite River View', '4.800.000 VN&Dstrok;')">
+            &Dstrok;ặt Ph&ograve;ng
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- Room 12 -->
+       <div class="room-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-capacity="2" data-rating="5" data-type="cao-cap">
+        <div class="relative h-60 overflow-hidden">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="The Phoenix Luxury Suite interior, living room with velvet chaise lounge, antique gramophone, handcrafted Saigon lacquer wall art" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0hFvm6fHX14ctghKuPRzlQbKB2uYmTc5dqrmcYDbDCayvjzbGNOcxyxl0G2HG6pOf5jNrX2m2nfE3YwwmSqxmFAvf4kgtsCC0f9xU4VLLFRPy7CqfMgjBJYCrQE6hDQUAUbplp9IbP96ua2F3teuxtUFvpct15cizzDn-8WGJQOQk5jBVmUT0tW3YvMLZz9IMxbxU7p1OM2FUvTcg8PoFRcc8FxQk7Zh9JZsmTkWkxmHVMJd1hs0s')">
+         </div>
+         <div class="absolute top-4 left-4 bg-primary text-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider px-2.5 py-1 rounded">
+          5 Sao
+         </div>
+         <div class="absolute bottom-3 right-3 bg-surface/90 backdrop-blur-sm text-primary font-title-sm text-title-sm px-3 py-1 rounded shadow-sm">
+          75 m&sup2;
+         </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+         <div>
+          <div class="flex items-center justify-between mb-2">
+           <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
+            2 Kh&aacute;ch &bull; Suite Thượng Hạng
+           </span>
+           <div class="flex text-secondary text-xs">
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+           </div>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-2">
+           The Phoenix Luxury Suite
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+           Biểu tượng ki&ecirc;u h&atilde;nh của kh&aacute;ch sạn với ph&ograve;ng kh&aacute;ch ri&ecirc;ng biệt c&ugrave;ng c&aacute;c t&aacute;c phẩm sơn m&agrave;i thủ c&ocirc;ng tinh xảo.
+          </p>
+         </div>
+         <div>
+          <div class="flex items-baseline justify-between mb-4 pt-3 bg-surface-container-low px-3 py-2 rounded">
+           <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">
+            Gi&aacute; ưu &dstrok;&atilde;i
+           </span>
+           <span class="font-title-lg text-title-lg font-bold text-secondary">
+            5.500.000 VN&Dstrok;
+            <span class="text-xs font-normal text-on-surface-variant">
+             / &dstrok;&ecirc;m
+            </span>
+           </span>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+           <button class="w-full bg-surface-container text-primary hover:bg-surface-container-high py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openDetailModal('phoenix-luxury-suite')">
+            Chi Tiết
+           </button>
+           <button class="w-full bg-primary text-on-primary hover:bg-primary-container py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openReserveModal('The Phoenix Luxury Suite', '5.500.000 VN&Dstrok;')">
+            &Dstrok;ặt Ph&ograve;ng
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- Room 13 -->
+       <div class="room-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-capacity="4" data-rating="5" data-type="cao-cap">
+        <div class="relative h-60 overflow-hidden">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Penthouse rooftop terrace with private plunge pool and daybeds, panoramic evening view of Ho Chi Minh city skyline, luxury Indochine design" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBPAELJHqLWoY933bM_cBLg4rgx-5ABce4w0TkEdlwoezNx6jWRiH7Xz5AUmSLS1ze1WNe5uIcTlP5E8tL4c4BZ8XxyMvHGSKDN9Dcd-MU6OrRh2rTGsu59D2hBoHBLkCBGhrmgqgABEsQ5xxNv_y5H8rcPPFHLexBY5Ltho2r3XRepVbB5-0VDF_2dnmXbaS7bvdn7S3eO1JqKl4a-608HnOzIT4J4pWa1f54RNNqxm19SzrW-p976')">
+         </div>
+         <div class="absolute top-4 left-4 bg-primary text-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider px-2.5 py-1 rounded">
+          5 Sao
+         </div>
+         <div class="absolute bottom-3 right-3 bg-surface/90 backdrop-blur-sm text-primary font-title-sm text-title-sm px-3 py-1 rounded shadow-sm">
+          95 m&sup2;
+         </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+         <div>
+          <div class="flex items-center justify-between mb-2">
+           <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
+            4 Kh&aacute;ch &bull; Hồ Bơi Ri&ecirc;ng
+           </span>
+           <div class="flex text-secondary text-xs">
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+           </div>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-2">
+           Phoenix Penthouse Suite
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+           Trải nghiệm &dstrok;ỉnh cao với hồ ng&acirc;m ch&acirc;n m&acirc;y ri&ecirc;ng tư, dịch vụ quản gia c&aacute; nh&acirc;n v&agrave; quầy bar sang trọng.
+          </p>
+         </div>
+         <div>
+          <div class="flex items-baseline justify-between mb-4 pt-3 bg-surface-container-low px-3 py-2 rounded">
+           <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">
+            Gi&aacute; ưu &dstrok;&atilde;i
+           </span>
+           <span class="font-title-lg text-title-lg font-bold text-secondary">
+            6.800.000 VN&Dstrok;
+            <span class="text-xs font-normal text-on-surface-variant">
+             / &dstrok;&ecirc;m
+            </span>
+           </span>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+           <button class="w-full bg-surface-container text-primary hover:bg-surface-container-high py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openDetailModal('phoenix-penthouse')">
+            Chi Tiết
+           </button>
+           <button class="w-full bg-primary text-on-primary hover:bg-primary-container py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openReserveModal('Phoenix Penthouse Suite', '6.800.000 VN&Dstrok;')">
+            &Dstrok;ặt Ph&ograve;ng
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- Room 14 -->
+       <div class="room-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-capacity="6" data-rating="5" data-type="gia-dinh">
+        <div class="relative h-60 overflow-hidden">
+         <div class="w-full h-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Grand Royal 3-bedroom villa living room with expansive marble floor, Indochine wooden ceiling rafters, chandelier, dining table for 8 people" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2ESL3AKE3tYBDKeWth6GQMnfFGIDwYGfpzVVsLGhIkkVRGkhbM3lri8FwjpauuoUK6IExticGyU1dJkgPTyru9mU8PWo26tKO4qNjFpqoCiac29-pmGVuBuZQOYA7_jYVAN_TrcnLSkOJl4j4KWR29hSMSNNROvyAN4RAYIh-GnenTWDB4XnW_fPdc8hfyO1WWPLj9qCiGrv2YinT1ufP5wqdrerEIPh19LL5r67BqA0quLSAKMRd')">
+         </div>
+         <div class="absolute top-4 left-4 bg-primary text-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider px-2.5 py-1 rounded">
+          5 Sao
+         </div>
+         <div class="absolute bottom-3 right-3 bg-surface/90 backdrop-blur-sm text-primary font-title-sm text-title-sm px-3 py-1 rounded shadow-sm">
+          140 m&sup2;
+         </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+         <div>
+          <div class="flex items-center justify-between mb-2">
+           <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
+            6 Kh&aacute;ch &bull; 3 Ph&ograve;ng Ngủ
+           </span>
+           <div class="flex text-secondary text-xs">
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+           </div>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-2">
+           Grand Royal Villa 3 Ph&ograve;ng Ngủ
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+           Dinh thự lộng lẫy biệt lập d&agrave;nh cho &dstrok;ại gia &dstrok;&igrave;nh thượng lưu với ph&ograve;ng kh&aacute;ch lớn v&agrave; gian bếp chuẩn sao.
+          </p>
+         </div>
+         <div>
+          <div class="flex items-baseline justify-between mb-4 pt-3 bg-surface-container-low px-3 py-2 rounded">
+           <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">
+            Gi&aacute; ưu &dstrok;&atilde;i
+           </span>
+           <span class="font-title-lg text-title-lg font-bold text-secondary">
+            7.500.000 VN&Dstrok;
+            <span class="text-xs font-normal text-on-surface-variant">
+             / &dstrok;&ecirc;m
+            </span>
+           </span>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+           <button class="w-full bg-surface-container text-primary hover:bg-surface-container-high py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openDetailModal('grand-royal-villa')">
+            Chi Tiết
+           </button>
+           <button class="w-full bg-primary text-on-primary hover:bg-primary-container py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openReserveModal('Grand Royal Villa 3 Ph&ograve;ng Ngủ', '7.500.000 VN&Dstrok;')">
+            &Dstrok;ặt Ph&ograve;ng
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- Room 15 -->
+       <div class="room-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-capacity="6" data-rating="5" data-type="cao-cap">
+        <div class="relative h-60 overflow-hidden">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="The Presidential Sanctuary ultra-luxurious master bedroom, grand carved teak headboard, handwoven gold silk rugs, private library lounge, Saigon riverfront view" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1T1YJddkISgc-4nDKJSHQb-iewgirdScmOurbZ-4TBAcJ1rS43MHO8snzST8Ysym5o4LvJCO0GbA5Cxq4qXbe-zmNf_Pmgk-Yb2KcyPs5V4ofg2kKke6JKI2jaJzFx9PCQ8zYOVN_c9AnQh40muF6cVXjsx_g9H4bXTrRoULO-F_u_nQI2CDfOG5ZV_Owqqq47Ek4iFw40WKlntoRAC3Z0uoH3Wlyp0mM2nNX_biBvb3ehkpXJF0U')">
+         </div>
+         <div class="absolute top-4 left-4 bg-primary text-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider px-2.5 py-1 rounded">
+          5 Sao VIP
+         </div>
+         <div class="absolute bottom-3 right-3 bg-surface/90 backdrop-blur-sm text-primary font-title-sm text-title-sm px-3 py-1 rounded shadow-sm">
+          180 m&sup2;
+         </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+         <div>
+          <div class="flex items-center justify-between mb-2">
+           <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
+            6 Kh&aacute;ch &bull; Tổng Thống
+           </span>
+           <div class="flex text-secondary text-xs">
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+           </div>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-2">
+           The Phoenix Presidential Sanctuary
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+           Kiệt t&aacute;c &dstrok;ỉnh phong giới hạn t&ocirc;n vinh c&aacute;c nguy&ecirc;n thủ v&agrave; vương t&ocirc;n, với ph&ograve;ng yến tiệc v&agrave; thang m&aacute;y chuy&ecirc;n biệt.
+          </p>
+         </div>
+         <div>
+          <div class="flex items-baseline justify-between mb-4 pt-3 bg-surface-container-low px-3 py-2 rounded">
+           <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">
+            Gi&aacute; ưu &dstrok;&atilde;i
+           </span>
+           <span class="font-title-lg text-title-lg font-bold text-secondary">
+            12.000.000 VN&Dstrok;
+            <span class="text-xs font-normal text-on-surface-variant">
+             / &dstrok;&ecirc;m
+            </span>
+           </span>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+           <button class="w-full bg-surface-container text-primary hover:bg-surface-container-high py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openDetailModal('presidential-sanctuary')">
+            Chi Tiết
+           </button>
+           <button class="w-full bg-primary text-on-primary hover:bg-primary-container py-2 rounded text-center font-title-sm text-title-sm transition-all uppercase cursor-pointer" onclick="openReserveModal('The Phoenix Presidential Sanctuary', '12.000.000 VN&Dstrok;')">
+            &Dstrok;ặt Ph&ograve;ng
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <!-- No match message -->
+      <div class="hidden text-center py-16 bg-surface-container-lowest rounded-xl shadow-sm mt-8" id="noMatchMessage">
+       <span class="material-symbols-outlined text-6xl text-secondary mb-3">
+        search_off
+       </span>
+       <h3 class="font-headline-sm text-headline-sm text-primary mb-2">
+        Kh&ocirc;ng t&igrave;m thấy hạng ph&ograve;ng ph&ugrave; hợp
+       </h3>
+       <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+        Qu&yacute; kh&aacute;ch vui l&ograve;ng &dstrok;iều chỉnh c&aacute;c ti&ecirc;u ch&iacute; bộ lọc hoặc li&ecirc;n hệ trực tiếp với Concierge của ch&uacute;ng t&ocirc;i.
+       </p>
+       <button class="bg-primary text-on-primary hover:bg-primary-container px-6 py-2.5 rounded font-title-sm text-title-sm uppercase tracking-wider cursor-pointer" onclick="resetFilters()">
+        &Dstrok;ặt Lại Bộ Lọc
+       </button>
+      </div>
+     </div>
+    </section>
+    <!-- 5. MODAL 1: CHI TIẾT PHÒNG NGHỈ (ROOM DETAIL MODAL) -->
+    <div class="fixed inset-0 z-50 hidden items-center justify-center p-4" id="roomDetailModal">
+     <!-- Backdrop -->
+     <div class="absolute inset-0 bg-[#0a1814]/80 backdrop-blur-md transition-opacity" onclick="closeDetailModal()">
+     </div>
+     <!-- Modal Card -->
+     <div class="relative bg-surface rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl z-10 border border-[#C5A059]/30 flex flex-col md:flex-row">
+      <!-- Close Button -->
+      <button class="absolute top-4 right-4 z-20 w-9 h-9 bg-surface-container/80 hover:bg-surface-container text-primary rounded-full flex items-center justify-center transition-all cursor-pointer" onclick="closeDetailModal()">
+       <span class="material-symbols-outlined text-lg">
+        close
+       </span>
+      </button>
+      <!-- Col Left: Image & Specs -->
+      <div class="md:w-1/2 relative min-h-[300px] md:min-h-full">
+       <div class="absolute inset-0 bg-cover bg-center" data-alt="Detailed view of Indochine hotel master bedroom suite with embroidered silk runner, natural sunlight through colonial shutters" id="detailModalImage" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQml7MvID5KZuWH0Ka02h9zUVPpp9fuNdbGWHSnoSwzYcAzOO3-fmG6eOrxOOx2wt6hVFVqgwV-ZPHg2WfXEIW3FmA9KOuvygTxHJ3siCw3Gw_zSH9aHVpw8Ja04J81VY-J84IpvvZiKRJf4y3vltJ_hB-nu4h6qyZVvezNFVYZfZ4SJMb1L92ttTMw5gDVeoU0M4dp0AkcVudKc223bYU3kku8b5IQKwPmyu8jr--gx5vOZiKTEW4')">
+       </div>
+       <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent">
+       </div>
+       <div class="absolute bottom-6 left-6 right-6 text-on-primary">
+        <div class="flex items-center gap-2 mb-2">
+         <span class="bg-secondary text-on-secondary px-2.5 py-0.5 rounded text-xs font-semibold tracking-wider uppercase">
+          Ti&ecirc;u Chuẩn 5 Sao
+         </span>
+         <span class="bg-surface-container-low/30 backdrop-blur-md px-2.5 py-0.5 rounded text-xs" id="detailModalArea">
+          38 m&sup2;
+         </span>
+        </div>
+        <p class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">
+         The Phoenix Hotel Saigon Heritage Suite
+        </p>
+       </div>
+      </div>
+      <!-- Col Right: Information & Privileges -->
+      <div class="md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
+       <div>
+        <span class="font-label-lg text-label-lg uppercase tracking-widest text-secondary font-semibold">
+         Chi Tiết Hạng Ph&ograve;ng
+        </span>
+        <h3 class="font-headline-md text-headline-md text-primary mt-1 mb-2" id="detailModalTitle">
+         Ph&ograve;ng Deluxe Ti&ecirc;u Chuẩn
+        </h3>
+        <div class="flex items-baseline gap-2 mb-4 pb-3 border-b-0">
+         <span class="font-headline-sm text-headline-sm font-bold text-secondary" id="detailModalPrice">
+          2.500.000 VN&Dstrok;
+         </span>
+         <span class="font-body-md text-body-md text-on-surface-variant">
+          / &dstrok;&ecirc;m (Chưa bao gồm thuế ph&iacute;)
+         </span>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6" id="detailModalDesc">
+         &Dstrok;ược kiến tạo với cảm hứng từ những biệt thự Ph&aacute;p cổ k&iacute;nh tại S&agrave;i G&ograve;n &dstrok;ầu thế kỷ 20, mỗi g&oacute;c nh&igrave;n trong ph&ograve;ng &dstrok;ều phản chiếu n&eacute;t duy&ecirc;n &dstrok;&agrave;i c&aacute;c với s&agrave;n gạch hoa thủ c&ocirc;ng, giường gụ nạm &dstrok;ồng v&agrave; c&aacute;c tiện nghi ph&ograve;ng tắm hiện &dstrok;ại &dstrok;ẳng cấp quốc tế.
+        </p>
+        <!-- 4 Specific Privileges -->
+        <div class="mb-6">
+         <h4 class="font-title-sm text-title-sm uppercase tracking-wider text-primary mb-3">
+          &Dstrok;ặc Quyền Nghỉ Dưỡng &Dstrok;i K&egrave;m:
+         </h4>
+         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="flex items-center gap-2.5 text-body-md text-on-surface">
+           <span class="material-symbols-outlined text-secondary text-lg shrink-0">
+            wifi
+           </span>
+           <span class="text-xs">
+            Wifi 6 Tốc &Dstrok;ộ Cao Miễn Ph&iacute;
+           </span>
+          </div>
+          <div class="flex items-center gap-2.5 text-body-md text-on-surface">
+           <span class="material-symbols-outlined text-secondary text-lg shrink-0">
+            restaurant
+           </span>
+           <span class="text-xs">
+            Bữa S&aacute;ng Buffet Quốc Tế
+           </span>
+          </div>
+          <div class="flex items-center gap-2.5 text-body-md text-on-surface">
+           <span class="material-symbols-outlined text-secondary text-lg shrink-0">
+            pool
+           </span>
+           <span class="text-xs">
+            Hồ Bơi V&ocirc; Cực &amp; Gym 24/7
+           </span>
+          </div>
+          <div class="flex items-center gap-2.5 text-body-md text-on-surface">
+           <span class="material-symbols-outlined text-secondary text-lg shrink-0">
+            coffee
+           </span>
+           <span class="text-xs">
+            M&aacute;y Espresso &amp; Tr&agrave; Thượng Hạng
+           </span>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- Action Button -->
+       <button class="w-full bg-secondary text-on-secondary hover:bg-secondary-container hover:text-on-secondary-container py-3.5 rounded font-title-sm text-title-sm uppercase tracking-wider shadow-md transition-all text-center cursor-pointer" id="detailModalBookBtn" onclick="bookFromDetailModal()">
+        &Dstrok;ặt Ph&ograve;ng N&agrave;y Ngay
+       </button>
+      </div>
+     </div>
+    </div>
+    <!-- 6. QUIET LUXURY ROOM RESERVATION MODAL & CONFIRMATION VIEW -->
+    <div class="fixed inset-0 z-50 hidden items-center justify-center p-4 overflow-y-auto" id="reservationModal">
+     <!-- Dark Emerald Backdrop with blur -->
+     <div class="fixed inset-0 bg-[#0a1814]/75 backdrop-blur-md transition-opacity" onclick="closeReserveModal()">
+     </div>
+     <!-- Modal Card (Width 540px, rounded-2xl, bg #FAF6F0, border 1.5px solid #C5A059) -->
+     <div class="relative bg-[#FAF6F0] rounded-2xl max-w-[540px] w-full max-h-[92vh] overflow-y-auto shadow-[0_20px_50px_rgba(0,34,26,0.35)] z-10 p-6 sm:p-8 flex flex-col border-[1.5px] border-[#C5A059] my-auto">
+      <!-- Close Button -->
+      <button aria-label="&Dstrok;&oacute;ng" class="absolute top-5 right-5 z-20 w-8 h-8 rounded-full bg-[#16382E]/10 hover:bg-[#16382E] text-[#16382E] hover:text-[#FAF6F0] flex items-center justify-center transition-all cursor-pointer font-bold text-sm" onclick="closeReserveModal()" type="button">
+       ✕
+      </button>
+      <!-- VIEW 1: RESERVATION FORM -->
+      <div class="w-full" id="bookingFormView">
+       <!-- Header with Emblem & Title -->
+       <div class="flex flex-col items-center text-center mb-5">
+        <div class="w-10 h-10 rounded-full bg-[#16382E] text-[#C5A059] flex items-center justify-center mb-2 shadow-inner">
+         <span class="material-symbols-outlined text-2xl">
+          hotel
+         </span>
+        </div>
+        <span class="font-label-sm text-[11px] uppercase tracking-[0.2em] text-[#C5A059] font-bold">
+         The Phoenix Hotel Saigon
+        </span>
+        <h3 class="font-headline-sm text-[26px] text-[#16382E] font-medium tracking-tight mt-0.5">
+         &Dstrok;ặt Ph&ograve;ng Nghỉ &amp; Suite
+        </h3>
+       </div>
+       <!-- Dynamic Room Badge -->
+       <div class="mb-5 p-3 rounded-xl bg-[#16382E]/5 border border-[#C5A059]/40 flex items-center justify-between gap-3">
+        <div class="flex items-center gap-2.5 min-w-0">
+         <span class="material-symbols-outlined text-[#C5A059] shrink-0 text-xl">
+          bed
+         </span>
+         <span class="font-title-sm text-[14px] text-[#16382E] font-semibold truncate" id="reserveModalRoomName">
+          Ph&ograve;ng Deluxe Ti&ecirc;u Chuẩn
+         </span>
+        </div>
+        <span class="font-title-sm text-[13px] text-[#A68037] font-bold whitespace-nowrap bg-[#FAF6F0] px-2.5 py-1 rounded-md border border-[#C5A059]/30" id="reserveModalRoomPrice">
+         2.500.000 VN&Dstrok; / &dstrok;&ecirc;m
+        </span>
+       </div>
+       <!-- Booking Form -->
+       <form class="space-y-4" id="reservationForm" onsubmit="submitReservation(event)">
+        <!-- 2-Column: Dates -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+         <div>
+          <label class="block font-label-sm text-[11px] uppercase tracking-wider text-[#414845] font-semibold mb-1">
+           Ng&agrave;y nhận ph&ograve;ng (Check-in)
+          </label>
+          <div class="relative">
+           <input class="w-full bg-white text-[#16382E] px-3 py-2 rounded-lg text-sm border border-[#c1c8c4] focus:outline-none focus:border-[#C5A059] focus:ring-1 focus:ring-[#C5A059] transition-all font-body-md" id="checkInDate" onchange="calculateReservationTotal()" required="" type="date"/>
+          </div>
+         </div>
+         <div>
+          <label class="block font-label-sm text-[11px] uppercase tracking-wider text-[#414845] font-semibold mb-1">
+           Ng&agrave;y trả ph&ograve;ng (Check-out)
+          </label>
+          <div class="relative">
+           <input class="w-full bg-white text-[#16382E] px-3 py-2 rounded-lg text-sm border border-[#c1c8c4] focus:outline-none focus:border-[#C5A059] focus:ring-1 focus:ring-[#C5A059] transition-all font-body-md" id="checkOutDate" onchange="calculateReservationTotal()" required="" type="date"/>
+          </div>
+         </div>
+        </div>
+        <!-- 2-Column: Arrival Time & Room Count -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+         <div>
+          <label class="block font-label-sm text-[11px] uppercase tracking-wider text-[#414845] font-semibold mb-1">
+           Giờ nhận ph&ograve;ng dự kiến
+          </label>
+          <select class="w-full bg-white text-[#16382E] px-3 py-2 rounded-lg text-sm border border-[#c1c8c4] focus:outline-none focus:border-[#C5A059] focus:ring-1 focus:ring-[#C5A059] transition-all font-body-md cursor-pointer" id="checkInTime">
+           <option value="14:00 (Ti&ecirc;u Chuẩn)">
+            14:00 (Ti&ecirc;u Chuẩn)
+           </option>
+           <option value="15:00 - 18:00">
+            15:00 - 18:00
+           </option>
+           <option value="Sau 18:00 (Nhận ph&ograve;ng muộn)">
+            Sau 18:00 (Nhận ph&ograve;ng muộn)
+           </option>
+           <option value="11:00 (Check-in sớm - T&ugrave;y ph&ograve;ng)">
+            11:00 (Check-in sớm)
+           </option>
+          </select>
+         </div>
+         <div>
+          <label class="block font-label-sm text-[11px] uppercase tracking-wider text-[#414845] font-semibold mb-1">
+           Số lượng ph&ograve;ng
+          </label>
+          <select class="w-full bg-white text-[#16382E] px-3 py-2 rounded-lg text-sm border border-[#c1c8c4] focus:outline-none focus:border-[#C5A059] focus:ring-1 focus:ring-[#C5A059] transition-all font-body-md cursor-pointer" id="roomQuantity" onchange="calculateReservationTotal()">
+           <option value="1">
+            1 Ph&ograve;ng
+           </option>
+           <option value="2">
+            2 Ph&ograve;ng
+           </option>
+           <option value="3">
+            3 Ph&ograve;ng
+           </option>
+           <option value="4">
+            4 Ph&ograve;ng
+           </option>
+          </select>
+         </div>
+        </div>
+        <!-- 2-Column Steppers: Adults & Children -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+         <div>
+          <label class="block font-label-sm text-[11px] uppercase tracking-wider text-[#414845] font-semibold mb-1">
+           Người lớn
+          </label>
+          <div class="flex items-center justify-between bg-white px-3 py-1.5 rounded-lg border border-[#c1c8c4]">
+           <span class="text-xs text-[#16382E] font-medium">
+            <strong class="text-sm font-semibold" id="adultCountText">
+             2
+            </strong>
+            kh&aacute;ch
+           </span>
+           <div class="flex items-center gap-1.5">
+            <button class="w-7 h-7 bg-[#FAF6F0] border border-[#c1c8c4] hover:bg-[#C5A059] hover:text-white rounded flex items-center justify-center text-[#16382E] font-bold text-sm transition-colors cursor-pointer" onclick="adjustGuest('adult', -1)" type="button">
+             -
+            </button>
+            <button class="w-7 h-7 bg-[#FAF6F0] border border-[#c1c8c4] hover:bg-[#C5A059] hover:text-white rounded flex items-center justify-center text-[#16382E] font-bold text-sm transition-colors cursor-pointer" onclick="adjustGuest('adult', 1)" type="button">
+             +
+            </button>
+           </div>
+          </div>
+         </div>
+         <div>
+          <label class="block font-label-sm text-[11px] uppercase tracking-wider text-[#414845] font-semibold mb-1">
+           Trẻ em (dưới 12 tuổi)
+          </label>
+          <div class="flex items-center justify-between bg-white px-3 py-1.5 rounded-lg border border-[#c1c8c4]">
+           <span class="text-xs text-[#16382E] font-medium">
+            <strong class="text-sm font-semibold" id="childCountText">
+             0
+            </strong>
+            trẻ em
+           </span>
+           <div class="flex items-center gap-1.5">
+            <button class="w-7 h-7 bg-[#FAF6F0] border border-[#c1c8c4] hover:bg-[#C5A059] hover:text-white rounded flex items-center justify-center text-[#16382E] font-bold text-sm transition-colors cursor-pointer" onclick="adjustGuest('child', -1)" type="button">
+             -
+            </button>
+            <button class="w-7 h-7 bg-[#FAF6F0] border border-[#c1c8c4] hover:bg-[#C5A059] hover:text-white rounded flex items-center justify-center text-[#16382E] font-bold text-sm transition-colors cursor-pointer" onclick="adjustGuest('child', 1)" type="button">
+             +
+            </button>
+           </div>
+          </div>
+         </div>
+        </div>
+        <!-- 2-Column: Customer Name & Phone -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+         <div>
+          <label class="block font-label-sm text-[11px] uppercase tracking-wider text-[#414845] font-semibold mb-1">
+           Họ v&agrave; t&ecirc;n qu&yacute; kh&aacute;ch *
+          </label>
+          <input class="w-full bg-white text-[#16382E] px-3 py-2 rounded-lg text-sm border border-[#c1c8c4] focus:outline-none focus:border-[#C5A059] focus:ring-1 focus:ring-[#C5A059] transition-all font-body-md placeholder:text-gray-400" id="guestFullName" placeholder="Nguyễn V&abreve;n A" required="" type="text"/>
+         </div>
+         <div>
+          <label class="block font-label-sm text-[11px] uppercase tracking-wider text-[#414845] font-semibold mb-1">
+           Số &dstrok;iện thoại *
+          </label>
+          <input class="w-full bg-white text-[#16382E] px-3 py-2 rounded-lg text-sm border border-[#c1c8c4] focus:outline-none focus:border-[#C5A059] focus:ring-1 focus:ring-[#C5A059] transition-all font-body-md placeholder:text-gray-400" id="guestPhone" placeholder="0901 234 567" required="" type="tel"/>
+         </div>
+        </div>
+        <!-- Special Request -->
+        <div>
+         <label class="block font-label-sm text-[11px] uppercase tracking-wider text-[#414845] font-semibold mb-1">
+          Y&ecirc;u cầu &dstrok;ặc biệt (Ph&ograve;ng tầng cao, giường King, check-in sớm...)
+         </label>
+         <input class="w-full bg-white text-[#16382E] px-3 py-2 rounded-lg text-sm border border-[#c1c8c4] focus:outline-none focus:border-[#C5A059] focus:ring-1 focus:ring-[#C5A059] transition-all font-body-md placeholder:text-gray-400" id="specialRequest" placeholder="V&iacute; dụ: Giường King size, tầng cao nh&igrave;n th&agrave;nh phố, hoa tươi kỷ niệm..." type="text"/>
+        </div>
+        <!-- Price Summary Box (bg #16382E text #FAF6F0 with gold border) -->
+        <div class="bg-[#16382E] text-[#FAF6F0] p-4 rounded-xl border border-[#C5A059] shadow-md">
+         <div class="flex items-center justify-between text-xs text-[#FAF6F0]/80 mb-1.5 pb-1.5 border-b border-[#FAF6F0]/15">
+          <span id="summaryRateDisplay">
+           2.500.000 VN&Dstrok; &times; 1 &dstrok;&ecirc;m &times; 1 ph&ograve;ng
+          </span>
+          <span class="text-[#C5A059] font-medium" id="summaryDurationBadge">
+           Thời lượng: 1 &dstrok;&ecirc;m
+          </span>
+         </div>
+         <div class="flex items-baseline justify-between pt-0.5">
+          <span class="font-title-sm text-xs tracking-wider uppercase text-[#C5A059]">
+           Tạm T&iacute;nh To&agrave;n Bộ:
+          </span>
+          <span class="font-headline-sm text-[22px] font-bold text-[#FAF6F0]" id="summaryTotalPrice">
+           2.500.000 VN&Dstrok;
+          </span>
+         </div>
+        </div>
+        <!-- Actions -->
+        <div class="flex items-center gap-3 pt-2">
+         <button class="w-1/3 bg-transparent hover:bg-[#16382E]/5 text-[#16382E] border border-[#c1c8c4] py-3 rounded-xl font-title-sm text-xs uppercase tracking-wider transition-all cursor-pointer text-center" onclick="closeReserveModal()" type="button">
+          &Dstrok;&oacute;ng
+         </button>
+         <button class="w-2/3 bg-[#C5A059] hover:bg-[#A68037] text-white py-3 rounded-xl font-title-sm text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-all cursor-pointer flex items-center justify-center gap-2" type="submit">
+          <span class="material-symbols-outlined text-sm">
+           lock
+          </span>
+          <span>
+           X&aacute;c Nhận &Dstrok;ặt Ph&ograve;ng
+          </span>
+         </button>
+        </div>
+       </form>
+      </div>
+      <!-- VIEW 2: CONFIRMATION SUCCESS VIEW -->
+      <div class="hidden w-full text-center py-2" id="bookingSuccessView">
+       <!-- Gold Checkmark Emblem -->
+       <div class="w-16 h-16 bg-[#16382E] text-[#C5A059] rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg border border-[#C5A059]">
+        <span class="material-symbols-outlined text-4xl">
+         check_circle
+        </span>
+       </div>
+       <span class="font-label-sm text-[11px] uppercase tracking-[0.2em] text-[#C5A059] font-bold">
+        The Phoenix Hotel Concierge
+       </span>
+       <h3 class="font-headline-sm text-[26px] text-[#16382E] font-medium tracking-tight mt-0.5 mb-1.5">
+        &Dstrok;ặt Ph&ograve;ng Th&agrave;nh C&ocirc;ng!
+       </h3>
+       <p class="font-body-md text-xs text-[#414845] max-w-sm mx-auto mb-4 leading-relaxed">
+        Bộ phận Lễ t&acirc;n &amp; Quản gia &dstrok;&atilde; ghi nhận. Thư x&aacute;c nhận &dstrok;iện tử &dstrok;&atilde; gửi tới qu&yacute; kh&aacute;ch.
+       </p>
+       <!-- Booking Reference Card -->
+       <div class="bg-white rounded-xl p-4 border border-[#C5A059]/40 mb-4 text-left shadow-sm">
+        <div class="flex items-center justify-between pb-3 border-b border-[#FAF6F0] mb-3">
+         <div>
+          <span class="block text-[10px] uppercase tracking-wider text-gray-500 font-semibold">
+           M&atilde; &Dstrok;ặt Chỗ (Booking Ref)
+          </span>
+          <span class="font-headline-sm text-xl text-[#C5A059] font-bold tracking-wider" id="confirmedRefCode">
+           PHX-RM59204
+          </span>
+         </div>
+         <span class="bg-[#16382E] text-[#FAF6F0] text-[10px] uppercase tracking-widest px-2.5 py-1 rounded font-semibold">
+          &Dstrok;&atilde; X&aacute;c Nhận
+         </span>
+        </div>
+        <div class="space-y-2 text-xs">
+         <div class="flex justify-between">
+          <span class="text-gray-500">
+           Hạng ph&ograve;ng:
+          </span>
+          <span class="font-semibold text-[#16382E]" id="confirmedRoomName">
+           Ph&ograve;ng Deluxe Ti&ecirc;u Chuẩn
+          </span>
+         </div>
+         <div class="flex justify-between">
+          <span class="text-gray-500">
+           Thời gian lưu tr&uacute;:
+          </span>
+          <span class="font-semibold text-[#16382E]" id="confirmedStayDates">
+           --
+          </span>
+         </div>
+         <div class="flex justify-between">
+          <span class="text-gray-500">
+           Số lượng kh&aacute;ch &amp; ph&ograve;ng:
+          </span>
+          <span class="font-semibold text-[#16382E]" id="confirmedGuests">
+           2 người lớn &bull; 1 ph&ograve;ng
+          </span>
+         </div>
+         <div class="flex justify-between">
+          <span class="text-gray-500">
+           Qu&yacute; kh&aacute;ch:
+          </span>
+          <span class="font-semibold text-[#16382E]" id="confirmedGuestContact">
+           --
+          </span>
+         </div>
+         <div class="flex justify-between pt-2 border-t border-gray-100 font-bold text-sm">
+          <span class="text-[#16382E]">
+           Tổng chi ph&iacute; dự kiến:
+          </span>
+          <span class="text-[#A68037]" id="confirmedTotalPrice">
+           2.500.000 VN&Dstrok;
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="p-3 bg-[#16382E]/5 rounded-lg border border-[#C5A059]/20 text-[11px] text-[#414845] mb-5">
+        Qu&yacute; kh&aacute;ch vui l&ograve;ng xuất tr&igrave;nh m&atilde; &dstrok;ặt chỗ khi l&agrave;m thủ tục nhận ph&ograve;ng tại sảnh ch&iacute;nh Indochine. Hỗ trợ 24/7:
+        <strong>
+         +84 (0) 28 3823 8888
+        </strong>
+        .
+       </div>
+       <button class="w-full bg-[#16382E] hover:bg-[#00221a] text-[#FAF6F0] py-3 rounded-xl font-title-sm text-xs uppercase tracking-wider shadow-md transition-all cursor-pointer" onclick="closeReserveModal()" type="button">
+        Ho&agrave;n Tất
+       </button>
+      </div>
+     </div>
+    </div>
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+
+  // Reservation modal: dùng chung cho nút "Lịch Đặt" và các nút "Đặt Phòng".
+  let currentRoomPrice = 2500000;
+  let adultCount = 2;
+  let childCount = 0;
+
+  function parseRoomPrice(price) {
+    const digits = String(price || '').replace(/[^\d]/g, '');
+    return Number(digits) || 2500000;
+  }
+
+  function formatVND(value) {
+    return new Intl.NumberFormat('vi-VN').format(value) + ' VNĐ';
+  }
+
+  function openReserveModal(roomName, roomPrice) {
+    const modal = document.getElementById('reservationModal');
+    if (!modal) return;
+
+    document.getElementById('reserveModalRoomName').textContent =
+      roomName || 'Phòng Deluxe Tiêu Chuẩn';
+
+    currentRoomPrice = parseRoomPrice(roomPrice);
+    document.getElementById('reserveModalRoomPrice').textContent =
+      formatVND(currentRoomPrice) + ' / đêm';
+
+    // Mỗi lần mở form, quay về màn hình nhập thông tin.
+    document.getElementById('bookingFormView').classList.remove('hidden');
+    document.getElementById('bookingSuccessView').classList.add('hidden');
+
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
+    const toDateValue = d => {
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      return `${y}-${m}-${day}`;
+    };
+
+    const checkIn = document.getElementById('checkInDate');
+    const checkOut = document.getElementById('checkOutDate');
+    checkIn.min = toDateValue(today);
+    checkOut.min = toDateValue(tomorrow);
+    if (!checkIn.value || checkIn.value < checkIn.min) checkIn.value = toDateValue(today);
+    if (!checkOut.value || checkOut.value <= checkIn.value) checkOut.value = toDateValue(tomorrow);
+
+    adultCount = 2;
+    childCount = 0;
+    document.getElementById('adultCountText').textContent = adultCount;
+    document.getElementById('childCountText').textContent = childCount;
+    document.getElementById('roomQuantity').value = '1';
+
+    calculateReservationTotal();
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeReserveModal() {
+    const modal = document.getElementById('reservationModal');
+    if (!modal) return;
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  function adjustGuest(type, amount) {
+    if (type === 'adult') {
+      adultCount = Math.max(1, Math.min(20, adultCount + amount));
+      document.getElementById('adultCountText').textContent = adultCount;
+    } else if (type === 'child') {
+      childCount = Math.max(0, Math.min(20, childCount + amount));
+      document.getElementById('childCountText').textContent = childCount;
+    }
+    calculateReservationTotal();
+  }
+
+  function calculateReservationTotal() {
+    const checkIn = document.getElementById('checkInDate');
+    const checkOut = document.getElementById('checkOutDate');
+    const quantity = Number(document.getElementById('roomQuantity').value || 1);
+    if (!checkIn || !checkOut) return;
+
+    const start = new Date(checkIn.value + 'T00:00:00');
+    const end = new Date(checkOut.value + 'T00:00:00');
+    let nights = Math.round((end - start) / 86400000);
+    if (!Number.isFinite(nights) || nights < 1) nights = 1;
+
+    const total = currentRoomPrice * nights * quantity;
+    document.getElementById('summaryRateDisplay').textContent =
+      `${formatVND(currentRoomPrice)} × ${nights} đêm × ${quantity} phòng`;
+    document.getElementById('summaryDurationBadge').textContent =
+      `Thời lượng: ${nights} đêm`;
+    document.getElementById('summaryTotalPrice').textContent = formatVND(total);
+  }
+
+  function submitReservation(event) {
+    event.preventDefault();
+
+    const form = document.getElementById('reservationForm');
+    if (!form.reportValidity()) return;
+
+    const checkInValue = document.getElementById('checkInDate').value;
+    const checkOutValue = document.getElementById('checkOutDate').value;
+    if (checkOutValue <= checkInValue) {
+      alert('Ngày trả phòng phải sau ngày nhận phòng.');
+      return;
+    }
+
+    const nights = Math.round(
+      (new Date(checkOutValue + 'T00:00:00') - new Date(checkInValue + 'T00:00:00')) / 86400000
+    );
+    const quantity = Number(document.getElementById('roomQuantity').value || 1);
+    const total = currentRoomPrice * nights * quantity;
+    const dateFormat = value => new Date(value + 'T00:00:00').toLocaleDateString('vi-VN');
+
+    document.getElementById('confirmedRoomName').textContent =
+      document.getElementById('reserveModalRoomName').textContent;
+    document.getElementById('confirmedStayDates').textContent =
+      `${dateFormat(checkInValue)} – ${dateFormat(checkOutValue)} (${nights} đêm)`;
+    document.getElementById('confirmedGuests').textContent =
+      `${adultCount} người lớn, ${childCount} trẻ em • ${quantity} phòng`;
+    document.getElementById('confirmedGuestContact').textContent =
+      `${document.getElementById('guestFullName').value} • ${document.getElementById('guestPhone').value}`;
+    document.getElementById('confirmedTotalPrice').textContent = formatVND(total);
+    document.getElementById('confirmedRefCode').textContent =
+      'PHX-' + Math.random().toString(36).slice(2, 8).toUpperCase();
+
+    document.getElementById('bookingFormView').classList.add('hidden');
+    document.getElementById('bookingSuccessView').classList.remove('hidden');
+  }
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') closeReserveModal();
+  });
+
+
+  // Room metadata database for detail modal
+  const roomData = {
+    'deluxe-tieu-chuan': {
+      title: 'Phòng Deluxe Tiêu Chuẩn',
+      price: '2.500.000 VNĐ',
+      area: '38 m²',
+      desc: 'Phòng Deluxe Tiêu Chuẩn mang hơi thở Indochine tinh giản với nội thất gỗ mun chạm khắc nhẹ nhàng, ban công hướng phố thoáng đạt và phòng tắm cẩm thạch trắng sang trọng, mang lại giấc ngủ thanh lành giữa lòng thành phố sôi động.'
+    },
+    'superior-giuong-doi': {
+      title: 'Phòng Superior Giường Đôi',
+      price: '2.200.000 VNĐ',
+      area: '35 m²',
+      desc: 'Thiết kế trang nhã với giường King cao cấp phủ nệm lông vũ êm ái, ánh đèn vàng ấm áp và tranh sơn dầu tôn lên vẻ đẹp thanh lịch của căn phòng.'
+    }
+  };
+</script>
+   </div>
+  </main>
+ </body>
+</html>

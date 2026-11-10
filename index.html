@@ -1,0 +1,2869 @@
+<!DOCTYPE html>
+<html lang="vi">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Montserrat:ital,wght@0,300..900;1,300..900&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <style>
+  @layer base{
+    html,body{
+      margin:0;padding:0;
+    }
+    body{
+      overscroll-behavior:none;
+    }
+    main>:first-child{
+      margin-top:0!important;
+    }
+    main>:last-child{
+    margin-bottom:0!important;
+    }
+  }
+  ::-webkit-scrollbar{
+    display:none;
+    }
+</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+tailwind.config={
+  darkMode:"class",theme:{
+    extend:{
+      colors:{
+        "primary-container":"#16382e",
+        "on-tertiary":"#ffffff",
+        "surface-bright":"#fdf9f3",
+        "on-tertiary-fixed-variant":"#234e41",
+        "on-primary":"#ffffff",
+        "inverse-primary":"#aacec0",
+        "on-tertiary-fixed":"#002118",
+        "surface-container-highest":"#e6e2dc",
+        "outline":"#717975","surface-container":"#f1ede7",
+        "secondary":"#775a19",
+        "tertiary-fixed":"#beedda",
+        "primary":"#00221a",
+        "tertiary":"#002219",
+        "primary-fixed":"#c5ebdc",
+        "on-primary-fixed-variant":"#2c4d42",
+        "inverse-on-surface":"#f4f0ea",
+        "on-secondary-fixed-variant":"#5d4201",
+        "on-tertiary-container":"#77a393",
+        "on-background":"#1c1c18",
+        "on-surface":"#1c1c18",
+        "on-secondary-container":"#785a1a",
+        "tertiary-container":"#09392d",
+        "primary-fixed-dim":"#aacec0",
+        "surface-container-lowest":"#ffffff",
+        "surface-container-low":"#f7f3ed",
+        "secondary-fixed-dim":"#e9c176",
+        "surface-variant":"#e6e2dc",
+        "on-primary-container":"#7ea294",
+        "error-container":"#ffdad6",
+        "surface-dim":"#dddad4",
+        "on-error-container":"#93000a",
+        "inverse-surface":"#31302d",
+        "tertiary-fixed-dim":"#a2d0bf",
+        "on-primary-fixed":"#002018",
+        "secondary-container":"#fed488",
+        "on-surface-variant":"#414845",
+        "secondary-fixed":"#ffdea5",
+        "outline-variant":"#c1c8c4",
+        "surface-tint":"#436559",
+        "on-error":"#ffffff",
+        "surface":"#fdf9f3",
+        "on-secondary-fixed":"#261900",
+        "surface-container-high":"#ebe8e2",
+        "background":"#fdf9f3",
+        "on-secondary":"#ffffff",
+        "error":"#ba1a1a"},
+      borderRadius:{
+        "DEFAULT":"0.25rem",
+        "lg":"0.5rem",
+        "xl":"0.75rem",
+        "full":"9999px"},
+      spacing:{
+        "margin-mobile":"1.25rem",
+        "space-sm":"0.75rem",
+        "space-xl":"3.5rem",
+        "gutter-mobile":"1rem",
+        "gutter":"1.5rem",
+        "margin-tablet":"2rem",
+        "margin":"3rem",
+        "space-md":"1.25rem",
+        "space-xs":"0.375rem",
+        "space-lg":"2rem"},
+      fontFamily:{
+        "headline-lg":["EB Garamond"],
+        "body-md":["Montserrat"],
+        "display-lg":["EB Garamond"],
+        "label-sm":["Montserrat"],
+        "title-lg":["Montserrat"],
+        "body-lg":["Montserrat"],
+        "label-lg":["Montserrat"],
+        "headline-sm":["EB Garamond"],
+        "display-lg-mobile":["EB Garamond"],
+        "headline-lg-mobile":["EB Garamond"],
+        "title-sm":["Montserrat"],
+        "headline-md":["EB Garamond"]},
+      fontSize:{
+          "headline-lg":["44px",{"lineHeight":"52px","letterSpacing":"-0.01em","fontWeight":"400"}],
+          "body-md":["14px",{"lineHeight":"22px","letterSpacing":"0.01em","fontWeight":"400"}],
+          "display-lg":["64px",{"lineHeight":"72px","letterSpacing":"-0.01em","fontWeight":"400"}],
+          "label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.15em","fontWeight":"600"}],
+          "title-lg":["18px",{"lineHeight":"26px","letterSpacing":"0.02em","fontWeight":"600"}],
+          "body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0.01em","fontWeight":"400"}],
+          "label-lg":["12px",{"lineHeight":"16px","letterSpacing":"0.12em","fontWeight":"600"}],
+          "headline-sm":["24px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"500"}],
+          "display-lg-mobile":["40px",{"lineHeight":"48px","letterSpacing":"0em","fontWeight":"400"}],
+          "headline-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"0em","fontWeight":"400"}],
+          "title-sm":["14px",{"lineHeight":"20px","letterSpacing":"0.05em","fontWeight":"600"}],
+          "headline-md":["32px",{"lineHeight":"40px","letterSpacing":"0em","fontWeight":"400"}]}}}};
+</script>
+ </head>
+ <body class="bg-background font-body-md text-on-surface antialiased">
+  <header class="fixed top-0 left-0 w-full z-50 shadow-[0_4px_24px_rgba(0,34,26,0.18)] desktop-header">
+   <div class="h-24 bg-primary px-margin flex items-center justify-between">
+    <div class="flex items-center gap-space-md">
+     <img src="./img/phoenix-bird.png"
+     alt="The Phoenix"
+     class="h-28 w-28 object-contain">
+     <div class="flex flex-col">
+      <span class="font-headline-md text-headline-md tracking-wider text-secondary-fixed">
+       The Phoenix
+      </span>
+      <span class="font-label-sm text-label-sm uppercase tracking-widest text-on-tertiary-container">
+       Hotel &middot; Saigon
+      </span>
+     </div>
+    </div>
+    <div class="flex-1 max-w-xl mx-space-lg relative" style="z-index: 1005; pointer-events: auto;">
+     <div class="relative flex items-center w-full">
+      <span class="material-symbols-outlined absolute left-4 text-on-tertiary-container">
+       search
+      </span>
+      <input autocomplete="off" class="w-full bg-primary-container text-on-primary pl-12 pr-10 py-2.5 rounded-full font-body-md text-body-md placeholder:text-on-tertiary-container focus:outline-none focus:ring-1 focus:ring-secondary-container transition-all" id="header-search-input" onfocus="openSearchDropdown()" oninput="handleHeaderSearch(this.value)" placeholder="T&igrave;m kiếm ph&ograve;ng nghỉ, nh&agrave; h&agrave;ng, dịch vụ..." type="text"/>
+      <button class="hidden absolute right-3 w-6 h-6 rounded-full bg-surface-container/20 text-on-tertiary-container hover:text-surface-bright items-center justify-center text-xs transition-colors cursor-pointer" id="clear-search-btn" onclick="clearHeaderSearch()" type="button">
+       <span class="material-symbols-outlined text-base leading-none">
+        close
+       </span>
+      </button>
+     </div>
+     <div class="hidden absolute top-full left-0 right-0 mt-2 bg-surface-container-lowest rounded-xl shadow-2xl border border-secondary-fixed/50 z-50 max-h-[440px] overflow-y-auto text-on-surface animate-fadeIn" id="search-results-dropdown">
+      <div class="p-4 flex flex-col gap-3" id="search-dropdown-content">
+      </div>
+     </div>
+    </div>
+    <div class="flex items-center gap-space-md">
+     <button id="header-booking-btn" class="flex items-center gap-2 bg-secondary text-on-secondary px-space-md py-2.5 rounded-lg hover:bg-secondary-container hover:text-on-secondary-container transition-all" type="button">
+      <span class="material-symbols-outlined text-secondary-fixed">
+       calendar_month
+      </span>
+      <span class="font-title-sm text-title-sm tracking-wide uppercase">
+       Lịch &Dstrok;ặt
+      </span>
+     </button>
+     <div class="relative inline-block" id="user-profile-menu-container">
+      <button class="flex items-center focus:outline-none cursor-pointer rounded-full p-0.5 transition-transform hover:scale-105 active:scale-95" id="profile-avatar-btn" type="button">
+       <img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-secondary-fixed shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUarHO2jTqBdRel5MnSbWVmqEkTJKb7TJiY1A0eikUMb7f-7R5WRjkUVFPAUpA3JetkZWzvOxY3_k0vIP28cTorm6mUND5-gwB-0VyQ0dS023KNCbotEx92IkfrPaNtlOY3UhZlmdzCoJMCVXuCplZe4Y0RiAWNAnh1hrI4tfvJ3aV1pantKhfJrexz8MmAwIATAamM_Z8ZBeAvVVuBT0Nyaymxg99JZv3cKuka0pQMY4TwvnPR2Zv"/>
+      </button>
+      <div class="hidden absolute right-0 top-full mt-3 w-[300px] bg-surface-container-lowest rounded-xl shadow-2xl overflow-hidden border border-secondary-fixed/50 z-50 animate-fadeIn text-on-surface" id="profile-dropdown">
+       <div class="bg-primary p-4 text-surface-bright flex items-center gap-3 border-b border-primary-container">
+        <img alt="Avatar" class="w-11 h-11 rounded-full object-cover ring-2 ring-secondary-fixed shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUarHO2jTqBdRel5MnSbWVmqEkTJKb7TJiY1A0eikUMb7f-7R5WRjkUVFPAUpA3JetkZWzvOxY3_k0vIP28cTorm6mUND5-gwB-0VyQ0dS023KNCbotEx92IkfrPaNtlOY3UhZlmdzCoJMCVXuCplZe4Y0RiAWNAnh1hrI4tfvJ3aV1pantKhfJrexz8MmAwIATAamM_Z8ZBeAvVVuBT0Nyaymxg99JZv3cKuka0pQMY4TwvnPR2Zv"/>
+        <div class="flex flex-col min-w-0">
+         <span class="font-title-sm text-title-sm text-surface-bright truncate font-semibold">
+          Nguyễn Minh Anh
+         </span>
+         <span class="inline-flex items-center gap-1 font-label-sm text-[10px] text-secondary-fixed mt-0.5 tracking-wide">
+          <span class="">
+           👑
+          </span>
+          Phoenix Gold (2.450 &dstrok;iểm)
+         </span>
+        </div>
+       </div>
+       <div class="py-2 flex flex-col">
+        <button class="w-full text-left px-4 py-2.5 flex items-center gap-3 hover:bg-surface-container transition-colors text-on-surface font-body-md text-sm cursor-pointer" onclick="openPhoenixModal('my-bookings')" type="button">
+         <span class="material-symbols-outlined text-secondary text-lg">
+          receipt_long
+         </span>
+         <span class="flex-1">
+          Lịch Sử &Dstrok;ặt Chỗ Của T&ocirc;i
+         </span>
+         <span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container">
+          3
+         </span>
+        </button>
+        <button class="w-full text-left px-4 py-2.5 flex items-center gap-3 hover:bg-surface-container transition-colors text-on-surface font-body-md text-sm cursor-pointer" onclick="openPhoenixModal('vip-member')" type="button">
+         <span class="material-symbols-outlined text-secondary text-lg">
+          workspace_premium
+         </span>
+         <span class="flex-1">
+          &Dstrok;ặc Quyền Thẻ VIP
+         </span>
+         <span class="material-symbols-outlined text-outline text-sm">
+          chevron_right
+         </span>
+        </button>
+        <button class="w-full text-left px-4 py-2.5 flex items-center gap-3 hover:bg-surface-container transition-colors text-on-surface font-body-md text-sm cursor-pointer" onclick="openPhoenixModal('login')" type="button">
+         <span class="material-symbols-outlined text-secondary text-lg">
+          manage_accounts
+         </span>
+         <span class="flex-1">
+          Th&ocirc;ng Tin &amp; &Dstrok;ổi T&agrave;i Khoản
+         </span>
+         <span class="material-symbols-outlined text-outline text-sm">
+          chevron_right
+         </span>
+        </button>
+        <div class="my-1 border-t border-surface-container-high">
+        </div>
+        <button class="w-full text-left px-4 py-2.5 flex items-center gap-3 hover:bg-error-container/20 text-error font-body-md text-sm cursor-pointer transition-colors" onclick="handlePhoenixLogout()" type="button">
+         <span class="material-symbols-outlined text-error text-lg">
+          logout
+         </span>
+         <span class="">
+          &Dstrok;&abreve;ng Xuất / &Dstrok;ổi Kh&aacute;ch
+         </span>
+        </button>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="h-[60px] bg-primary-container px-margin flex items-center justify-center">
+    <nav class="flex items-center gap-space-xl" data-active-classes="text-secondary-fixed border-b-2 border-secondary-fixed pb-1">
+     <a class="font-label-lg text-label-lg uppercase tracking-wider text-on-tertiary-container hover:text-on-primary transition-colors" data-path="trang-chu" href="index.html">
+      Trang Chủ
+     </a>
+     <a class="font-label-lg text-label-lg uppercase tracking-wider text-on-tertiary-container hover:text-on-primary transition-colors" data-path="dich-vu" href="dich_vu.html">
+      Dịch Vụ
+     </a>
+     <a class="font-label-lg text-label-lg uppercase tracking-wider text-on-tertiary-container hover:text-on-primary transition-colors" data-path="phong-nghi" href="phong_nghi.html">
+      Ph&ograve;ng Nghỉ
+     </a>
+     <a class="font-label-lg text-label-lg uppercase tracking-wider text-on-tertiary-container hover:text-on-primary transition-colors" data-path="an-uong" href="an_uong.html">
+      &Abreve;n Uống
+     </a>
+     <a class="font-label-lg text-label-lg uppercase tracking-wider text-on-tertiary-container hover:text-on-primary transition-colors" data-path="lien-he" href="lien_he.html">
+      Li&ecirc;n Hệ
+     </a>
+    </nav>
+   </div>
+  </header>
+  <!-- Mobile Header + Slide Drawer -->
+  <header class="hidden fixed top-0 left-0 right-0 h-16 bg-primary z-50 items-center justify-between px-4 border-b border-secondary-fixed/30 shadow-md" id="mobile-dedicated-header">
+   <div class="flex items-center gap-2.5">
+    <img alt="The Phoenix Emblem" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vv908DnSsWmzhahV2zuOLj0fnLA3K2HcgZxASc8Z9l6Sj7HE7N0chcECZ1xWr74kOh7OLklKOy7RxOJybaOxFaF2AgSchLlJbZZUZQsAInXN5UC7IcAR7Lv0xNWzLYGobPfjLLD9JDVmcMqa7ka4CQibhcEbsfFUppzzucFLkQnXtdTaaa1Vjfr_Pg8Qa_CV3cYosqwuuZyx3CCKyhiIfrQN1HSVQBLmPOC4a24pGn2-b3dVS7v9TNnVo"/>
+    <div class="flex flex-col">
+     <span class="font-headline-sm text-base tracking-wider text-secondary-fixed leading-tight">
+      The Phoenix
+     </span>
+     <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container">
+      Saigon &middot; 5&starf;
+     </span>
+    </div>
+   </div>
+   <div class="flex items-center gap-1.5">
+    <button class="w-9 h-9 rounded-full bg-primary-container/80 text-secondary-fixed flex items-center justify-center cursor-pointer hover:bg-secondary hover:text-on-secondary transition-all" onclick="toggleMobileSearch()" type="button">
+     <span class="material-symbols-outlined text-lg">
+      search
+     </span>
+    </button>
+    <button class="w-9 h-9 rounded-full bg-secondary text-on-secondary flex items-center justify-center cursor-pointer hover:bg-secondary-container hover:text-on-secondary-container transition-all shadow" onclick="openBookingModal()" type="button">
+     <span class="material-symbols-outlined text-lg">
+      calendar_month
+     </span>
+    </button>
+    <button class="w-9 h-9 rounded-full p-0.5 focus:outline-none cursor-pointer" onclick="openPhoenixModal('vip-member')" type="button">
+     <img alt="User Avatar" class="w-8 h-8 rounded-full object-cover ring-2 ring-secondary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUarHO2jTqBdRel5MnSbWVmqEkTJKb7TJiY1A0eikUMb7f-7R5WRjkUVFPAUpA3JetkZWzvOxY3_k0vIP28cTorm6mUND5-gwB-0VyQ0dS023KNCbotEx92IkfrPaNtlOY3UhZlmdzCoJMCVXuCplZe4Y0RiAWNAnh1hrI4tfvJ3aV1pantKhfJrexz8MmAwIATAamM_Z8ZBeAvVVuBT0Nyaymxg99JZv3cKuka0pQMY4TwvnPR2Zv"/>
+    </button>
+    <button class="w-9 h-9 rounded-full bg-primary-container text-surface-bright flex items-center justify-center cursor-pointer ml-1" onclick="toggleMobileDrawer(true)" type="button">
+     <span class="material-symbols-outlined text-xl">
+      menu
+     </span>
+    </button>
+   </div>
+  </header>
+  <div class="hidden fixed top-16 left-0 right-0 bg-primary-container p-3 z-40 border-b border-secondary-fixed/30 animate-fadeIn" id="mobile-search-bar">
+   <div class="relative flex items-center">
+    <span class="material-symbols-outlined absolute left-3 text-secondary-fixed text-lg">
+     search
+    </span>
+    <input class="w-full bg-primary text-surface-bright pl-10 pr-9 py-2 rounded-full font-body-md text-xs placeholder:text-on-tertiary-container focus:outline-none focus:ring-1 focus:ring-secondary" oninput="handleHeaderSearch(this.value)" placeholder="T&igrave;m ph&ograve;ng, spa, ẩm thực..." type="text"/>
+    <button class="absolute right-2 text-on-tertiary-container hover:text-surface-bright text-xs p-1" onclick="toggleMobileSearch()" type="button">
+     <span class="material-symbols-outlined text-base">
+      close
+     </span>
+    </button>
+   </div>
+  </div>
+  <div class="hidden fixed inset-0 z-50 bg-primary/80 backdrop-blur-sm" id="mobile-nav-drawer">
+   <div class="absolute right-0 top-0 bottom-0 w-[82%] max-w-[320px] bg-primary-container text-surface-bright flex flex-col justify-between p-6 shadow-2xl animate-fadeIn">
+    <div class="flex flex-col gap-6">
+     <div class="flex items-center justify-between pb-4 border-b border-white/10">
+      <div class="flex items-center gap-2">
+       <span class="text-secondary-fixed text-lg">
+        👑
+       </span>
+       <span class="font-headline-sm text-base text-secondary-fixed font-semibold">
+        The Phoenix Club
+       </span>
+      </div>
+      <button class="text-on-tertiary-container hover:text-surface-bright cursor-pointer" onclick="toggleMobileDrawer(false)" type="button">
+       <span class="material-symbols-outlined text-2xl">
+        close
+       </span>
+      </button>
+     </div>
+     <div class="flex items-center gap-3 p-3 rounded-xl bg-primary/60 border border-secondary-fixed/30 cursor-pointer" onclick="toggleMobileDrawer(false); openPhoenixModal('vip-member');">
+      <img alt="Minh Anh" class="w-10 h-10 rounded-full object-cover ring-1 ring-secondary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUarHO2jTqBdRel5MnSbWVmqEkTJKb7TJiY1A0eikUMb7f-7R5WRjkUVFPAUpA3JetkZWzvOxY3_k0vIP28cTorm6mUND5-gwB-0VyQ0dS023KNCbotEx92IkfrPaNtlOY3UhZlmdzCoJMCVXuCplZe4Y0RiAWNAnh1hrI4tfvJ3aV1pantKhfJrexz8MmAwIATAamM_Z8ZBeAvVVuBT0Nyaymxg99JZv3cKuka0pQMY4TwvnPR2Zv"/>
+      <div class="flex flex-col min-w-0">
+       <span class="font-title-sm text-xs font-semibold text-surface-bright truncate">
+        Nguyễn Minh Anh
+       </span>
+       <span class="text-[10px] text-secondary-fixed">
+        Phoenix Gold (2.450 pts)
+       </span>
+      </div>
+      <span class="material-symbols-outlined text-secondary text-sm ml-auto">
+       chevron_right
+      </span>
+     </div>
+     <nav class="flex flex-col gap-3 font-title-sm text-sm uppercase tracking-wider">
+      <a class="flex items-center justify-between py-2 text-secondary-fixed border-b border-white/5 font-semibold" href="#" onclick="toggleMobileDrawer(false)">
+       <span class="">
+        Trang Chủ
+       </span>
+       <span class="text-xs">
+        ●
+       </span>
+      </a>
+      <a class="flex items-center justify-between py-2 text-surface-bright hover:text-secondary-fixed border-b border-white/5" href="#" onclick="toggleMobileDrawer(false); document.querySelector('nav a[data-path=&quot;dich-vu&quot;]')?.click();">
+       <span class="">
+        Dịch Vụ
+       </span>
+       <span class="material-symbols-outlined text-sm">
+        arrow_forward
+       </span>
+      </a>
+      <a class="flex items-center justify-between py-2 text-surface-bright hover:text-secondary-fixed border-b border-white/5" href="#" onclick="toggleMobileDrawer(false); document.querySelector('nav a[data-path=&quot;phong-nghi&quot;]')?.click();">
+       <span class="">
+        Ph&ograve;ng Nghỉ
+       </span>
+       <span class="material-symbols-outlined text-sm">
+        arrow_forward
+       </span>
+      </a>
+      <a class="flex items-center justify-between py-2 text-surface-bright hover:text-secondary-fixed border-b border-white/5" href="#" onclick="toggleMobileDrawer(false); document.querySelector('nav a[data-path=&quot;an-uong&quot;]')?.click();">
+       <span class="">
+        &Abreve;n Uống
+       </span>
+       <span class="material-symbols-outlined text-sm">
+        arrow_forward
+       </span>
+      </a>
+      <a class="flex items-center justify-between py-2 text-surface-bright hover:text-secondary-fixed" href="#" onclick="toggleMobileDrawer(false); document.querySelector('nav a[data-path=&quot;lien-he&quot;]')?.click();">
+       <span class="">
+        Li&ecirc;n Hệ
+       </span>
+       <span class="material-symbols-outlined text-sm">
+        arrow_forward
+       </span>
+      </a>
+     </nav>
+    </div>
+    <div class="flex flex-col gap-3 pt-4 border-t border-white/10">
+     <button class="w-full py-3 rounded-full bg-secondary text-on-secondary font-title-sm text-xs uppercase font-semibold flex items-center justify-center gap-2 shadow" onclick="toggleMobileDrawer(false); openBookingModal();" type="button">
+      <span class="material-symbols-outlined text-sm">
+       calendar_today
+      </span>
+      &Dstrok;ặt Ph&ograve;ng Trực Tuyến
+     </button>
+     <a class="flex items-center justify-center gap-2 text-xs text-secondary-fixed py-2" href="tel:+006612369">
+      <span class="material-symbols-outlined text-sm">
+       call
+      </span>
+      Hotline: +006612369
+     </a>
+    </div>
+   </div>
+  </div>
+  <!-- Dedicated 64px Mobile Sticky Header -->
+  <header class="hidden fixed top-0 left-0 right-0 h-16 bg-primary z-50 items-center justify-between px-4 border-b border-secondary-fixed/30 shadow-md" id="mobile-dedicated-header">
+   <div class="flex items-center gap-2.5">
+    <img alt="The Phoenix Emblem" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vv908DnSsWmzhahV2zuOLj0fnLA3K2HcgZxASc8Z9l6Sj7HE7N0chcECZ1xWr74kOh7OLklKOy7RxOJybaOxFaF2AgSchLlJbZZUZQsAInXN5UC7IcAR7Lv0xNWzLYGobPfjLLD9JDVmcMqa7ka4CQibhcEbsfFUppzzucFLkQnXtdTaaa1Vjfr_Pg8Qa_CV3cYosqwuuZyx3CCKyhiIfrQN1HSVQBLmPOC4a24pGn2-b3dVS7v9TNnVo"/>
+    <div class="flex flex-col">
+     <span class="font-headline-sm text-base tracking-wider text-secondary-fixed leading-tight">
+      The Phoenix
+     </span>
+     <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container">
+      Saigon &middot; 5&starf;
+     </span>
+    </div>
+   </div>
+   <div class="flex items-center gap-1.5">
+    <button class="w-9 h-9 rounded-full bg-primary-container/80 text-secondary-fixed flex items-center justify-center cursor-pointer hover:bg-secondary hover:text-on-secondary transition-all" onclick="toggleMobileSearch()" type="button">
+     <span class="material-symbols-outlined text-lg">
+      search
+     </span>
+    </button>
+    <button class="w-9 h-9 rounded-full bg-secondary text-on-secondary flex items-center justify-center cursor-pointer hover:bg-secondary-container hover:text-on-secondary-container transition-all shadow" onclick="openBookingModal()" type="button">
+     <span class="material-symbols-outlined text-lg">
+      calendar_month
+     </span>
+    </button>
+    <button class="w-9 h-9 rounded-full p-0.5 focus:outline-none cursor-pointer" onclick="openPhoenixModal('vip-member')" type="button">
+     <img alt="User Avatar" class="w-8 h-8 rounded-full object-cover ring-2 ring-secondary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUarHO2jTqBdRel5MnSbWVmqEkTJKb7TJiY1A0eikUMb7f-7R5WRjkUVFPAUpA3JetkZWzvOxY3_k0vIP28cTorm6mUND5-gwB-0VyQ0dS023KNCbotEx92IkfrPaNtlOY3UhZlmdzCoJMCVXuCplZe4Y0RiAWNAnh1hrI4tfvJ3aV1pantKhfJrexz8MmAwIATAamM_Z8ZBeAvVVuBT0Nyaymxg99JZv3cKuka0pQMY4TwvnPR2Zv"/>
+    </button>
+   </div>
+  </header>
+  <main class="w-full pt-[156px] min-h-screen bg-background">
+   <div class="flex flex-col w-full">
+    <!-- ==================== SECTION 1: HERO SECTION ==================== -->
+    <section class="relative w-full min-h-[720px] lg:h-[860px] -mt-[156px] flex items-center justify-center overflow-hidden">
+     <!-- Atmospheric Visual Canvas with Scrim -->
+     <div class="absolute inset-0 w-full h-full bg-cover bg-center" data-alt="Stunning 5-star colonial luxury resort infinity swimming pool with classical Indochine architecture arches, marble balustrades, soft twilight warm lanterns reflection on emerald water, serene tropical plants, looking toward luxury city lights of Saigon in background, rich cinematic atmosphere, 8k resolution" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7uN3WmIiWZOgdJIoVBCC5e4uypOft2amZISFfWYcmg6y0yicI17EXLOW2BaCdD2SB4pOkXb4IckwcO7RvGXjKMAHubbd3VmDZDexEGXrXPXFECI61b90DsR1sN8cKDBdYjb_HJsBSpXHB8LyIebQYW6YkURpLFkg1JMGASZPj3y28-zC-kj92FNVI0NBfCIwbq0LFRWzHqOfyW26BDNl0-9RvH61aaw2_19sf0dNCbY2DpN6g9IYh')">
+     </div>
+     <!-- Deep Emerald Gradient Scrim for Editorial Depth -->
+     <div class="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary-container/85 to-primary">
+     </div>
+     <!-- Centered Editorial Content Container -->
+     <div class="relative z-10 max-w-5xl mx-auto px-margin-mobile md:px-margin text-center pt-[156px] pb-16 flex flex-col items-center">
+      <!-- Eyebrow Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-container/60 backdrop-blur-md mb-6 shadow-sm">
+       <span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed">
+       </span>
+       <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">
+        Welcome To Luxury Sanctuary
+       </span>
+      </div>
+      <!-- Master Heading -->
+      <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-surface-bright leading-tight max-w-4xl tracking-tight mb-6">
+       Biểu Tượng Nghỉ Dưỡng Thượng Lưu Giữa L&ograve;ng Th&agrave;nh Phố
+      </h1>
+      <!-- Editorial Subtitle -->
+      <p class="font-body-lg text-body-lg text-on-tertiary-container max-w-2xl mx-auto leading-relaxed mb-10">
+       Trải nghiệm kh&ocirc;ng gian xa hoa mang &dstrok;ậm dấu ấn di sản &Dstrok;&ocirc;ng Dương giao h&ograve;a c&ugrave;ng chuẩn mực tiện nghi 5 sao quốc tế tại trung t&acirc;m S&agrave;i G&ograve;n hoa lệ.
+      </p>
+      <!-- Action Cluster -->
+      <div class="flex flex-col sm:flex-row items-center gap-4 justify-center w-full sm:w-auto">
+       <a class="w-full sm:w-auto flex items-center justify-center gap-3 bg-secondary text-on-secondary hover:bg-secondary-container hover:text-on-secondary-container font-title-sm text-title-sm uppercase px-8 py-4 rounded-full shadow-xl transition-all duration-300" href="#rooms-showcase">
+        <span class="">
+         Kh&aacute;m Ph&aacute; Ph&ograve;ng Nghỉ
+        </span>
+        <span class="material-symbols-outlined text-sm">
+         arrow_forward
+        </span>
+       </a>
+       <button class="w-full sm:w-auto flex items-center justify-center gap-2 bg-surface-lowest/10 hover:bg-surface-lowest/20 backdrop-blur-md text-surface-bright font-title-sm text-title-sm uppercase px-8 py-4 rounded-full transition-all duration-300" onclick="openBookingModal()" type="button">
+        <span class="material-symbols-outlined text-secondary-fixed">
+         calendar_today
+        </span>
+        <span class="">
+         &Dstrok;ặt Ph&ograve;ng Nhanh
+        </span>
+       </button>
+      </div>
+     </div>
+    </section>
+    <!-- ==================== SECTION 2: FLOATING INTRO CARD ==================== -->
+    <section class="relative z-20 px-margin-mobile md:px-margin -mt-16 mb-16">
+     <div class="max-w-[1140px] mx-auto bg-surface-container-lowest rounded-xl shadow-2xl p-8 md:p-14 text-center">
+      <!-- Architectural Tag -->
+      <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold block mb-2">
+       Hồ Ch&iacute; Minh, Việt Nam
+      </span>
+      <!-- Brand Epithet -->
+      <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-wide mb-4">
+       The Phoenix Hotel
+      </h2>
+      <!-- Subtle Filigree Filament -->
+      <div class="flex items-center justify-center gap-3 mb-6">
+       <span class="w-12 h-[1px] bg-secondary-fixed-dim">
+       </span>
+       <span class="material-symbols-outlined text-secondary text-base">
+        spa
+       </span>
+       <span class="w-12 h-[1px] bg-secondary-fixed-dim">
+       </span>
+      </div>
+      <!-- Narrative Copy -->
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed mb-8">
+       Tọa lạc tại vị tr&iacute; danh gi&aacute; bậc nhất &dstrok;ường &Dstrok;ồng Khởi, The Phoenix Hotel mở ra kh&ocirc;ng gian nghỉ dưỡng thanh b&igrave;nh t&aacute;ch biệt khỏi nhịp sống s&ocirc;i &dstrok;ộng. Từng &dstrok;ường n&eacute;t kiến tr&uacute;c &Dstrok;&ocirc;ng Dương kinh &dstrok;iển kết hợp h&agrave;i h&ograve;a với nghệ thuật &dstrok;ương &dstrok;ại, mang &dstrok;ến kỳ nghỉ ho&agrave;n mỹ c&ugrave;ng dịch vụ quản gia chuẩn mực ho&agrave;ng gia.
+      </p>
+      <!-- Highlights Strip -->
+      <div class="flex flex-wrap items-center justify-center gap-3 md:gap-8 pt-4">
+       <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-low text-primary font-title-sm text-title-sm">
+        <span class="material-symbols-outlined text-secondary text-sm">
+         location_city
+        </span>
+        <span class="">
+         Vị Tr&iacute; Trung T&acirc;m Quận 1
+        </span>
+       </div>
+       <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-low text-primary font-title-sm text-title-sm">
+        <span class="material-symbols-outlined text-secondary text-sm">
+         verified
+        </span>
+        <span class="">
+         Chuẩn 5 Sao Quốc Tế
+        </span>
+       </div>
+       <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-low text-primary font-title-sm text-title-sm">
+        <span class="material-symbols-outlined text-secondary text-sm">
+         restaurant
+        </span>
+        <span class="">
+         Ẩm Thực Michelin Selected
+        </span>
+       </div>
+      </div>
+     </div>
+    </section>
+    <!-- ==================== SECTION 3: ROOMS & SUITES BENTO ==================== -->
+    <section class="w-full bg-surface-container py-space-xl px-margin-mobile md:px-margin" id="rooms-showcase">
+     <div class="max-w-[1320px] mx-auto">
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-12">
+       <span class="font-label-lg text-label-lg uppercase tracking-widest text-secondary block mb-2">
+        Accommodations &amp; Suites
+       </span>
+       <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">
+        Kh&ocirc;ng Gian Nghỉ Dưỡng &Dstrok;ỉnh Cao
+       </h2>
+      </div>
+      <!-- Bento Grid (12 Columns) -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-5 mb-8">
+       <!-- Left Column: 2 Stacked Suites (col-span-3) -->
+       <div class="md:col-span-3 flex flex-col gap-5">
+        <!-- Deluxe City View -->
+        <div class="group relative h-64 md:h-[270px] rounded-xl overflow-hidden bg-surface-container-highest shadow-md transition-all duration-300 hover:shadow-xl cursor-pointer" onclick="openBookingModal('Deluxe King')">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Deluxe king bedroom in modern Indochine style, dark wood canopy bed, soft gold silk pillows, warm bedside sconces, elegant city view through louvered French blinds, 5-star hotel ambiance" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZjwDk9L3g2_Rj5oEckLCxG5KVS73oCC4D7daTUftCydIAgqeBOKgnIHGNDS9KgWQ-w_vP7qOn3zA4_iK9BR5IOdlxXT56y4lZcE9lcSvK3YjtTSrgeXH2Xnu4jbn5oPjhLzFL2PMqmtnkd1VCiS4lVK3DKxhLNGX6auRWfKKvcwA8ZZzj84Iv7c5gz90plJvEN5WacUlxAxAeROPmXodXcxHjGBA_GSJ9To1IEPkysjYOZ5pniASJ')">
+         </div>
+         <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent">
+         </div>
+         <div class="absolute top-4 left-4">
+          <span class="bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase px-3 py-1 rounded-full shadow-sm">
+           45m&sup2; &middot; King Bed
+          </span>
+         </div>
+         <div class="absolute bottom-4 left-4 right-4 text-on-primary">
+          <h3 class="font-headline-sm text-headline-sm text-surface-bright leading-tight mb-1">
+           Deluxe King Room
+          </h3>
+          <p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">
+           Tầm nh&igrave;n phố thị hoa lệ
+          </p>
+         </div>
+        </div>
+        <!-- Premier Suite -->
+        <div class="group relative h-64 md:h-[270px] rounded-xl overflow-hidden bg-surface-container-highest shadow-md transition-all duration-300 hover:shadow-xl cursor-pointer" onclick="openBookingModal('Premier Suite')">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Luxury hotel suite white marble bathroom, freestanding clawfoot deep soaking tub, champagne bottle in silver bucket, soft candle light, Indochine patterned tiles, warm golden fixtures" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBIltUN51r7u0hxm7l5IW3QRsqPP8M6OQCqRHLprDB180RXBT-biEpbMR27_Kc-zyqDMkS1LXIulE84MnhIknivMBQkvETCKr5SG5ylu2PADU5F--U3XdlClrMnafNUL2GkUlnO8gOXcaL0pjfe3XTkL9kkid4cug17ga7SK6mZ2uJGtIi9EHp3B3j9Q9cEQGSzSrkFap7uqsr8IMLRUFwFQJZfWsFyhLKfq83392Oz7166FZgl7BLO')">
+         </div>
+         <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent">
+         </div>
+         <div class="absolute top-4 left-4">
+          <span class="bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase px-3 py-1 rounded-full shadow-sm">
+           65m&sup2; &middot; Bồn Tắm Cẩm Thạch
+          </span>
+         </div>
+         <div class="absolute bottom-4 left-4 right-4 text-on-primary">
+          <h3 class="font-headline-sm text-headline-sm text-surface-bright leading-tight mb-1">
+           Executive Suite
+          </h3>
+          <p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">
+           &Dstrok;ặc quyền Executive Lounge
+          </p>
+         </div>
+        </div>
+       </div>
+       <!-- Center Column: Presidential Penthouse (col-span-6) -->
+       <div class="md:col-span-6">
+        <div class="group relative h-[380px] md:h-[560px] rounded-xl overflow-hidden bg-surface-container-highest shadow-lg transition-all duration-300 hover:shadow-2xl cursor-pointer" onclick="openBookingModal('Presidential Penthouse')">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Lavish grand presidential hotel penthouse living room, 180 square meters, floor-to-ceiling glass windows overlooking panoramic Saigon river and skyscrapers, crystal chandelier, handcrafted emerald velvet sofa, gold leaf finishes, private terrace outdoor heated jacuzzi" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQzonFZyywejHjTZXSe2BVoYbaifY-m2t25r3SNq_ZG95y8w_2QVmEE5s-DkHYacNy_L27skAgwAE8PcQPxcUctkcNfsT2eYV9UkGs0m_pXpUCJozjR0Vv0eLgY7e0JWbryvgxuVI8S9TgT9dKxubBZBatfCrpZ148Uh37V0kalkf62Ue6c6hNRvkvMiULnUkBn4R3SthwajFTWew0IBrmrratuVbXegMmYzjox6PH76jz59hA8Z81')">
+         </div>
+         <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent">
+         </div>
+         <div class="absolute top-5 left-5 flex gap-2">
+          <span class="bg-secondary text-on-secondary font-label-sm text-label-sm uppercase px-3.5 py-1.5 rounded-full shadow">
+           &Dstrok;ặc Biệt &middot; Ho&agrave;ng Gia
+          </span>
+          <span class="bg-primary-container/80 backdrop-blur-sm text-secondary-fixed font-label-sm text-label-sm uppercase px-3 py-1.5 rounded-full">
+           180m&sup2; &middot; Tầng Thượng
+          </span>
+         </div>
+         <div class="absolute bottom-6 left-6 right-6 text-on-primary">
+          <span class="font-label-lg text-label-lg uppercase tracking-widest text-secondary-fixed block mb-1">
+           Signature Masterpiece
+          </span>
+          <h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-surface-bright mb-2">
+           The Phoenix Presidential Suite
+          </h3>
+          <p class="font-body-md text-body-md text-on-tertiary-container max-w-lg mb-4 hidden md:block">
+           Tầm nh&igrave;n 360 &dstrok;ộ &ocirc;m trọn s&ocirc;ng S&agrave;i G&ograve;n, quản gia ri&ecirc;ng 24/7, ph&ograve;ng x&ocirc;ng hơi ho&agrave;ng gia v&agrave; dịch vụ &dstrok;ưa &dstrok;&oacute;n Rolls-Royce chuy&ecirc;n biệt.
+          </p>
+          <div class="flex items-center gap-4">
+           <span class="font-headline-sm text-headline-sm text-secondary-fixed">
+            Từ 24.500.000₫
+            <span class="font-body-md text-xs text-on-tertiary-container">
+             / &dstrok;&ecirc;m
+            </span>
+           </span>
+           <span class="inline-flex items-center gap-1 text-surface-bright font-title-sm text-title-sm group-hover:translate-x-1 transition-transform">
+            Chi tiết
+            <span class="material-symbols-outlined text-sm">
+             arrow_forward
+            </span>
+           </span>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- Right Column: 2 Stacked Suites (col-span-3) -->
+       <div class="md:col-span-3 flex flex-col gap-5">
+        <!-- Heritage Balcony Suite -->
+        <div class="group relative h-64 md:h-[270px] rounded-xl overflow-hidden bg-surface-container-highest shadow-md transition-all duration-300 hover:shadow-xl cursor-pointer" onclick="openBookingModal('Heritage Balcony')">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Indochine heritage hotel suite private balcony with dark teakwood louvered shutters, lush tropical potted palms, antique wicker chair with raw silk cushions, gentle morning sun ray" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2H9Km-Y-cRRsEWUIT9R5NNAQXdpeIcHrbXMeJZhN4O25QKsk8GhdsO5QyKKUNXibw2fUKdkfUffRRkF0NY_LHRNlh53qXkAyb_pVaWDwqw61v11Qz2ilYWnOr_iI2PaIfnIVNA0CdICGmkJoN57CT2PlzTTl6VFuIpSLRgkCHSdNT7XqiFkAlvIAEyKOOQpEeDcQb6rSwotB5kmXgk0gx0rbpcDVh2ABR_xWn3FAMex8ehRLnJFxy')">
+         </div>
+         <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent">
+         </div>
+         <div class="absolute top-4 left-4">
+          <span class="bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase px-3 py-1 rounded-full shadow-sm">
+           55m&sup2; &middot; Ban C&ocirc;ng Di Sản
+          </span>
+         </div>
+         <div class="absolute bottom-4 left-4 right-4 text-on-primary">
+          <h3 class="font-headline-sm text-headline-sm text-surface-bright leading-tight mb-1">
+           Heritage Balcony Suite
+          </h3>
+          <p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">
+           Ban c&ocirc;ng ri&ecirc;ng biệt hướng vườn
+          </p>
+         </div>
+        </div>
+        <!-- Grand Family Villa -->
+        <div class="group relative h-64 md:h-[270px] rounded-xl overflow-hidden bg-surface-container-highest shadow-md transition-all duration-300 hover:shadow-xl cursor-pointer" onclick="openBookingModal('Grand Family Villa')">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Grand spacious hotel family suite living area, 2 master bedrooms connected, cozy dining table with fresh tropical fruits, plush woven rugs, elegant warm lighting, peaceful ambiance" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMa0KYwcxhEY9f9x1hcWRKsLldAVTGJO7AhtYQAEfKUvZLM8nAS4M0UtnbWkO-jH-wTdc-e55DnQekV5Nzv3zwFrXk9V4no4BI3QRnR8bvmaxshel5RzMXTsU7QgpfJbz0dOEBmfJuwpwxy0lT0bE-heF2y0Z3_4r2Dolgf_z0YRVQ5lkmD-r3JSzhRaNjaswM4HKbW-6CiLP93CrkcJhSVTT6W64v2Z6USmHVlNzbDCVGU56xD_1j')">
+         </div>
+         <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent">
+         </div>
+         <div class="absolute top-4 left-4">
+          <span class="bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase px-3 py-1 rounded-full shadow-sm">
+           90m&sup2; &middot; 2 Ph&ograve;ng Ngủ
+          </span>
+         </div>
+         <div class="absolute bottom-4 left-4 right-4 text-on-primary">
+          <h3 class="font-headline-sm text-headline-sm text-surface-bright leading-tight mb-1">
+           Grand Family Villa
+          </h3>
+          <p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">
+           Kh&ocirc;ng gian sum vầy &dstrok;ẳng cấp
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <!-- Action Split Card Below Grid -->
+      <div class="bg-surface-container-lowest rounded-xl p-6 md:p-8 shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
+       <div class="flex flex-col gap-1 text-center md:text-left">
+        <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">
+         Accommodations
+        </span>
+        <h4 class="font-headline-sm text-headline-sm text-primary">
+         Ph&ograve;ng Nghỉ &amp; Suite Thượng Hạng
+        </h4>
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+         Hơn 220 ph&ograve;ng v&agrave; suite &dstrok;ược b&agrave;i tr&iacute; tinh xảo với tầm nh&igrave;n trọn vẹn s&ocirc;ng S&agrave;i G&ograve;n v&agrave; trung t&acirc;m hoa lệ.
+        </p>
+       </div>
+       <button class="shrink-0 flex items-center gap-3 bg-primary hover:bg-primary-container text-on-primary font-title-sm text-title-sm uppercase px-8 py-3.5 rounded-full transition-all shadow-md" onclick="if (document.querySelector('nav a[data-path=&quot;phong-nghi&quot;]')) document.querySelector('nav a[data-path=&quot;phong-nghi&quot;]').click(); else window.scrollTo({ top: 0, behavior: 'smooth' });" type="button">
+        <span class="">
+         Xem Bảng Gi&aacute; &amp; &Dstrok;ặt Ph&ograve;ng
+        </span>
+        <span class="material-symbols-outlined text-secondary-fixed text-sm">
+         arrow_forward
+        </span>
+       </button>
+      </div>
+     </div>
+    </section>
+    <!-- ==================== SECTION 4: RATINGS & TRUST BANNER ==================== -->
+    <!-- ==================== SECTION 4: OTA RATINGS & GUEST REVIEWS SYSTEM ==================== -->
+    <section class="w-full flex flex-col" id="guest-reviews-section">
+     <!-- Part 1: OTA Ratings Banner -->
+     <div class="w-full bg-primary-container text-surface-bright py-12 px-margin-mobile md:px-margin border-y border-secondary-fixed/30">
+      <div class="max-w-[1320px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+       <!-- Left Column: Master Score -->
+       <div class="flex items-center gap-6 shrink-0">
+        <div class="font-headline-lg md:font-display-lg text-display-lg-mobile md:text-display-lg text-secondary-fixed font-normal leading-none">
+         4.7
+         <span class="text-2xl text-on-tertiary-container">
+          /5
+         </span>
+        </div>
+        <div class="flex flex-col gap-1.5">
+         <div class="flex items-center gap-2.5">
+          <span class="font-headline-sm text-headline-sm text-surface-bright font-normal">
+           Xuất sắc
+          </span>
+          <div class="flex text-secondary-fixed text-base">
+           <span class="material-symbols-outlined text-base">
+            star
+           </span>
+           <span class="material-symbols-outlined text-base">
+            star
+           </span>
+           <span class="material-symbols-outlined text-base">
+            star
+           </span>
+           <span class="material-symbols-outlined text-base">
+            star
+           </span>
+           <span class="material-symbols-outlined text-base">
+            star_half
+           </span>
+          </div>
+         </div>
+         <p class="font-body-md text-body-md text-on-tertiary-container">
+          Dựa tr&ecirc;n
+          <strong class="text-secondary-fixed font-semibold">
+           33.751
+          </strong>
+          &dstrok;&aacute;nh gi&aacute; x&aacute;c thực to&agrave;n cầu
+         </p>
+        </div>
+       </div>
+       <!-- Divider -->
+       <div class="hidden lg:block w-[1px] h-16 bg-white/10 shrink-0">
+       </div>
+       <!-- Right Column: Interactive OTA Badges / Filters -->
+       <div class="flex flex-wrap items-center justify-center lg:justify-end gap-2.5 w-full lg:w-auto" id="ota-filter-container">
+        <button class="ota-filter-btn px-4 py-2.5 rounded-full text-xs font-title-sm uppercase tracking-wider transition-all cursor-pointer bg-secondary text-on-secondary shadow-md border border-secondary flex items-center gap-1.5" data-ota="all" onclick="filterReviewsByOTA('all')" type="button">
+         <span class="material-symbols-outlined text-sm">
+          verified
+         </span>
+         <span class="">
+          Tất cả (33.751)
+         </span>
+        </button>
+        <button class="ota-filter-btn px-4 py-2.5 rounded-full text-xs font-title-sm uppercase tracking-wider transition-all cursor-pointer bg-primary/60 hover:bg-primary text-surface-bright border border-secondary-fixed/30 flex items-center gap-1.5" data-ota="google" onclick="filterReviewsByOTA('google')" type="button">
+         <span class="font-semibold text-secondary-fixed">
+          Google:
+         </span>
+         4.7 / 5
+        </button>
+        <button class="ota-filter-btn px-4 py-2.5 rounded-full text-xs font-title-sm uppercase tracking-wider transition-all cursor-pointer bg-primary/60 hover:bg-primary text-surface-bright border border-secondary-fixed/30 flex items-center gap-1.5" data-ota="tripadvisor" onclick="filterReviewsByOTA('tripadvisor')" type="button">
+         <span class="font-semibold text-secondary-fixed">
+          TripAdvisor:
+         </span>
+         4.6 / 5
+        </button>
+        <button class="ota-filter-btn px-4 py-2.5 rounded-full text-xs font-title-sm uppercase tracking-wider transition-all cursor-pointer bg-primary/60 hover:bg-primary text-surface-bright border border-secondary-fixed/30 flex items-center gap-1.5" data-ota="booking" onclick="filterReviewsByOTA('booking')" type="button">
+         <span class="font-semibold text-secondary-fixed">
+          Booking.com:
+         </span>
+         9.3 / 10
+        </button>
+        <button class="ota-filter-btn px-4 py-2.5 rounded-full text-xs font-title-sm uppercase tracking-wider transition-all cursor-pointer bg-primary/60 hover:bg-primary text-surface-bright border border-secondary-fixed/30 flex items-center gap-1.5" data-ota="expedia" onclick="filterReviewsByOTA('expedia')" type="button">
+         <span class="font-semibold text-secondary-fixed">
+          Expedia:
+         </span>
+         9.6 / 10
+        </button>
+        <button class="ota-filter-btn px-4 py-2.5 rounded-full text-xs font-title-sm uppercase tracking-wider transition-all cursor-pointer bg-primary/60 hover:bg-primary text-surface-bright border border-secondary-fixed/30 flex items-center gap-1.5" data-ota="trip" onclick="filterReviewsByOTA('trip')" type="button">
+         <span class="font-semibold text-secondary-fixed">
+          Trip.com:
+         </span>
+         9.3 / 10
+        </button>
+       </div>
+      </div>
+     </div>
+     <!-- Part 2: Verified Guest Reviews Feed & Filters -->
+     <div class="w-full bg-surface-container-low py-16 px-margin-mobile md:px-margin border-b border-surface-container-high">
+      <div class="max-w-[1320px] mx-auto">
+       <!-- Reviews Header -->
+       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-6 border-b border-surface-container-high">
+        <div>
+         <div class="inline-flex items-center gap-2 mb-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary">
+          </span>
+          <span class="font-label-lg text-label-lg uppercase tracking-widest text-secondary font-semibold">
+           Guest Testimonials
+          </span>
+         </div>
+         <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">
+          Trải Nghiệm Thực Tế Từ Kh&aacute;ch Lưu Tr&uacute;
+         </h2>
+         <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 max-w-xl">
+          Tổng hợp chia sẻ trung thực về chất lượng dịch vụ, kh&ocirc;ng gian nghỉ dưỡng v&agrave; ẩm thực tại The Phoenix Hotel.
+         </p>
+        </div>
+        <!-- Controls: Category Filters + Write Review CTA -->
+        <div class="flex flex-wrap items-center gap-3">
+         <div class="flex items-center gap-1.5 bg-surface-container p-1 rounded-full border border-surface-container-high" id="review-category-filters">
+          <button class="cat-filter-btn px-3.5 py-1.5 rounded-full font-title-sm text-xs uppercase tracking-wider transition-all cursor-pointer bg-primary text-on-primary shadow-sm" data-cat="all" onclick="filterReviewsByCategory('all')" type="button">
+           Tất cả
+          </button>
+          <button class="cat-filter-btn px-3.5 py-1.5 rounded-full font-title-sm text-xs uppercase tracking-wider transition-all cursor-pointer text-on-surface-variant hover:text-primary" data-cat="phong-nghi" onclick="filterReviewsByCategory('phong-nghi')" type="button">
+           Ph&ograve;ng Nghỉ
+          </button>
+          <button class="cat-filter-btn px-3.5 py-1.5 rounded-full font-title-sm text-xs uppercase tracking-wider transition-all cursor-pointer text-on-surface-variant hover:text-primary" data-cat="dich-vu" onclick="filterReviewsByCategory('dich-vu')" type="button">
+           Dịch Vụ &amp; Spa
+          </button>
+          <button class="cat-filter-btn px-3.5 py-1.5 rounded-full font-title-sm text-xs uppercase tracking-wider transition-all cursor-pointer text-on-surface-variant hover:text-primary" data-cat="an-uong" onclick="filterReviewsByCategory('an-uong')" type="button">
+           Nh&agrave; H&agrave;ng &amp; Ẩm Thực
+          </button>
+         </div>
+         <button class="px-5 py-2.5 rounded-full bg-secondary hover:bg-secondary-container text-on-secondary hover:text-on-secondary-container font-title-sm text-xs uppercase tracking-wider transition-all flex items-center gap-2 shadow-md cursor-pointer shrink-0" onclick="openWriteReviewModal()" type="button">
+          <span class="material-symbols-outlined text-base">
+           rate_review
+          </span>
+          <span class="">
+           Viết &Dstrok;&aacute;nh Gi&aacute; Của Bạn
+          </span>
+         </button>
+        </div>
+       </div>
+       <!-- Review Cards 3-Column Grid -->
+       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="guest-reviews-grid">
+        <!-- Review Card 1 (Booking.com) -->
+        <div class="review-card bg-surface-container-lowest rounded-xl p-6 shadow-md border border-secondary-fixed/40 flex flex-col justify-between transition-all hover:shadow-xl" data-cat="phong-nghi" data-ota="booking">
+         <div>
+          <!-- Header Strip: OTA Source & Star Rating -->
+          <div class="flex items-center justify-between gap-2 pb-4 mb-4 border-b border-surface-container-high">
+           <div class="flex items-center gap-2">
+            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-primary text-secondary-fixed border border-secondary-fixed/30 flex items-center gap-1">
+             <span class="material-symbols-outlined text-sm">
+              hotel
+             </span>
+             Booking.com
+            </span>
+            <span class="text-xs font-bold text-secondary-container bg-primary px-2 py-0.5 rounded">
+             10 / 10
+            </span>
+           </div>
+           <div class="flex text-secondary text-sm">
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+           </div>
+          </div>
+          <!-- Guest Identity -->
+          <div class="flex items-center gap-3 mb-3">
+           <div class="w-11 h-11 rounded-full bg-primary text-secondary-fixed font-headline-sm font-semibold flex items-center justify-center text-lg shrink-0 border border-secondary-fixed/50">
+            TN
+           </div>
+           <div class="min-w-0 flex flex-col">
+            <div class="flex items-center gap-1.5 flex-wrap">
+             <span class="font-title-sm text-sm text-primary font-semibold">
+              Trần Ho&agrave;ng Nam
+             </span>
+             <span class="inline-flex items-center gap-1 text-[10px] text-secondary font-semibold bg-secondary-fixed/20 px-2 py-0.5 rounded-full">
+              <span class="material-symbols-outlined text-xs">
+               verified
+              </span>
+              &Dstrok;&atilde; x&aacute;c thực lưu tr&uacute;
+             </span>
+            </div>
+            <span class="text-xs text-on-surface-variant truncate">
+             Doanh nh&acirc;n &middot; Lưu tr&uacute; tại Ph&ograve;ng &Dstrok;&ocirc;i Ho&agrave;ng Gia
+            </span>
+           </div>
+          </div>
+          <!-- Review Content -->
+          <p class="font-body-md text-body-md text-on-surface leading-relaxed mb-4">
+           "Kh&ocirc;ng gian sang trọng tuyệt &dstrok;ối ngay trung t&acirc;m Quận 1. Hồ bơi v&ocirc; cực Cloud 22 ngắm ho&agrave;ng h&ocirc;n cực &dstrok;ẹp, nh&acirc;n vi&ecirc;n lễ t&acirc;n v&agrave; Concierge hỗ trợ chu &dstrok;&aacute;o từng chi tiết nhỏ. Dịch vụ quản gia vượt xa kỳ vọng 5 sao!"
+          </p>
+         </div>
+         <!-- Footer: Stay Date & Helpful Action -->
+         <div class="pt-4 border-t border-surface-container-high flex items-center justify-between text-xs text-on-surface-variant">
+          <span class="flex items-center gap-1">
+           <span class="material-symbols-outlined text-sm text-secondary">
+            calendar_today
+           </span>
+           Th&aacute;ng 10/2026
+          </span>
+          <button class="helpful-btn flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container hover:bg-secondary-container hover:text-on-secondary-container text-primary transition-colors cursor-pointer font-medium" onclick="toggleReviewHelpful(this, 24)" type="button">
+           <span class="material-symbols-outlined text-sm">
+            thumb_up
+           </span>
+           <span class="">
+            Hữu &iacute;ch (
+            <span class="helpful-count">
+             24
+            </span>
+            )
+           </span>
+          </button>
+         </div>
+        </div>
+        <!-- Review Card 2 (TripAdvisor) -->
+        <div class="review-card bg-surface-container-lowest rounded-xl p-6 shadow-md border border-secondary-fixed/40 flex flex-col justify-between transition-all hover:shadow-xl" data-cat="dich-vu" data-ota="tripadvisor">
+         <div>
+          <!-- Header Strip -->
+          <div class="flex items-center justify-between gap-2 pb-4 mb-4 border-b border-surface-container-high">
+           <div class="flex items-center gap-2">
+            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-secondary text-on-secondary flex items-center gap-1">
+             <span class="material-symbols-outlined text-sm">
+              travel_explore
+             </span>
+             TripAdvisor
+            </span>
+            <span class="text-xs font-bold text-primary bg-secondary-fixed px-2 py-0.5 rounded">
+             5.0 / 5
+            </span>
+           </div>
+           <div class="flex text-secondary text-sm">
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+           </div>
+          </div>
+          <!-- Guest Identity -->
+          <div class="flex items-center gap-3 mb-3">
+           <div class="w-11 h-11 rounded-full bg-secondary-fixed text-primary font-headline-sm font-semibold flex items-center justify-center text-lg shrink-0 border border-secondary/30">
+            SN
+           </div>
+           <div class="min-w-0 flex flex-col">
+            <div class="flex items-center gap-1.5 flex-wrap">
+             <span class="font-title-sm text-sm text-primary font-semibold">
+              Sophia Nguyễn &amp; Gia &Dstrok;&igrave;nh
+             </span>
+             <span class="inline-flex items-center gap-1 text-[10px] text-secondary font-semibold bg-secondary-fixed/20 px-2 py-0.5 rounded-full">
+              <span class="material-symbols-outlined text-xs">
+               verified
+              </span>
+              &Dstrok;&atilde; x&aacute;c thực lưu tr&uacute;
+             </span>
+            </div>
+            <span class="text-xs text-on-surface-variant truncate">
+             Kỳ nghỉ gia &dstrok;&igrave;nh &middot; Biệt Thự Gia &Dstrok;&igrave;nh &amp; Kids Club
+            </span>
+           </div>
+          </div>
+          <!-- Review Content -->
+          <p class="font-body-md text-body-md text-on-surface leading-relaxed mb-4">
+           "C&aacute;c b&eacute; nh&agrave; m&igrave;nh m&ecirc; mẩn khu Kids Club v&agrave; lớp học l&agrave;m b&aacute;nh, nhờ vậy hai vợ chồng c&oacute; trọn buổi chiều thư gi&atilde;n tại The Phoenix Spa với liệu tr&igrave;nh &dstrok;&aacute; n&oacute;ng thảo mộc tuyệt vời. Trải nghiệm &dstrok;&aacute;ng nhớ cho cả nh&agrave;!"
+          </p>
+         </div>
+         <!-- Footer -->
+         <div class="pt-4 border-t border-surface-container-high flex items-center justify-between text-xs text-on-surface-variant">
+          <span class="flex items-center gap-1">
+           <span class="material-symbols-outlined text-sm text-secondary">
+            calendar_today
+           </span>
+           Th&aacute;ng 10/2026
+          </span>
+          <button class="helpful-btn flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container hover:bg-secondary-container hover:text-on-secondary-container text-primary transition-colors cursor-pointer font-medium" onclick="toggleReviewHelpful(this, 19)" type="button">
+           <span class="material-symbols-outlined text-sm">
+            thumb_up
+           </span>
+           <span class="">
+            Hữu &iacute;ch (
+            <span class="helpful-count">
+             19
+            </span>
+            )
+           </span>
+          </button>
+         </div>
+        </div>
+        <!-- Review Card 3 (Google Reviews) -->
+        <div class="review-card bg-surface-container-lowest rounded-xl p-6 shadow-md border border-secondary-fixed/40 flex flex-col justify-between transition-all hover:shadow-xl" data-cat="an-uong" data-ota="google">
+         <div>
+          <!-- Header Strip -->
+          <div class="flex items-center justify-between gap-2 pb-4 mb-4 border-b border-surface-container-high">
+           <div class="flex items-center gap-2">
+            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-primary-container text-secondary-fixed flex items-center gap-1 border border-secondary-fixed/30">
+             <span class="material-symbols-outlined text-sm">
+              reviews
+             </span>
+             Google Review
+            </span>
+            <span class="text-xs font-bold text-secondary-container bg-primary px-2 py-0.5 rounded">
+             5.0 / 5
+            </span>
+           </div>
+           <div class="flex text-secondary text-sm">
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+            <span class="material-symbols-outlined text-sm">
+             star
+            </span>
+           </div>
+          </div>
+          <!-- Guest Identity -->
+          <div class="flex items-center gap-3 mb-3">
+           <div class="w-11 h-11 rounded-full bg-primary text-secondary-fixed font-headline-sm font-semibold flex items-center justify-center text-lg shrink-0 border border-secondary-fixed/50">
+            DM
+           </div>
+           <div class="min-w-0 flex flex-col">
+            <div class="flex items-center gap-1.5 flex-wrap">
+             <span class="font-title-sm text-sm text-primary font-semibold">
+              David Miller
+             </span>
+             <span class="inline-flex items-center gap-1 text-[10px] text-secondary font-semibold bg-secondary-fixed/20 px-2 py-0.5 rounded-full">
+              <span class="material-symbols-outlined text-xs">
+               verified
+              </span>
+              &Dstrok;&atilde; x&aacute;c thực lưu tr&uacute;
+             </span>
+            </div>
+            <span class="text-xs text-on-surface-variant truncate">
+             Du kh&aacute;ch Quốc tế &middot; &Dstrok;ại Tiệc Hải Sản &amp; S&acirc;n Golf 18 Hố
+            </span>
+           </div>
+          </div>
+          <!-- Review Content -->
+          <p class="font-body-md text-body-md text-on-surface leading-relaxed mb-4">
+           "Buffet s&aacute;ng v&agrave; &dstrok;ại tiệc hải sản buổi tối thực sự &dstrok;ạt chuẩn Michelin. S&acirc;n Golf 18 hố &dstrok;ược bảo dưỡng ho&agrave;n hảo, dịch vụ Caddy 1:1 rất chuy&ecirc;n nghiệp. Chắc chắn t&ocirc;i sẽ quay lại trong chuyến c&ocirc;ng t&aacute;c tới!"
+          </p>
+         </div>
+         <!-- Footer -->
+         <div class="pt-4 border-t border-surface-container-high flex items-center justify-between text-xs text-on-surface-variant">
+          <span class="flex items-center gap-1">
+           <span class="material-symbols-outlined text-sm text-secondary">
+            calendar_today
+           </span>
+           Th&aacute;ng 09/2026
+          </span>
+          <button class="helpful-btn flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container hover:bg-secondary-container hover:text-on-secondary-container text-primary transition-colors cursor-pointer font-medium" onclick="toggleReviewHelpful(this, 31)" type="button">
+           <span class="material-symbols-outlined text-sm">
+            thumb_up
+           </span>
+           <span class="">
+            Hữu &iacute;ch (
+            <span class="helpful-count">
+             31
+            </span>
+            )
+           </span>
+          </button>
+         </div>
+        </div>
+       </div>
+       <!-- Empty State if filters yield no results -->
+       <div class="hidden py-12 text-center flex flex-col items-center justify-center gap-3 bg-surface-container-lowest rounded-xl border border-dashed border-secondary-fixed/50 mt-6" id="reviews-empty-state">
+        <span class="material-symbols-outlined text-4xl text-secondary">
+         feedback
+        </span>
+        <p class="font-headline-sm text-base text-primary">
+         Kh&ocirc;ng c&oacute; &dstrok;&aacute;nh gi&aacute; n&agrave;o ph&ugrave; hợp với bộ lọc &dstrok;&atilde; chọn
+        </p>
+        <button class="px-5 py-2 rounded-full bg-secondary text-on-secondary text-xs uppercase font-semibold cursor-pointer hover:bg-secondary-container hover:text-on-secondary-container transition-all" onclick="resetAllReviewFilters()" type="button">
+         &Dstrok;ặt Lại Bộ Lọc
+        </button>
+       </div>
+      </div>
+     </div>
+    </section>
+    <!-- ==================== MODAL: VIẾT ĐÁNH GIÁ (WRITE A REVIEW) ==================== -->
+    <div class="fixed inset-0 z-50 hidden items-center justify-center bg-primary/80 backdrop-blur-md p-4 modal-bottom-sheet-target" id="modal-write-review">
+     <div class="bg-surface-container-lowest rounded-xl shadow-2xl max-w-lg w-full overflow-hidden animate-fadeIn border border-secondary-fixed/40 max-h-[92vh] flex flex-col">
+      <!-- Header -->
+      <div class="bg-primary p-6 text-on-primary flex items-center justify-between shrink-0">
+       <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-secondary-fixed">
+         <span class="material-symbols-outlined text-xl">
+          rate_review
+         </span>
+        </div>
+        <div>
+         <h3 class="font-headline-sm text-headline-sm text-surface-bright leading-tight">
+          Viết &Dstrok;&aacute;nh Gi&aacute; Của Bạn
+         </h3>
+         <p class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed mt-0.5">
+          The Phoenix Hotel Saigon
+         </p>
+        </div>
+       </div>
+       <button class="text-on-tertiary-container hover:text-surface-bright transition-colors cursor-pointer" onclick="closeWriteReviewModal()" type="button">
+        <span class="material-symbols-outlined text-2xl">
+         close
+        </span>
+       </button>
+      </div>
+      <!-- Form Body -->
+      <form class="p-6 overflow-y-auto flex flex-col gap-4 text-on-surface" id="write-review-form" onsubmit="handleReviewSubmission(event)">
+       <!-- Star Rating Picker -->
+       <div class="flex flex-col gap-1.5 bg-surface-container-low p-4 rounded-xl border border-surface-container-high">
+        <label class="text-xs font-semibold text-primary uppercase tracking-wider">
+         &Dstrok;&aacute;nh Gi&aacute; Chất Lượng Tổng Thể *
+        </label>
+        <div class="flex items-center gap-2 pt-1" id="star-rating-selector">
+         <button class="star-btn text-2xl text-secondary transition-transform hover:scale-110 cursor-pointer" data-star="1" onclick="setStarRating(1)" type="button">
+          &starf;
+         </button>
+         <button class="star-btn text-2xl text-secondary transition-transform hover:scale-110 cursor-pointer" data-star="2" onclick="setStarRating(2)" type="button">
+          &starf;
+         </button>
+         <button class="star-btn text-2xl text-secondary transition-transform hover:scale-110 cursor-pointer" data-star="3" onclick="setStarRating(3)" type="button">
+          &starf;
+         </button>
+         <button class="star-btn text-2xl text-secondary transition-transform hover:scale-110 cursor-pointer" data-star="4" onclick="setStarRating(4)" type="button">
+          &starf;
+         </button>
+         <button class="star-btn text-2xl text-secondary transition-transform hover:scale-110 cursor-pointer" data-star="5" onclick="setStarRating(5)" type="button">
+          &starf;
+         </button>
+         <span class="ml-2 text-xs font-semibold text-secondary font-title-sm uppercase tracking-wide" id="star-rating-label">
+          5/5 - Ho&agrave;n hảo
+         </span>
+        </div>
+        <input id="review-stars-input" type="hidden" value="5"/>
+       </div>
+       <!-- Category Picker -->
+       <div class="flex flex-col gap-1.5">
+        <label class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider">
+         Chuy&ecirc;n Mục Trải Nghiệm *
+        </label>
+        <select class="w-full bg-surface-container-low text-primary px-3.5 py-2.5 rounded-lg font-body-md text-sm border border-surface-container-high focus:outline-none focus:ring-1 focus:ring-secondary" id="review-category-select" required="">
+         <option value="phong-nghi">
+          Ph&ograve;ng Nghỉ &amp; Suite
+         </option>
+         <option value="dich-vu">
+          Dịch Vụ &amp; The Phoenix Spa
+         </option>
+         <option value="an-uong">
+          Nh&agrave; H&agrave;ng &amp; Ẩm Thực
+         </option>
+        </select>
+       </div>
+       <!-- Guest Name -->
+       <div class="flex flex-col gap-1.5">
+        <label class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider">
+         Họ v&agrave; t&ecirc;n của bạn *
+        </label>
+        <input class="w-full bg-surface-container-low text-primary px-3.5 py-2.5 rounded-lg font-body-md text-sm border border-surface-container-high focus:outline-none focus:ring-1 focus:ring-secondary" id="review-guest-name" placeholder="V&iacute; dụ: L&ecirc; Ho&agrave;ng Minh" required="" type="text"/>
+       </div>
+       <!-- Service or Room Detail -->
+       <div class="flex flex-col gap-1.5">
+        <label class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider">
+         Hạng ph&ograve;ng / Dịch vụ &dstrok;&atilde; trải nghiệm
+        </label>
+        <input class="w-full bg-surface-container-low text-primary px-3.5 py-2.5 rounded-lg font-body-md text-sm border border-surface-container-high focus:outline-none focus:ring-1 focus:ring-secondary" id="review-experience-title" placeholder="V&iacute; dụ: Executive Suite / Tr&agrave; Chiều Ho&agrave;ng Gia" type="text"/>
+       </div>
+       <!-- Comment Textarea -->
+       <div class="flex flex-col gap-1.5">
+        <label class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider">
+         Chia sẻ cảm nhận của bạn *
+        </label>
+        <textarea class="w-full bg-surface-container-low text-primary px-3.5 py-2.5 rounded-lg font-body-md text-sm border border-surface-container-high focus:outline-none focus:ring-1 focus:ring-secondary leading-relaxed" id="review-comment-text" placeholder="H&atilde;y m&ocirc; tả trải nghiệm về ph&ograve;ng ốc, th&aacute;i &dstrok;ộ phục vụ hoặc tiện &iacute;ch tại The Phoenix..." required="" rows="3"></textarea>
+       </div>
+       <!-- Submit Button -->
+       <button class="w-full py-3.5 rounded-full bg-secondary hover:bg-secondary-container text-on-secondary hover:text-on-secondary-container font-title-sm text-sm uppercase tracking-wide transition-all shadow-md font-semibold cursor-pointer mt-2 flex items-center justify-center gap-2" type="submit">
+        <span class="material-symbols-outlined text-base">
+         send
+        </span>
+        <span class="">
+         Gửi &Dstrok;&aacute;nh Gi&aacute; Ngay
+        </span>
+       </button>
+       <div class="flex items-center justify-center gap-2 text-on-surface-variant text-[11px] font-body-md text-center">
+        <span class="material-symbols-outlined text-xs text-secondary">
+         shield
+        </span>
+        <span class="">
+         &Dstrok;&aacute;nh gi&aacute; của qu&yacute; kh&aacute;ch sẽ hiển thị c&ocirc;ng khai k&egrave;m huy hiệu x&aacute;c thực.
+        </span>
+       </div>
+      </form>
+     </div>
+    </div>
+    <!-- ==================== SCRIPT FOR REVIEWS & MODAL ==================== -->
+    <script id="phoenix-reviews-interactive-script">
+var activeOTAChoice = 'all';
+var activeCategoryChoice = 'all';
+var currentSelectedRating = 5;
+
+function filterReviewsByOTA(otaKey) {
+  activeOTAChoice = otaKey;
+  var otaBtns = document.querySelectorAll('#ota-filter-container .ota-filter-btn');
+  otaBtns.forEach(function(btn) {
+    if (btn.getAttribute('data-ota') === otaKey) {
+      btn.className = 'ota-filter-btn px-4 py-2.5 rounded-full text-xs font-title-sm uppercase tracking-wider transition-all cursor-pointer bg-secondary text-on-secondary shadow-md border border-secondary flex items-center gap-1.5';
+    } else {
+      btn.className = 'ota-filter-btn px-4 py-2.5 rounded-full text-xs font-title-sm uppercase tracking-wider transition-all cursor-pointer bg-primary/60 hover:bg-primary text-surface-bright border border-secondary-fixed/30 flex items-center gap-1.5';
+    }
+  });
+  applyCombinedReviewFilters();
+}
+
+function filterReviewsByCategory(catKey) {
+  activeCategoryChoice = catKey;
+  var catBtns = document.querySelectorAll('#review-category-filters .cat-filter-btn');
+  catBtns.forEach(function(btn) {
+    if (btn.getAttribute('data-cat') === catKey) {
+      btn.className = 'cat-filter-btn px-3.5 py-1.5 rounded-full font-title-sm text-xs uppercase tracking-wider transition-all cursor-pointer bg-primary text-on-primary shadow-sm';
+    } else {
+      btn.className = 'cat-filter-btn px-3.5 py-1.5 rounded-full font-title-sm text-xs uppercase tracking-wider transition-all cursor-pointer text-on-surface-variant hover:text-primary';
+    }
+  });
+  applyCombinedReviewFilters();
+}
+
+function applyCombinedReviewFilters() {
+  var cards = document.querySelectorAll('#guest-reviews-grid .review-card');
+  var visibleCount = 0;
+  cards.forEach(function(card) {
+    var cardOTA = card.getAttribute('data-ota');
+    var cardCat = card.getAttribute('data-cat');
+    var matchOTA = (activeOTAChoice === 'all' || cardOTA === activeOTAChoice);
+    var matchCat = (activeCategoryChoice === 'all' || cardCat === activeCategoryChoice);
+    if (matchOTA && matchCat) {
+      card.style.display = 'flex';
+      visibleCount++;
+    } else {
+      card.style.display = 'none';
+    }
+  });
+  var emptyState = document.getElementById('reviews-empty-state');
+  if (emptyState) {
+    emptyState.style.display = visibleCount === 0 ? 'flex' : 'none';
+  }
+}
+
+function resetAllReviewFilters() {
+  filterReviewsByOTA('all');
+  filterReviewsByCategory('all');
+}
+
+function toggleReviewHelpful(buttonEl, initialCount) {
+  var countEl = buttonEl.querySelector('.helpful-count');
+  if (!countEl) return;
+  var isVoted = buttonEl.getAttribute('data-voted') === 'true';
+  var curCount = parseInt(countEl.textContent, 10) || initialCount;
+  if (!isVoted) {
+    buttonEl.setAttribute('data-voted', 'true');
+    countEl.textContent = curCount + 1;
+    buttonEl.classList.remove('bg-surface-container', 'text-primary');
+    buttonEl.classList.add('bg-secondary', 'text-on-secondary');
+  } else {
+    buttonEl.setAttribute('data-voted', 'false');
+    countEl.textContent = curCount - 1;
+    buttonEl.classList.remove('bg-secondary', 'text-on-secondary');
+    buttonEl.classList.add('bg-surface-container', 'text-primary');
+  }
+}
+
+function openWriteReviewModal() {
+  var modal = document.getElementById('modal-write-review');
+  if (modal) {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+}
+
+function closeWriteReviewModal() {
+  var modal = document.getElementById('modal-write-review');
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+}
+
+function setStarRating(rating) {
+  currentSelectedRating = rating;
+  var starsInput = document.getElementById('review-stars-input');
+  if (starsInput) starsInput.value = rating;
+  var buttons = document.querySelectorAll('#star-rating-selector .star-btn');
+  buttons.forEach(function(btn, idx) {
+    if (idx < rating) {
+      btn.style.color = '#775a19';
+      btn.style.opacity = '1';
+    } else {
+      btn.style.color = '#717975';
+      btn.style.opacity = '0.35';
+    }
+  });
+  var label = document.getElementById('star-rating-label');
+  if (label) {
+    var textMap = {
+      1: '1/5 - Cần cải thiện',
+      2: '2/5 - Tạm ổn',
+      3: '3/5 - Hài lòng',
+      4: '4/5 - Rất tốt',
+      5: '5/5 - Hoàn hảo'
+    };
+    label.textContent = textMap[rating] || (rating + '/5');
+  }
+}
+
+function handleReviewSubmission(event) {
+  event.preventDefault();
+  var nameInput = document.getElementById('review-guest-name');
+  var titleInput = document.getElementById('review-experience-title');
+  var commentInput = document.getElementById('review-comment-text');
+  var catSelect = document.getElementById('review-category-select');
+  var starsInput = document.getElementById('review-stars-input');
+
+  var guestName = (nameInput && nameInput.value.trim()) || 'Quý Khách';
+  var expTitle = (titleInput && titleInput.value.trim()) || 'Trải nghiệm The Phoenix';
+  var comment = (commentInput && commentInput.value.trim()) || '';
+  var category = (catSelect && catSelect.value) || 'phong-nghi';
+  var stars = parseInt((starsInput && starsInput.value) || '5', 10);
+
+  // Initials
+  var initials = guestName.split(' ').map(function(w){ return w[0]; }).join('').slice(0, 2).toUpperCase() || 'KH';
+
+  // Star markup
+  var starIcons = '';
+  for (var i = 0; i < stars; i++) {
+    starIcons += '<span class="material-symbols-outlined text-sm">star</span>';
+  }
+
+  var newCard = document.createElement('div');
+  newCard.className = 'review-card bg-surface-container-lowest rounded-xl p-6 shadow-md border-2 border-secondary flex flex-col justify-between transition-all hover:shadow-xl animate-fadeIn';
+  newCard.setAttribute('data-ota', 'all');
+  newCard.setAttribute('data-cat', category);
+  newCard.innerHTML = `
+    <div>
+      <div class="flex items-center justify-between gap-2 pb-4 mb-4 border-b border-surface-container-high">
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-secondary text-on-secondary flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">verified_user</span> Vừa Đánh Giá
+          </span>
+          <span class="text-xs font-bold text-primary bg-secondary-fixed px-2 py-0.5 rounded">` + stars + `.0 / 5</span>
+        </div>
+        <div class="flex text-secondary text-sm">` + starIcons + `</div>
+      </div>
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-11 h-11 rounded-full bg-secondary text-on-secondary font-headline-sm font-semibold flex items-center justify-center text-lg shrink-0 border border-secondary-fixed/50">
+          ` + initials + `
+        </div>
+        <div class="min-w-0 flex flex-col">
+          <div class="flex items-center gap-1.5 flex-wrap">
+            <span class="font-title-sm text-sm text-primary font-semibold">` + guestName + `</span>
+            <span class="inline-flex items-center gap-1 text-[10px] text-secondary font-semibold bg-secondary-fixed/20 px-2 py-0.5 rounded-full">
+              <span class="material-symbols-outlined text-xs">verified</span> Đã xác thực
+            </span>
+          </div>
+          <span class="text-xs text-on-surface-variant truncate">` + expTitle + `</span>
+        </div>
+      </div>
+      <p class="font-body-md text-body-md text-on-surface leading-relaxed mb-4">
+        "` + comment + `"
+      </p>
+    </div>
+    <div class="pt-4 border-t border-surface-container-high flex items-center justify-between text-xs text-on-surface-variant">
+      <span class="flex items-center gap-1">
+        <span class="material-symbols-outlined text-sm text-secondary">calendar_today</span> Vừa xong
+      </span>
+      <button type="button" onclick="toggleReviewHelpful(this, 1)" class="helpful-btn flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container hover:bg-secondary-container hover:text-on-secondary-container text-primary transition-colors cursor-pointer font-medium">
+        <span class="material-symbols-outlined text-sm">thumb_up</span>
+        <span>Hữu ích (<span class="helpful-count">1</span>)</span>
+      </button>
+    </div>
+  `;
+
+  var grid = document.getElementById('guest-reviews-grid');
+  if (grid) {
+    grid.prepend(newCard);
+  }
+
+  // Reset and close
+  if (nameInput) nameInput.value = '';
+  if (titleInput) titleInput.value = '';
+  if (commentInput) commentInput.value = '';
+  closeWriteReviewModal();
+
+  // Reset filter to see all
+  resetAllReviewFilters();
+
+  // Scroll to new review
+  newCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  alert('Cảm ơn quý khách ' + guestName + '! Đánh giá đã được đăng thành công lên trang chủ The Phoenix Hotel.');
+}
+
+// Close modal when clicking on backdrop
+document.addEventListener('click', function(e) {
+  var writeReviewModal = document.getElementById('modal-write-review');
+  if (writeReviewModal && e.target === writeReviewModal) {
+    closeWriteReviewModal();
+  }
+});
+</script>
+    <!-- ==================== SECTION 5: FINE DINING & CULINARY ==================== -->
+    <section class="w-full bg-surface py-space-xl px-margin-mobile md:px-margin">
+     <div class="max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <!-- Left Column: Editorial Card (5 cols) -->
+      <div class="lg:col-span-5 bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-lg relative overflow-hidden">
+       <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary">
+       </div>
+       <span class="font-label-lg text-label-lg uppercase tracking-widest text-secondary block mb-2 font-semibold">
+        Culinary Artistry
+       </span>
+       <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4 leading-tight">
+        Nh&agrave; H&agrave;ng &amp; Ẩm Thực Tinh Hoa
+       </h2>
+       <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+        H&agrave;nh tr&igrave;nh vị gi&aacute;c th&abreve;ng hoa với ẩm thực kết hợp &Aacute; - &Acirc;u s&aacute;ng tạo bởi bếp trưởng gắn sao quốc tế. Thưởng thức buffet hải sản tươi sống thượng hạng, hầm rượu vang qu&yacute; hiếm v&agrave; tiệc tr&agrave; chiều qu&yacute; tộc Anh tại Phoenix Lounge.
+       </p>
+       <ul class="flex flex-col gap-3.5 mb-8">
+        <li class="flex items-center gap-3">
+         <span class="flex items-center justify-center w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container">
+          <span class="material-symbols-outlined text-sm">
+           check
+          </span>
+         </span>
+         <span class="font-title-sm text-title-sm text-primary">
+          Buffet Hải Sản Ho&agrave;ng Gia Nha Trang &amp; Ph&uacute; Quốc
+         </span>
+        </li>
+        <li class="flex items-center gap-3">
+         <span class="flex items-center justify-center w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container">
+          <span class="material-symbols-outlined text-sm">
+           check
+          </span>
+         </span>
+         <span class="font-title-sm text-title-sm text-primary">
+          Sky Wine Cellar &amp; Cigar Lounge Hạng Nhất
+         </span>
+        </li>
+        <li class="flex items-center gap-3">
+         <span class="flex items-center justify-center w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container">
+          <span class="material-symbols-outlined text-sm">
+           check
+          </span>
+         </span>
+         <span class="font-title-sm text-title-sm text-primary">
+          Tr&agrave; Chiều Indochine Cổ &Dstrok;iển &amp; B&aacute;nh Ngọt Ph&aacute;p
+         </span>
+        </li>
+       </ul>
+       <a class="inline-flex items-center gap-2 bg-primary text-on-primary hover:bg-primary-container px-8 py-3.5 rounded-full font-title-sm text-title-sm uppercase transition-all shadow-md" href="#" onclick="event.preventDefault(); if (document.querySelector('nav a[data-path=&quot;an-uong&quot;]')) document.querySelector('nav a[data-path=&quot;an-uong&quot;]').click(); else window.scrollTo({ top: 0, behavior: 'smooth' });">
+        <span class="">
+         Kh&aacute;m Ph&aacute; Thực &Dstrok;ơn
+        </span>
+        <span class="material-symbols-outlined text-secondary-fixed text-sm">
+         arrow_forward
+        </span>
+       </a>
+      </div>
+      <!-- Right Column: 3-Image Masonry Grid (7 cols) -->
+      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-12 gap-5">
+       <!-- Masterchef Plating (Tall, 7 cols) -->
+       <div class="sm:col-span-7 h-[360px] sm:h-[480px] rounded-xl overflow-hidden shadow-md group">
+        <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Gourmet Michelin fine dining dish presentation, master executive chef delicately garnishing wagyu beef medallion with 24k gold leaf and microgreens, charcoal slate plate, moody upscale restaurant kitchen background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCErUKISkFGaLLb_LY2DYLVJ2YPyb02rsD6lJaYiRlgTIpZ0WfU-zuBet2W3-5JHUx1-uqKjH24UD7uE3yHLB27UTLQ-V4HyL0Ghl1_1A79hGtJDYa0r7obxmsYpyodrAf8j0d6bIKgvaztEP82FjRfWHN2S7k_2iySGe--l5Rpzgi3Idwmc4VCItXuLNYVKbR-qnGsYAl1-PueP6FOD5Qc97gYly3LmoinC3av83S307m-aexvN3H6')">
+        </div>
+       </div>
+       <!-- 2 Stacked Atmospheric Photos (5 cols) -->
+       <div class="sm:col-span-5 flex flex-col gap-5">
+        <div class="h-[175px] sm:h-[230px] rounded-xl overflow-hidden shadow-md group">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Intimate candlelit luxury fine dining restaurant room with dark mahogany tables, sparkling Riedel crystal wine glasses, romantic evening ambiance with gentle jazz performance in background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCV7YZzVL0cXgNcDY25lsrwUEKs_12cLpBPusZs82mBcmozYB5JPVubE_4Nndc9IQEDHoFlIn0dY_YE1AEhfGHXApLhYVSRj-cK_CfY9i3NjoS1bU3vqwNFz1wgLtOIt0aqXJ2opzIeqdrhUeugiS4QQVV8CTguXkh5uJZqgxYaw7z4zgqpsQLA64epHqxl-IwUjSVashRaRiiAS8C5ttaGWYoQ6V8gf8E4X9VILCsVSlSpm-PI-s1b')">
+         </div>
+        </div>
+        <div class="h-[175px] sm:h-[230px] rounded-xl overflow-hidden shadow-md group">
+         <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Artisanal craft cocktail in crystal coupe glass garnished with dehydrated orange and edible orchid, accompanied by three-tier English afternoon tea pastries stand, warm sunlight in colonial solarium" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVhx9H7AVsZL6j69_zCKqIFBa6CRSAryL_J90k_Q7uzJO2XBUqmpNmiEJHzMIHfZ14sclju-I6UC_JUvM4Uuk4UnLTfi3-bHqZ82RDmqlGhmgg_9__A_1R28mQu_i4kI7qliaYmGEFaXm1Vcd0TivgYxyBUwmK2nGUZzKRsUXCwArQKGWCw2yYPUk7KUQFe3QgKKTKP7B_oNMOzC2c7tcJu-ijo5vJyaPLb4A2muAMYRYOhzvULjy_')">
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <!-- ==================== SECTION 6: 7 SIGNATURE SERVICES CAROUSEL ==================== -->
+    <section class="w-full bg-surface-container py-space-xl px-margin-mobile md:px-margin overflow-hidden">
+     <div class="max-w-[1320px] mx-auto">
+      <!-- Section Header with Controls -->
+      <div class="flex flex-col md:flex-row items-end justify-between mb-10 gap-6">
+       <div>
+        <span class="font-label-lg text-label-lg uppercase tracking-widest text-secondary block mb-2 font-semibold">
+         Signature Experiences
+        </span>
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">
+         Dịch Vụ Nổi Bật Tại The Phoenix
+        </h2>
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mt-2">
+         Thư gi&atilde;n tuyệt &dstrok;ối với chuỗi tiện &iacute;ch &dstrok;ẳng cấp quốc tế phục vụ 24/7 cho kỳ nghỉ trọn vẹn.
+        </p>
+       </div>
+       <!-- Carousel Navigation Controls -->
+       <div class="flex items-center gap-3">
+        <button aria-label="Previous Slide" class="w-12 h-12 rounded-full bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary flex items-center justify-center transition-colors shadow-md" id="carousel-prev" type="button">
+         <span class="material-symbols-outlined">
+          chevron_left
+         </span>
+        </button>
+        <button aria-label="Next Slide" class="w-12 h-12 rounded-full bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary flex items-center justify-center transition-colors shadow-md" id="carousel-next" type="button">
+         <span class="material-symbols-outlined">
+          chevron_right
+         </span>
+        </button>
+       </div>
+      </div>
+      <!-- Horizontal Scroll Track (7 Distinct Items) -->
+      <div class="flex gap-6 overflow-x-auto pb-6 scroll-smooth snap-x snap-mandatory" id="services-track" style="scrollbar-width: none; -ms-overflow-style: none;">
+       <!-- Service 01: Spa -->
+       <div class="snap-start shrink-0 w-[300px] md:w-[360px] h-[460px] rounded-xl overflow-hidden relative shadow-lg group cursor-pointer" onclick="if (document.querySelector('nav a[data-path=&quot;dich-vu&quot;]')) document.querySelector('nav a[data-path=&quot;dich-vu&quot;]').click(); else window.scrollTo({ top: 0, behavior: 'smooth' });">
+        <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Luxury organic botanical spa treatment room, hot basalt stones on pristine towel, lotus essential oil diffuser with soft rising steam, bamboo interior accents, relaxing warm candlelit aura" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDTh6ptujMLtJWG1CUf0HO0dMoxIkaJZWwAUTLkufY2JxR5V0gZMRvRhb6AEuuzFqSZqBaEi8H4AC6SyOrqGernjxDeWI-XdV_aShd7eNylhuH8jSapKRqGdhrjgNj0ohav_yhszKPYKWwYyFuTUPnyZtpL9cHLB3-gdFMmC0f98ej7u-RcypPAIky3je9cLsBzVVRuxUd-tVGEFAcGMuF5aVfDjsue4Mg3xyrqcrw2uJJmgRZOJSxq')">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent">
+        </div>
+        <div class="absolute top-5 left-5">
+         <span class="font-headline-sm text-headline-sm text-secondary-fixed">
+          01
+         </span>
+        </div>
+        <div class="absolute bottom-6 left-6 right-6 text-on-primary">
+         <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed block mb-1">
+          Wellness &amp; Healing
+         </span>
+         <h3 class="font-headline-sm text-headline-sm text-surface-bright mb-2">
+          Spa &amp; Trị Liệu Thảo Mộc
+         </h3>
+         <p class="font-body-md text-body-md text-on-tertiary-container line-clamp-2 mb-3">
+          Liệu ph&aacute;p &Dstrok;&ocirc;ng y kết hợp &dstrok;&aacute; n&oacute;ng bazan v&agrave; tinh dầu hoa sen thanh lọc t&acirc;m hồn.
+         </p>
+         <span class="inline-flex items-center gap-1 font-title-sm text-title-sm text-secondary-fixed group-hover:translate-x-1 transition-transform">
+          Xem chi tiết
+          <span class="material-symbols-outlined text-sm">
+           arrow_forward
+          </span>
+         </span>
+        </div>
+       </div>
+       <!-- Service 02: Rooftop Infinity Pool -->
+       <div class="snap-start shrink-0 w-[300px] md:w-[360px] h-[460px] rounded-xl overflow-hidden relative shadow-lg group cursor-pointer" onclick="if (document.querySelector('nav a[data-path=&quot;dich-vu&quot;]')) document.querySelector('nav a[data-path=&quot;dich-vu&quot;]').click(); else window.scrollTo({ top: 0, behavior: 'smooth' });">
+        <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="50-meter rooftop infinity pool at twilight overlooking shimmering Ho Chi Minh City skyline, elegant sun loungers with emerald cushions, glowing pool bottom lights, luxury sky lounge cocktails" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB4R9OiXFqk4CAsq8Y6uEitwXrE1x39E88HFV85dI3D_KtnNuC-qLLkRy3Cbu4RfwQU4B3oX54qNOLqmTErHsOnMn-qopxaxsiwyMEsW7xvt7E3o6f57E1SxZ5OFpS-OQibKYh_ppXjVxrbGJ7_OJmyOCB556YXLdc_vx0PEU2xvtt8LywROlIhkQP8pnQysXwYe4pBVr8Mg-nLyrxjGbZ8Rm6MW7Eu-tDa0j7F2bcpcwVhrufW2thw')">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent">
+        </div>
+        <div class="absolute top-5 left-5">
+         <span class="font-headline-sm text-headline-sm text-secondary-fixed">
+          02
+         </span>
+        </div>
+        <div class="absolute bottom-6 left-6 right-6 text-on-primary">
+         <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed block mb-1">
+          Sky Relaxation
+         </span>
+         <h3 class="font-headline-sm text-headline-sm text-surface-bright mb-2">
+          Hồ Bơi V&ocirc; Cực &amp; Sky Bar
+         </h3>
+         <p class="font-body-md text-body-md text-on-tertiary-container line-clamp-2 mb-3">
+          Thư gi&atilde;n giữa l&agrave;n nước m&aacute;t ở tầng 28 với tầm nh&igrave;n ngoạn mục to&agrave;n cảnh s&ocirc;ng S&agrave;i G&ograve;n.
+         </p>
+         <span class="inline-flex items-center gap-1 font-title-sm text-title-sm text-secondary-fixed group-hover:translate-x-1 transition-transform">
+          Xem chi tiết
+          <span class="material-symbols-outlined text-sm">
+           arrow_forward
+          </span>
+         </span>
+        </div>
+       </div>
+       <!-- Service 03: 24/7 Technogym & Yoga -->
+       <div class="snap-start shrink-0 w-[300px] md:w-[360px] h-[460px] rounded-xl overflow-hidden relative shadow-lg group cursor-pointer" onclick="if (document.querySelector('nav a[data-path=&quot;dich-vu&quot;]')) document.querySelector('nav a[data-path=&quot;dich-vu&quot;]').click(); else window.scrollTo({ top: 0, behavior: 'smooth' });">
+        <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="High-end hotel gym with latest Italian Technogym cardiovascular machines and weights, floor-to-ceiling glass wall, peaceful hardwood floor yoga studio with meditation cushions" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3sxBhAWMTW_TSTJAe5znYTgSXoJVRqMbhZXFBF1Voklv34S-3lmO2lPGKKMZfG2_QvbxSTr2RRpNXT_U6sz4W5t_QHziwyYujWPBI3AAftOpVOmR5LxUc4va__yVv4JKbdVCpm6QFrx7e361FSi93wOHtgQ4xVxac_LtKxSwLgAerBeRhE-DfAJlBZmBJAGErzhDhlkJJ7uid7g3OB4asGWGyLGO1vss-MSsx7C-4c7tAhaJgdqUH')">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent">
+        </div>
+        <div class="absolute top-5 left-5">
+         <span class="font-headline-sm text-headline-sm text-secondary-fixed">
+          03
+         </span>
+        </div>
+        <div class="absolute bottom-6 left-6 right-6 text-on-primary">
+         <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed block mb-1">
+          Fitness Club
+         </span>
+         <h3 class="font-headline-sm text-headline-sm text-surface-bright mb-2">
+          Ph&ograve;ng Gym &amp; Yoga 24/7
+         </h3>
+         <p class="font-body-md text-body-md text-on-tertiary-container line-clamp-2 mb-3">
+          Thiết bị Technogym ti&ecirc;n tiến bậc nhất c&ugrave;ng huấn luyện vi&ecirc;n c&aacute; nh&acirc;n v&agrave; lớp thiền &dstrok;ịnh.
+         </p>
+         <span class="inline-flex items-center gap-1 font-title-sm text-title-sm text-secondary-fixed group-hover:translate-x-1 transition-transform">
+          Xem chi tiết
+          <span class="material-symbols-outlined text-sm">
+           arrow_forward
+          </span>
+         </span>
+        </div>
+       </div>
+       <!-- Service 04: Royal Golf Simulator & Partner Club -->
+       <div class="snap-start shrink-0 w-[300px] md:w-[360px] h-[460px] rounded-xl overflow-hidden relative shadow-lg group cursor-pointer" onclick="if (document.querySelector('nav a[data-path=&quot;dich-vu&quot;]')) document.querySelector('nav a[data-path=&quot;dich-vu&quot;]').click(); else window.scrollTo({ top: 0, behavior: 'smooth' });">
+        <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Indoor luxury private high-definition 3D golf simulator room, VIP leather chairs, gentleman swinging driver club, set of gold plated irons in leather golf bag" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAEhOpfEBVJZP1V_9XKejkB2y3ypfsMKu9UjlgFPZV2vEJRhS1CEweXZEYVXag-_SSFb9t9WKoAh-TA1IXO8cncCb3njWJ9uqLtAw9EwhuAkkzi6oXt388oAM07RphpvDC2CpzI_DXBxVss-bGoM768v6AXBRcVji78x8x4Fa0tck9EX6AvaubhFbQANbkrj3vzDycDpWG1kOQgt39DUs5TJTC_nw3m19slxBNlS_GP0wVJS239SeZ1')">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent">
+        </div>
+        <div class="absolute top-5 left-5">
+         <span class="font-headline-sm text-headline-sm text-secondary-fixed">
+          04
+         </span>
+        </div>
+        <div class="absolute bottom-6 left-6 right-6 text-on-primary">
+         <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed block mb-1">
+          Elite Sports
+         </span>
+         <h3 class="font-headline-sm text-headline-sm text-surface-bright mb-2">
+          S&acirc;n Golf Ho&agrave;ng Gia 18 Hố
+         </h3>
+         <p class="font-body-md text-body-md text-on-tertiary-container line-clamp-2 mb-3">
+          Hệ thống m&ocirc; phỏng 3D hiện &dstrok;ại v&agrave; &dstrok;ặc quyền &dstrok;ặt s&acirc;n tee-time tại c&aacute;c c&acirc;u lạc bộ golf h&agrave;ng &dstrok;ầu.
+         </p>
+         <span class="inline-flex items-center gap-1 font-title-sm text-title-sm text-secondary-fixed group-hover:translate-x-1 transition-transform">
+          Xem chi tiết
+          <span class="material-symbols-outlined text-sm">
+           arrow_forward
+          </span>
+         </span>
+        </div>
+       </div>
+       <!-- Service 05: Montessori Kids Club -->
+       <div class="snap-start shrink-0 w-[300px] md:w-[360px] h-[460px] rounded-xl overflow-hidden relative shadow-lg group cursor-pointer" onclick="if (document.querySelector('nav a[data-path=&quot;dich-vu&quot;]')) document.querySelector('nav a[data-path=&quot;dich-vu&quot;]').click(); else window.scrollTo({ top: 0, behavior: 'smooth' });">
+        <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Bright, safe upscale Montessori children play lounge in luxury hotel, handcrafted natural wooden toys, soft pastel colored beanbags, story reading nook with fairy lights and warm attendant" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKCoA7EsLDHI7bw_BW6__zinGscb0jHFg34WksU9wQAY2pXxTMHWSsPLoDtuIQEeNYQW6XItmtFKjvT4iythfKDmVKEGzP1BTHlQmzEaQj6ipTveantEnsM8aHtB-srgG8afEbRZQKT3fmBReREyN8DyEprQeQQjpZrW2JscVAVaXGBViAx1bPW5PVhSS7gMR6kTpfmI9qGi_ctXi00th3GIDPOniQYYOl-Ja4McfArPsmrnzPQGxL')">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent">
+        </div>
+        <div class="absolute top-5 left-5">
+         <span class="font-headline-sm text-headline-sm text-secondary-fixed">
+          05
+         </span>
+        </div>
+        <div class="absolute bottom-6 left-6 right-6 text-on-primary">
+         <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed block mb-1">
+          Family &amp; Kids
+         </span>
+         <h3 class="font-headline-sm text-headline-sm text-surface-bright mb-2">
+          Khu Vui Chơi Trẻ Em
+         </h3>
+         <p class="font-body-md text-body-md text-on-tertiary-container line-clamp-2 mb-3">
+          Kh&ocirc;ng gian Montessori s&aacute;ng tạo, an to&agrave;n c&ugrave;ng &dstrok;ội ng&utilde; bảo mẫu chuy&ecirc;n nghiệp &dstrok;ược chứng nhận.
+         </p>
+         <span class="inline-flex items-center gap-1 font-title-sm text-title-sm text-secondary-fixed group-hover:translate-x-1 transition-transform">
+          Xem chi tiết
+          <span class="material-symbols-outlined text-sm">
+           arrow_forward
+          </span>
+         </span>
+        </div>
+       </div>
+       <!-- Service 06: Luxury Shopping Boutiques -->
+       <div class="snap-start shrink-0 w-[300px] md:w-[360px] h-[460px] rounded-xl overflow-hidden relative shadow-lg group cursor-pointer" onclick="if (document.querySelector('nav a[data-path=&quot;dich-vu&quot;]')) document.querySelector('nav a[data-path=&quot;dich-vu&quot;]').click(); else window.scrollTo({ top: 0, behavior: 'smooth' });">
+        <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Luxury hotel internal designer shopping arcade with illuminated vitrines displaying Swiss luxury watches, haute couture silks, and fine diamond jewelry, marble floor reflections" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDWTBqk4k0maXUg5EsOmzmpLeQ7qDWAkkf6imr8QmoPHoTrKnulHXjEXhvbqT1F81OVMfG8ZBUlTvZlVC9tvsSFVhEZchbXuoTpTHeLiqoJqQIzz5JohYd9d5GnINo_r7r5rU1dNdgj4KhiP24xIV7SR2oN4iR3f71zLErcgbvk9xWvRHXyag2XC39kwGdTD1XQ0WWFzt064C627B36H4hTQwIalNtcNdCpcNuYRKyUtMlzb2PpFuGC')">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent">
+        </div>
+        <div class="absolute top-5 left-5">
+         <span class="font-headline-sm text-headline-sm text-secondary-fixed">
+          06
+         </span>
+        </div>
+        <div class="absolute bottom-6 left-6 right-6 text-on-primary">
+         <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed block mb-1">
+          Haute Couture
+         </span>
+         <h3 class="font-headline-sm text-headline-sm text-surface-bright mb-2">
+          Khu Mua Sắm Xa Xỉ
+         </h3>
+         <p class="font-body-md text-body-md text-on-tertiary-container line-clamp-2 mb-3">
+          Tụ hội những thương hiệu &dstrok;ồng hồ Thụy S&itilde;, trang sức kim ho&agrave;n v&agrave; thời trang thiết kế &dstrok;ộc bản.
+         </p>
+         <span class="inline-flex items-center gap-1 font-title-sm text-title-sm text-secondary-fixed group-hover:translate-x-1 transition-transform">
+          Xem chi tiết
+          <span class="material-symbols-outlined text-sm">
+           arrow_forward
+          </span>
+         </span>
+        </div>
+       </div>
+       <!-- Service 07: Grand Ballroom & Events -->
+       <div class="snap-start shrink-0 w-[300px] md:w-[360px] h-[460px] rounded-xl overflow-hidden relative shadow-lg group cursor-pointer" onclick="if (document.querySelector('nav a[data-path=&quot;dich-vu&quot;]')) document.querySelector('nav a[data-path=&quot;dich-vu&quot;]').click(); else window.scrollTo({ top: 0, behavior: 'smooth' });">
+        <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Magnificent neoclassical grand ballroom set up for luxury gala dinner, opulent crystal chandeliers, white floral centerpieces, round banquet tables with gold chiavari chairs, stage lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB07fX22onDxht8uuNtnr1T2zg8Olj-C52eKlDjpkRd1lofBqyjZEzQRtUGXdF6HDLKl5ci16huKCM378HHzcaX0xxV1vADfjnat8QlqVGhtvwYpLw3iZQQaYEgI_7oKsU1jjl6XurYJ20-l9cpX11oUBEA1fYhGmLfWSCzmp1vfjYIYdbIfYyiTc-S0kdK0OrOMFw8P7iLA-G3GI2PhX9ACRVy4TRvVuByxrCwNMmCnNAO5TwBBPEv')">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent">
+        </div>
+        <div class="absolute top-5 left-5">
+         <span class="font-headline-sm text-headline-sm text-secondary-fixed">
+          07
+         </span>
+        </div>
+        <div class="absolute bottom-6 left-6 right-6 text-on-primary">
+         <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed block mb-1">
+          Grand Events
+         </span>
+         <h3 class="font-headline-sm text-headline-sm text-surface-bright mb-2">
+          Ph&ograve;ng Họp &amp; Hội Nghị
+         </h3>
+         <p class="font-body-md text-body-md text-on-tertiary-container line-clamp-2 mb-3">
+          &Dstrok;ại sảnh tiệc Phoenix Ballroom sức chứa 500 kh&aacute;ch với hệ thống &acirc;m thanh, &aacute;nh s&aacute;ng chuẩn quốc tế.
+         </p>
+         <span class="inline-flex items-center gap-1 font-title-sm text-title-sm text-secondary-fixed group-hover:translate-x-1 transition-transform">
+          Xem chi tiết
+          <span class="material-symbols-outlined text-sm">
+           arrow_forward
+          </span>
+         </span>
+        </div>
+       </div>
+      </div>
+      <!-- Bottom Button -->
+      <div class="text-center mt-10">
+       <button class="inline-flex items-center gap-3 bg-primary hover:bg-primary-container text-on-primary px-9 py-3.5 rounded-full font-title-sm text-title-sm uppercase transition-all shadow-md" onclick="if (document.querySelector('nav a[data-path=&quot;dich-vu&quot;]')) document.querySelector('nav a[data-path=&quot;dich-vu&quot;]').click(); else window.scrollTo({ top: 0, behavior: 'smooth' });" type="button">
+        <span class="">
+         Kh&aacute;m Ph&aacute; Tất Cả 7 Dịch Vụ
+        </span>
+        <span class="material-symbols-outlined text-secondary-fixed text-sm">
+         arrow_forward
+        </span>
+       </button>
+      </div>
+     </div>
+    </section>
+    <!-- ==================== SECTION 7: PRE-FOOTER CONVERSION BANNER ==================== -->
+    <section class="w-full bg-surface-container-high py-16 px-margin-mobile md:px-margin">
+     <div class="max-w-[1240px] mx-auto bg-surface-container-lowest rounded-xl p-8 md:p-14 shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8">
+      <div class="flex flex-col gap-2 max-w-2xl text-center lg:text-left">
+       <span class="font-label-lg text-label-lg uppercase tracking-widest text-secondary font-semibold">
+        Reserve Your Stay
+       </span>
+       <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-tight">
+        &Dstrok;ặt Ph&ograve;ng Ngay H&ocirc;m Nay &Dstrok;ể Nhận Ưu &Dstrok;&atilde;i &Dstrok;ộc Quyền Giảm 20%
+       </h2>
+       <p class="font-body-md text-body-md text-on-surface-variant">
+        Bao gồm bữa s&aacute;ng buffet miễn ph&iacute; mỗi ng&agrave;y tại Phoenix Brasserie v&agrave; v&eacute; trải nghiệm tr&agrave; chiều ho&agrave;ng gia.
+       </p>
+      </div>
+      <div class="flex flex-col sm:flex-row items-center gap-4 shrink-0 w-full lg:w-auto">
+       <button class="w-full sm:w-auto flex items-center justify-center gap-2 bg-secondary text-on-secondary hover:bg-secondary-container hover:text-on-secondary-container px-8 py-4 rounded-full font-title-sm text-title-sm uppercase transition-all shadow-md" onclick="openBookingModal()" type="button">
+        <span class="material-symbols-outlined text-secondary-fixed text-sm">
+         event
+        </span>
+        <span class="">
+         Xem Ph&ograve;ng &amp; &Dstrok;ặt Ngay
+        </span>
+       </button>
+       <a class="w-full sm:w-auto flex items-center justify-center gap-2 bg-surface-container-low hover:bg-surface-container text-primary px-8 py-4 rounded-full font-title-sm text-title-sm transition-all shadow-sm" href="tel:+842838238888">
+        <span class="material-symbols-outlined text-secondary text-sm">
+         call
+        </span>
+        <span class="">
+         (+84) 28 3823 8888
+        </span>
+       </a>
+      </div>
+     </div>
+    </section>
+    <!-- ==================== GLOBAL RESERVATION POPUP MODAL ==================== -->
+    <div class="fixed inset-0 z-50 hidden items-center justify-center bg-primary/75 backdrop-blur-md p-4 modal-bottom-sheet-target" id="booking-modal">
+     <div class="bg-surface-container-lowest rounded-xl shadow-2xl max-w-lg w-full overflow-hidden animate-fadeIn">
+      <!-- Modal Header -->
+      <div class="bg-primary p-6 text-on-primary flex items-center justify-between">
+       <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-secondary-fixed text-2xl">
+         hotel
+        </span>
+        <div>
+         <h3 class="font-headline-sm text-headline-sm text-surface-bright leading-none">
+          The Phoenix
+         </h3>
+         <p class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed mt-1">
+          Hệ Thống &Dstrok;ặt Ph&ograve;ng Trực Tuyến
+         </p>
+        </div>
+       </div>
+       <button class="text-on-tertiary-container hover:text-surface-bright transition-colors" onclick="closeBookingModal()" type="button">
+        <span class="material-symbols-outlined text-2xl">
+         close
+        </span>
+       </button>
+      </div>
+      <!-- Modal Body / Form -->
+      <form class="p-6 md:p-8 flex flex-col gap-5" id="reservation-form" onsubmit="handleBookingSubmit(event)">
+       <!-- Date Pickers Grid -->
+       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+         <label class="block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-1.5">
+          Ng&agrave;y Nhận Ph&ograve;ng (Check-in)
+         </label>
+         <div class="relative">
+          <input class="w-full bg-surface-container-low text-on-surface px-4 py-2.5 rounded-lg font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-secondary" id="checkin-date" required="" type="date"/>
+         </div>
+        </div>
+        <div>
+         <label class="block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-1.5">
+          Ng&agrave;y Trả Ph&ograve;ng (Check-out)
+         </label>
+         <div class="relative">
+          <input class="w-full bg-surface-container-low text-on-surface px-4 py-2.5 rounded-lg font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-secondary" id="checkout-date" required="" type="date"/>
+         </div>
+        </div>
+       </div>
+       <!-- Room Selection -->
+       <div>
+        <label class="block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-1.5">
+         Hạng Ph&ograve;ng Ưa Th&iacute;ch
+        </label>
+        <select class="w-full bg-surface-container-low text-on-surface px-4 py-2.5 rounded-lg font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-secondary" id="modal-room-type">
+         <option value="Deluxe King Room">
+          Deluxe King Room (45m&sup2; - City View)
+         </option>
+         <option value="Executive Suite">
+          Executive Suite (65m&sup2; - Marble Tub)
+         </option>
+         <option value="Heritage Balcony Suite">
+          Heritage Balcony Suite (55m&sup2; - Garden)
+         </option>
+         <option value="Grand Family Villa">
+          Grand Family Villa (90m&sup2; - 2 Bedrooms)
+         </option>
+         <option value="Presidential Penthouse">
+          The Phoenix Presidential Penthouse (180m&sup2;)
+         </option>
+        </select>
+       </div>
+       <!-- Guests Count -->
+       <div class="grid grid-cols-2 gap-4">
+        <div>
+         <label class="block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-1.5">
+          Người Lớn
+         </label>
+         <select class="w-full bg-surface-container-low text-on-surface px-4 py-2.5 rounded-lg font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-secondary">
+          <option value="1">
+           1 Kh&aacute;ch
+          </option>
+          <option selected="" value="2">
+           2 Kh&aacute;ch
+          </option>
+          <option value="3">
+           3 Kh&aacute;ch
+          </option>
+          <option value="4">
+           4+ Kh&aacute;ch
+          </option>
+         </select>
+        </div>
+        <div>
+         <label class="block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-1.5">
+          Trẻ Em (&lt;12 tuổi)
+         </label>
+         <select class="w-full bg-surface-container-low text-on-surface px-4 py-2.5 rounded-lg font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-secondary">
+          <option selected="" value="0">
+           0
+          </option>
+          <option value="1">
+           1 B&eacute;
+          </option>
+          <option value="2">
+           2 B&eacute;
+          </option>
+          <option value="3">
+           3+ B&eacute;
+          </option>
+         </select>
+        </div>
+       </div>
+       <!-- Submit Button -->
+       <button class="w-full bg-secondary hover:bg-secondary-container text-on-secondary hover:text-on-secondary-container py-3.5 rounded-lg font-title-sm text-title-sm uppercase tracking-wide transition-all shadow-md mt-2" type="submit">
+        X&aacute;c Nhận T&igrave;m Ph&ograve;ng Trống
+       </button>
+       <!-- Guarantee Note -->
+       <div class="flex items-center justify-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+        <span class="material-symbols-outlined text-secondary text-sm">
+         lock
+        </span>
+        <span class="">
+         &Dstrok;ảm bảo gi&aacute; tốt nhất &middot; Miễn ph&iacute; hủy ph&ograve;ng trước 48h
+        </span>
+       </div>
+      </form>
+     </div>
+    </div>
+    <!-- MODAL A: MY BOOKINGS -->
+    <div class="fixed inset-0 z-50 hidden items-center justify-center bg-primary/80 backdrop-blur-md p-4 modal-bottom-sheet-target" id="modal-my-bookings">
+     <div class="bg-surface-container-lowest rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] flex flex-col overflow-hidden animate-fadeIn border border-secondary-fixed/40">
+      <div class="bg-primary p-6 text-on-primary flex items-center justify-between shrink-0">
+       <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-secondary-fixed">
+         <span class="material-symbols-outlined text-xl">
+          calendar_month
+         </span>
+        </div>
+        <div>
+         <h3 class="font-headline-sm text-headline-sm text-surface-bright leading-tight">
+          Quản L&yacute; &Dstrok;ặt Chỗ Của T&ocirc;i
+         </h3>
+         <p class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed mt-0.5">
+          3 Giao Dịch &Dstrok;&atilde; X&aacute;c Nhận
+         </p>
+        </div>
+       </div>
+       <button class="text-on-tertiary-container hover:text-surface-bright transition-colors cursor-pointer" onclick="closePhoenixModal('my-bookings')" type="button">
+        <span class="material-symbols-outlined text-2xl">
+         close
+        </span>
+       </button>
+      </div>
+      <div class="p-6 overflow-y-auto flex flex-col gap-4">
+       <div class="p-4 rounded-xl border border-secondary-fixed/40 bg-surface-container-low flex flex-col gap-3 relative overflow-hidden">
+        <div class="flex items-start justify-between gap-2">
+         <div class="flex items-center gap-2">
+          <span class="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-sm text-xs uppercase font-semibold">
+           Ph&ograve;ng Nghỉ
+          </span>
+          <span class="font-headline-sm text-base text-primary font-semibold">
+           Ph&ograve;ng &Dstrok;&ocirc;i Ho&agrave;ng Gia (Royal Suite)
+          </span>
+         </div>
+         <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary text-secondary-fixed border border-secondary-fixed/30">
+          &Dstrok;&atilde; x&aacute;c nhận
+         </span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-on-surface-variant font-body-md">
+         <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-secondary text-base">
+           confirmation_number
+          </span>
+          <span class="">
+           M&atilde;:
+           <strong class="text-primary">
+            PHX-RM59204
+           </strong>
+          </span>
+         </div>
+         <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-secondary text-base">
+           event_available
+          </span>
+          <span class="">
+           Thời gian:
+           <strong class="text-primary">
+            25/10/2026 - 27/10/2026
+           </strong>
+          </span>
+         </div>
+         <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-secondary text-base">
+           king_bed
+          </span>
+          <span class="">
+           Hạng: 1 Giường King, View S&ocirc;ng S&agrave;i G&ograve;n
+          </span>
+         </div>
+         <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-secondary text-base">
+           room_service
+          </span>
+          <span class="">
+           Dịch vụ: Quản gia ri&ecirc;ng 24/7 + Bữa s&aacute;ng
+          </span>
+         </div>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-surface-container-high">
+         <span class="text-sm text-secondary font-semibold">
+          Tổng: 49.000.000₫ (&Dstrok;&atilde; thanh to&aacute;n)
+         </span>
+         <div class="flex gap-2">
+          <button class="px-3 py-1.5 rounded-lg border border-secondary text-secondary hover:bg-secondary hover:text-on-secondary text-xs uppercase font-semibold transition-all cursor-pointer" onclick="alert('Hệ thống &dstrok;&atilde; nhận y&ecirc;u cầu thay &dstrok;ổi lịch tr&igrave;nh. Concierge sẽ gọi hỗ trợ trong 5 ph&uacute;t!')" type="button">
+           Hủy / &Dstrok;ổi Lịch
+          </button>
+          <button class="px-3 py-1.5 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high text-xs font-semibold transition-all flex items-center gap-1 cursor-pointer" onclick="window.print()" type="button">
+           <span class="material-symbols-outlined text-xs">
+            print
+           </span>
+           In V&eacute;
+          </button>
+         </div>
+        </div>
+       </div>
+       <div class="p-4 rounded-xl border border-secondary-fixed/40 bg-surface-container-low flex flex-col gap-3">
+        <div class="flex items-start justify-between gap-2">
+         <div class="flex items-center gap-2">
+          <span class="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-sm text-xs uppercase font-semibold">
+           Dịch Vụ &amp; Spa
+          </span>
+          <span class="font-headline-sm text-base text-primary font-semibold">
+           The Phoenix Spa &amp; Trị Liệu Thảo Mộc
+          </span>
+         </div>
+         <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container">
+          Sắp diễn ra
+         </span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-on-surface-variant font-body-md">
+         <div class="">
+          M&atilde;:
+          <strong class="text-primary">
+           PHX-849201
+          </strong>
+          (G&oacute;i Ho&agrave;ng Gia 90 ph&uacute;t)
+         </div>
+         <div class="">
+          Thời gian:
+          <strong class="text-primary">
+           14:00 &middot; 25/10/2026
+          </strong>
+          (2 kh&aacute;ch)
+         </div>
+         <div class="">
+          Chuy&ecirc;n vi&ecirc;n: Master Therapist Lan Nguyễn
+         </div>
+         <div class="">
+          &Dstrok;ịa &dstrok;iểm: Lotus Sanctuary Tầng 5
+         </div>
+        </div>
+        <div class="flex items-center justify-end pt-2 border-t border-surface-container-high">
+         <button class="px-3 py-1.5 rounded-lg border border-secondary text-secondary hover:bg-secondary hover:text-on-secondary text-xs uppercase font-semibold transition-all cursor-pointer" onclick="alert('Lịch Spa &dstrok;&atilde; &dstrok;ược cập nhật ghi ch&uacute; &dstrok;ặc biệt!')" type="button">
+          Gửi Ghi Ch&uacute; &Dstrok;ặc Biệt
+         </button>
+        </div>
+       </div>
+       <div class="p-4 rounded-xl border border-secondary-fixed/40 bg-surface-container-low flex flex-col gap-3">
+        <div class="flex items-start justify-between gap-2">
+         <div class="flex items-center gap-2">
+          <span class="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-sm text-xs uppercase font-semibold">
+           B&agrave;n Nh&agrave; H&agrave;ng
+          </span>
+          <span class="font-headline-sm text-base text-primary font-semibold">
+           &Dstrok;ại Tiệc Hải Sản Thượng Hạng
+          </span>
+         </div>
+         <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary text-secondary-fixed border border-secondary-fixed/30">
+          &Dstrok;&atilde; giữ b&agrave;n
+         </span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-on-surface-variant font-body-md">
+         <div class="">
+          M&atilde;:
+          <strong class="text-primary">
+           PHX-TB3094
+          </strong>
+          (B&agrave;n VIP cạnh cửa sổ)
+         </div>
+         <div class="">
+          Thời gian:
+          <strong class="text-primary">
+           19:00 &middot; 25/10/2026
+          </strong>
+          (2 người lớn)
+         </div>
+         <div class="">
+          Nh&agrave; h&agrave;ng: Phoenix Brasserie Tầng 2
+         </div>
+         <div class="">
+          Ưu &dstrok;&atilde;i: Tặng 1 chai vang Ph&aacute;p Grand Cru
+         </div>
+        </div>
+        <div class="flex items-center justify-end pt-2 border-t border-surface-container-high">
+         <button class="px-3 py-1.5 rounded-lg border border-secondary text-secondary hover:bg-secondary hover:text-on-secondary text-xs uppercase font-semibold transition-all cursor-pointer" onclick="alert('&Dstrok;&atilde; gửi x&aacute;c nhận &dstrok;ặt b&agrave;n qua SMS &amp; Email!')" type="button">
+          Nhận Lại SMS X&aacute;c Nhận
+         </button>
+        </div>
+       </div>
+      </div>
+      <div class="p-4 bg-surface-container border-t border-surface-container-high flex flex-col sm:flex-row items-center justify-between gap-3 shrink-0">
+       <button class="w-full sm:w-auto px-6 py-2.5 rounded-full bg-secondary text-on-secondary hover:bg-secondary-container hover:text-on-secondary-container font-title-sm text-sm uppercase font-semibold transition-all flex items-center justify-center gap-2 shadow cursor-pointer" onclick="closePhoenixModal('my-bookings'); openBookingModal();" type="button">
+        <span class="material-symbols-outlined text-sm">
+         add_circle
+        </span>
+        &Dstrok;ặt Th&ecirc;m Dịch Vụ Mới
+       </button>
+       <button class="w-full sm:w-auto px-6 py-2.5 rounded-full bg-surface-container-highest text-primary hover:bg-surface-container-low font-title-sm text-sm uppercase transition-all cursor-pointer" onclick="closePhoenixModal('my-bookings')" type="button">
+        &Dstrok;&oacute;ng
+       </button>
+      </div>
+     </div>
+    </div>
+    <!-- MODAL B: VIP MEMBER CARD -->
+    <div class="fixed inset-0 z-50 hidden items-center justify-center bg-primary/80 backdrop-blur-md p-4 modal-bottom-sheet-target" id="modal-vip-member">
+     <div class="bg-surface-container-lowest rounded-xl shadow-2xl max-w-xl w-full overflow-hidden animate-fadeIn border border-secondary-fixed/40">
+      <div class="bg-primary p-6 text-on-primary flex items-center justify-between">
+       <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-secondary-fixed">
+         <span class="material-symbols-outlined text-xl">
+          workspace_premium
+         </span>
+        </div>
+        <div>
+         <h3 class="font-headline-sm text-headline-sm text-surface-bright leading-tight">
+          &Dstrok;ặc Quyền Hội Vi&ecirc;n The Phoenix Club
+         </h3>
+         <p class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed mt-0.5">
+          Gold Tier Member
+         </p>
+        </div>
+       </div>
+       <button class="text-on-tertiary-container hover:text-surface-bright transition-colors cursor-pointer" onclick="closePhoenixModal('vip-member')" type="button">
+        <span class="material-symbols-outlined text-2xl">
+         close
+        </span>
+       </button>
+      </div>
+      <div class="p-6 md:p-8 flex flex-col gap-6">
+       <div class="relative rounded-2xl p-6 text-on-primary overflow-hidden shadow-2xl bg-gradient-to-br from-primary via-primary-container to-secondary">
+        <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl">
+         <span class="material-symbols-outlined">
+          workspace_premium
+         </span>
+        </div>
+        <div class="flex items-center justify-between mb-8">
+         <div class="flex items-center gap-2">
+          <span class="font-headline-md text-2xl tracking-wider text-secondary-fixed font-semibold">
+           The Phoenix
+          </span>
+          <span class="text-[10px] uppercase tracking-widest px-2 py-0.5 rounded bg-secondary-fixed/20 text-secondary-fixed border border-secondary-fixed/30">
+           Club VIP
+          </span>
+         </div>
+         <span class="font-display-lg text-lg text-secondary-fixed font-light tracking-widest">
+          GOLD
+         </span>
+        </div>
+        <div class="mb-6">
+         <div class="text-xs uppercase tracking-widest text-secondary-fixed/80 mb-1">
+          Thẻ Hội Vi&ecirc;n Danh Dự
+         </div>
+         <div class="font-title-sm text-xl text-surface-bright tracking-wider font-semibold">
+          NGUYỄN MINH ANH
+         </div>
+         <div class="text-xs text-on-tertiary-container mt-0.5">
+          M&atilde; thẻ:
+          <strong>
+           PHX-GLD-8829-99
+          </strong>
+          &middot; Hạn: 12/2028
+         </div>
+        </div>
+        <div class="flex items-center justify-between pt-4 border-t border-white/10">
+         <div class="flex flex-col">
+          <span class="text-[10px] uppercase text-secondary-fixed/80 tracking-wider">
+           &Dstrok;iểm T&iacute;ch L&utilde;y
+          </span>
+          <span class="font-headline-sm text-xl text-secondary-fixed font-semibold">
+           2.450
+           <span class="text-xs font-normal text-on-tertiary-container">
+            Phoenix Points
+           </span>
+          </span>
+         </div>
+         <button class="px-3 py-1.5 rounded-full bg-secondary text-on-secondary hover:bg-secondary-container hover:text-on-secondary-container text-xs font-semibold uppercase shadow cursor-pointer transition-all" onclick="alert('Quy &dstrok;ổi &dstrok;iểm thưởng trực tiếp tại quầy Concierge hoặc khi thanh to&aacute;n dịch vụ.')" type="button">
+          &Dstrok;ổi Thưởng
+         </button>
+        </div>
+       </div>
+       <div class="flex flex-col gap-3">
+        <h4 class="font-title-sm text-sm uppercase tracking-wider text-primary font-semibold flex items-center gap-2">
+         <span class="material-symbols-outlined text-secondary text-base">
+          verified
+         </span>
+         &Dstrok;ặc Quyền Th&agrave;nh Vi&ecirc;n Phoenix Gold
+        </h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+         <div class="p-3 rounded-lg bg-surface-container-low border border-surface-container-high flex items-start gap-3">
+          <span class="material-symbols-outlined text-secondary text-xl shrink-0">
+           spa
+          </span>
+          <div>
+           <div class="font-semibold text-sm text-primary">
+            Giảm 15% Spa &amp; Golf
+           </div>
+           <p class="text-xs text-on-surface-variant mt-0.5">
+            &Aacute;p dụng kh&ocirc;ng giới hạn tất cả c&aacute;c ng&agrave;y trong tuần.
+           </p>
+          </div>
+         </div>
+         <div class="p-3 rounded-lg bg-surface-container-low border border-surface-container-high flex items-start gap-3">
+          <span class="material-symbols-outlined text-secondary text-xl shrink-0">
+           hotel
+          </span>
+          <div>
+           <div class="font-semibold text-sm text-primary">
+            N&acirc;ng Hạng Ph&ograve;ng Miễn Ph&iacute;
+           </div>
+           <p class="text-xs text-on-surface-variant mt-0.5">
+            T&ugrave;y thuộc v&agrave;o t&igrave;nh trạng ph&ograve;ng trống khi check-in.
+           </p>
+          </div>
+         </div>
+         <div class="p-3 rounded-lg bg-surface-container-low border border-surface-container-high flex items-start gap-3">
+          <span class="material-symbols-outlined text-secondary text-xl shrink-0">
+           local_bar
+          </span>
+          <div>
+           <div class="font-semibold text-sm text-primary">
+            Cocktail Ch&agrave;o Mừng Miễn Ph&iacute;
+           </div>
+           <p class="text-xs text-on-surface-variant mt-0.5">
+            02 ly &dstrok;ặc biệt mỗi kỳ nghỉ tại Sky Lounge tầng 28.
+           </p>
+          </div>
+         </div>
+         <div class="p-3 rounded-lg bg-surface-container-low border border-surface-container-high flex items-start gap-3">
+          <span class="material-symbols-outlined text-secondary text-xl shrink-0">
+           schedule
+          </span>
+          <div>
+           <div class="font-semibold text-sm text-primary">
+            Check-in 11h &amp; Check-out 16h
+           </div>
+           <p class="text-xs text-on-surface-variant mt-0.5">
+            Ưu ti&ecirc;n check-in sớm v&agrave; check-out muộn miễn ph&iacute;.
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+       <button class="w-full py-3 rounded-full bg-primary text-on-primary hover:bg-primary-container font-title-sm text-sm uppercase transition-all shadow cursor-pointer" onclick="closePhoenixModal('vip-member')" type="button">
+        &Dstrok;&oacute;ng Thẻ Th&agrave;nh Vi&ecirc;n
+       </button>
+      </div>
+     </div>
+    </div>
+    <!-- MODAL C: LOGIN / MEMBER PROFILE -->
+    <div class="fixed inset-0 z-50 hidden items-center justify-center bg-primary/80 backdrop-blur-md p-4 modal-bottom-sheet-target" id="modal-login">
+     <div class="bg-surface-container-lowest rounded-xl shadow-2xl max-w-lg w-full overflow-hidden animate-fadeIn border border-secondary-fixed/40">
+      <div class="bg-primary p-6 text-on-primary flex items-center justify-between">
+       <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-secondary-fixed">
+         <span class="material-symbols-outlined text-xl">
+          manage_accounts
+         </span>
+        </div>
+        <div>
+         <h3 class="font-headline-sm text-headline-sm text-surface-bright leading-tight">
+          T&agrave;i Khoản &amp; Hồ Sơ Hội Vi&ecirc;n
+         </h3>
+         <p class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed mt-0.5">
+          The Phoenix Hotel Saigon
+         </p>
+        </div>
+       </div>
+       <button class="text-on-tertiary-container hover:text-surface-bright transition-colors cursor-pointer" onclick="closePhoenixModal('login')" type="button">
+        <span class="material-symbols-outlined text-2xl">
+         close
+        </span>
+       </button>
+      </div>
+      <div class="border-b border-surface-container-high flex bg-surface-container-low">
+       <button class="flex-1 py-3 font-title-sm text-xs uppercase tracking-wider text-secondary border-b-2 border-secondary font-semibold cursor-pointer" id="tab-btn-profile" onclick="switchPhoenixTab('profile')" type="button">
+        Hồ Sơ C&aacute; Nh&acirc;n
+       </button>
+       <button class="flex-1 py-3 font-title-sm text-xs uppercase tracking-wider text-on-surface-variant hover:text-primary cursor-pointer" id="tab-btn-signin" onclick="switchPhoenixTab('signin')" type="button">
+        &Dstrok;&abreve;ng Nhập
+       </button>
+       <button class="flex-1 py-3 font-title-sm text-xs uppercase tracking-wider text-on-surface-variant hover:text-primary cursor-pointer" id="tab-btn-signup" onclick="switchPhoenixTab('signup')" type="button">
+        &Dstrok;&abreve;ng K&yacute; Mới
+       </button>
+      </div>
+      <div class="p-6 flex flex-col gap-4">
+       <div class="flex flex-col gap-4" id="tab-content-profile">
+        <div class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low border border-surface-container-high">
+         <img alt="Avatar" class="w-16 h-16 rounded-full object-cover ring-2 ring-secondary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUarHO2jTqBdRel5MnSbWVmqEkTJKb7TJiY1A0eikUMb7f-7R5WRjkUVFPAUpA3JetkZWzvOxY3_k0vIP28cTorm6mUND5-gwB-0VyQ0dS023KNCbotEx92IkfrPaNtlOY3UhZlmdzCoJMCVXuCplZe4Y0RiAWNAnh1hrI4tfvJ3aV1pantKhfJrexz8MmAwIATAamM_Z8ZBeAvVVuBT0Nyaymxg99JZv3cKuka0pQMY4TwvnPR2Zv"/>
+         <div>
+          <div class="font-headline-sm text-lg text-primary font-semibold">
+           Nguyễn Minh Anh
+          </div>
+          <div class="text-xs text-on-surface-variant">
+           minhanh.nguyen@phoenix-club.vn
+          </div>
+          <span class="inline-block mt-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container">
+           👑 Phoenix Gold Tier
+          </span>
+         </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+         <div class="flex flex-col gap-1">
+          <label class="text-xs text-on-surface-variant font-medium">
+           Số &dstrok;iện thoại
+          </label>
+          <input class="px-3 py-2 rounded-lg bg-surface-container-low border border-surface-container-high text-primary font-body-md text-sm focus:outline-none focus:ring-1 focus:ring-secondary" type="text" value="+84 908 123 456"/>
+         </div>
+         <div class="flex flex-col gap-1">
+          <label class="text-xs text-on-surface-variant font-medium">
+           Ng&agrave;y sinh
+          </label>
+          <input class="px-3 py-2 rounded-lg bg-surface-container-low border border-surface-container-high text-primary font-body-md text-sm focus:outline-none focus:ring-1 focus:ring-secondary" type="date" value="1992-06-15"/>
+         </div>
+         <div class="flex flex-col gap-1 sm:col-span-2">
+          <label class="text-xs text-on-surface-variant font-medium">
+           &Dstrok;ịa chỉ thường tr&uacute;
+          </label>
+          <input class="px-3 py-2 rounded-lg bg-surface-container-low border border-surface-container-high text-primary font-body-md text-sm focus:outline-none focus:ring-1 focus:ring-secondary" type="text" value="Quận 1, TP. Hồ Ch&iacute; Minh, Việt Nam"/>
+         </div>
+        </div>
+        <button class="w-full py-3 rounded-full bg-secondary text-on-secondary hover:bg-secondary-container hover:text-on-secondary-container font-title-sm text-sm uppercase font-semibold transition-all shadow cursor-pointer mt-2" onclick="alert('Th&ocirc;ng tin t&agrave;i khoản c&aacute; nh&acirc;n &dstrok;&atilde; &dstrok;ược lưu th&agrave;nh c&ocirc;ng!')" type="button">
+         Cập Nhật Hồ Sơ
+        </button>
+       </div>
+       <form class="hidden flex-col gap-3.5" id="tab-content-signin" onsubmit="event.preventDefault(); alert('&Dstrok;&abreve;ng nhập t&agrave;i khoản th&agrave;nh c&ocirc;ng!'); closePhoenixModal('login');">
+        <div class="flex flex-col gap-1">
+         <label class="text-xs text-on-surface-variant font-medium">
+          Email hoặc Số &dstrok;iện thoại
+         </label>
+         <input class="px-3 py-2.5 rounded-lg bg-surface-container-low border border-surface-container-high text-primary font-body-md text-sm focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="nhapemail@example.com" required="" type="text"/>
+        </div>
+        <div class="flex flex-col gap-1">
+         <label class="text-xs text-on-surface-variant font-medium">
+          Mật khẩu
+         </label>
+         <input class="px-3 py-2.5 rounded-lg bg-surface-container-low border border-surface-container-high text-primary font-body-md text-sm focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" required="" type="password"/>
+        </div>
+        <div class="flex items-center justify-between text-xs text-on-surface-variant">
+         <label class="flex items-center gap-1.5 cursor-pointer">
+          <input checked="" class="accent-secondary" type="checkbox"/>
+          Ghi nhớ t&agrave;i khoản
+         </label>
+         <a class="text-secondary hover:underline" href="#" onclick="event.preventDefault(); alert('Li&ecirc;n kết kh&ocirc;i phục mật khẩu &dstrok;&atilde; &dstrok;ược gửi &dstrok;ến email qu&yacute; kh&aacute;ch.');">
+          Qu&ecirc;n mật khẩu?
+         </a>
+        </div>
+        <button class="w-full py-3 rounded-full bg-primary text-on-primary hover:bg-primary-container font-title-sm text-sm uppercase transition-all shadow cursor-pointer mt-2" type="submit">
+         &Dstrok;&abreve;ng Nhập Ngay
+        </button>
+       </form>
+       <form class="hidden flex-col gap-3" id="tab-content-signup" onsubmit="event.preventDefault(); alert('&Dstrok;&abreve;ng k&yacute; hội vi&ecirc;n th&agrave;nh c&ocirc;ng! Qu&yacute; kh&aacute;ch &dstrok;&atilde; nhận 500 Phoenix Points ch&agrave;o mừng.'); closePhoenixModal('login');">
+        <div class="flex flex-col gap-1">
+         <label class="text-xs text-on-surface-variant font-medium">
+          Họ v&agrave; T&ecirc;n
+         </label>
+         <input class="px-3 py-2 rounded-lg bg-surface-container-low border border-surface-container-high text-primary font-body-md text-sm focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Nguyễn V&abreve;n A" required="" type="text"/>
+        </div>
+        <div class="flex flex-col gap-1">
+         <label class="text-xs text-on-surface-variant font-medium">
+          Email
+         </label>
+         <input class="px-3 py-2 rounded-lg bg-surface-container-low border border-surface-container-high text-primary font-body-md text-sm focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="email@example.com" required="" type="email"/>
+        </div>
+        <div class="flex flex-col gap-1">
+         <label class="text-xs text-on-surface-variant font-medium">
+          Số &dstrok;iện thoại
+         </label>
+         <input class="px-3 py-2 rounded-lg bg-surface-container-low border border-surface-container-high text-primary font-body-md text-sm focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="+84 ..." required="" type="tel"/>
+        </div>
+        <div class="flex flex-col gap-1">
+         <label class="text-xs text-on-surface-variant font-medium">
+          Tạo Mật khẩu
+         </label>
+         <input class="px-3 py-2 rounded-lg bg-surface-container-low border border-surface-container-high text-primary font-body-md text-sm focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" required="" type="password"/>
+        </div>
+        <button class="w-full py-3 rounded-full bg-secondary text-on-secondary hover:bg-secondary-container hover:text-on-secondary-container font-title-sm text-sm uppercase font-semibold transition-all shadow cursor-pointer mt-2" type="submit">
+         Ho&agrave;n Tất &Dstrok;&abreve;ng K&yacute; Hội Vi&ecirc;n
+        </button>
+       </form>
+      </div>
+     </div>
+    </div>
+    <!-- Inline Interaction Scripts for Carousel and Modal -->
+    <script>
+    // Booking Modal Interactions
+    function openBookingModal(preselectedRoom) {
+      const modal = document.getElementById('booking-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        
+        // Auto pre-select room if provided
+        if (preselectedRoom) {
+          const selectElement = document.getElementById('modal-room-type');
+          if (selectElement) {
+            for (let i = 0; i < selectElement.options.length; i++) {
+              if (selectElement.options[i].text.toLowerCase().includes(preselectedRoom.toLowerCase()) || 
+                  selectElement.options[i].value.toLowerCase().includes(preselectedRoom.toLowerCase())) {
+                selectElement.selectedIndex = i;
+                break;
+              }
+            }
+          }
+        }
+
+        // Set default dates (Today and Tomorrow)
+        const checkinInput = document.getElementById('checkin-date');
+        const checkoutInput = document.getElementById('checkout-date');
+        if (checkinInput && !checkinInput.value) {
+          const today = new Date();
+          const tomorrow = new Date(today);
+          tomorrow.setDate(tomorrow.getDate() + 2);
+          checkinInput.value = today.toISOString().split('T')[0];
+          checkoutInput.value = tomorrow.toISOString().split('T')[0];
+        }
+      }
+    }
+
+    function closeBookingModal() {
+      const modal = document.getElementById('booking-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function handleBookingSubmit(event) {
+      event.preventDefault();
+      const room = document.getElementById('modal-room-type').value;
+      const checkin = document.getElementById('checkin-date').value;
+      alert('Yêu cầu đặt phòng [' + room + '] từ ngày ' + checkin + ' đã được chuyển đến bộ phận Lễ tân Phoenix Hotel. Chúng tôi sẽ liên hệ trong ít phút!');
+      closeBookingModal();
+    }
+
+    // Attach click triggers to shell header calendar button if present
+    document.addEventListener('DOMContentLoaded', function() {
+      const shellCalendarBtn = document.getElementById('header-booking-btn');
+      if (shellCalendarBtn) {
+        shellCalendarBtn.addEventListener('click', function() {
+          openBookingModal();
+        });
+      }
+
+      // Close modal on click outside backdrop
+      const modalBackdrop = document.getElementById('booking-modal');
+      if (modalBackdrop) {
+        modalBackdrop.addEventListener('click', function(e) {
+          if (e.target === modalBackdrop) {
+            closeBookingModal();
+          }
+        });
+      }
+
+      // 7-Services Horizontal Scroll Buttons
+      const track = document.getElementById('services-track');
+      const prevBtn = document.getElementById('carousel-prev');
+      const nextBtn = document.getElementById('carousel-next');
+
+      if (track && prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', function() {
+          track.scrollBy({ left: -380, behavior: 'smooth' });
+        });
+        nextBtn.addEventListener('click', function() {
+          track.scrollBy({ left: 380, behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
+   </div>
+  </main>
+  <footer class="w-full text-on-primary">
+   <div class="bg-primary-container py-space-xl px-margin">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-space-lg">
+     <div class="md:col-span-4 flex flex-col gap-space-sm">
+      <div class="flex items-center gap-3">
+       <span class="font-headline-sm text-headline-sm text-secondary-fixed">
+        The Phoenix Hotel
+       </span>
+      </div>
+      <p class="font-body-md text-body-md text-on-tertiary-container leading-relaxed">
+       Trải nghiệm nghỉ dưỡng chuẩn mực Indochine giao h&ograve;a phong vị hiện &dstrok;ại giữa trung t&acirc;m Quận 1, Th&agrave;nh phố Hồ Ch&iacute; Minh.
+      </p>
+      <div class="flex items-center gap-space-sm text-secondary-fixed pt-space-xs">
+       <span class="material-symbols-outlined">
+        star
+       </span>
+       <span class="material-symbols-outlined">
+        star
+       </span>
+       <span class="material-symbols-outlined">
+        star
+       </span>
+       <span class="material-symbols-outlined">
+        star
+       </span>
+       <span class="material-symbols-outlined">
+        star
+       </span>
+       <span class="font-label-sm text-label-sm uppercase text-on-tertiary tracking-widest ml-1">
+        5-Star Certified Luxury
+       </span>
+      </div>
+     </div>
+     <div class="md:col-span-4 flex flex-col gap-space-sm">
+      <h4 class="font-title-sm text-title-sm uppercase tracking-wider text-secondary-fixed">
+       Li&ecirc;n Hệ &amp; Vị Tr&iacute;
+      </h4>
+      <div class="flex items-start gap-2.5 text-on-tertiary-container font-body-md text-body-md">
+       <span class="material-symbols-outlined text-secondary-fixed shrink-0 text-lg">
+        location_on
+       </span>
+       <span class="">
+        138 &Dstrok;ường &Dstrok;ồng Khởi, Phường Bến Ngh&eacute;, Quận 1, TP. Hồ Ch&iacute; Minh
+       </span>
+      </div>
+      <div class="flex items-center gap-2.5 text-on-tertiary-container font-body-md text-body-md">
+       <span class="material-symbols-outlined text-secondary-fixed shrink-0 text-lg">
+        call
+       </span>
+       <span class="">
+        Hotline: +84 (0) 28 3823 8888
+       </span>
+      </div>
+      <div class="flex items-center gap-2.5 text-on-tertiary-container font-body-md text-body-md">
+       <span class="material-symbols-outlined text-secondary-fixed shrink-0 text-lg">
+        mail
+       </span>
+       <span class="">
+        Concierge: reservation@thephoenix-saigon.com
+       </span>
+      </div>
+     </div>
+     <div class="md:col-span-4 flex flex-col gap-space-sm">
+      <h4 class="font-title-sm text-title-sm uppercase tracking-wider text-secondary-fixed">
+       Bản Tin &Dstrok;ặc Quyền
+      </h4>
+      <p class="font-body-md text-body-md text-on-tertiary-container">
+       &Dstrok;&abreve;ng k&yacute; nhận ưu &dstrok;&atilde;i &dstrok;ộc quyền d&agrave;nh cho c&aacute;c kỳ nghỉ v&agrave; dạ tiệc ẩm thực thượng lưu.
+      </p>
+      <div class="flex items-center gap-2 mt-space-xs">
+       <input class="bg-tertiary-container text-on-primary px-4 py-2.5 rounded-lg flex-1 font-body-md text-body-md placeholder:text-on-tertiary-container focus:outline-none focus:ring-1 focus:ring-secondary-fixed" placeholder="&Dstrok;ịa chỉ email của qu&yacute; kh&aacute;ch..." type="email"/>
+       <button class="bg-secondary text-on-secondary px-space-md py-2.5 rounded-lg hover:bg-secondary-container hover:text-on-secondary-container transition-all font-title-sm text-title-sm uppercase" type="button">
+        Gửi
+       </button>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="bg-primary py-space-md px-margin text-on-tertiary-container">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-space-sm">
+     <p class="font-label-sm text-label-sm uppercase tracking-wider">
+      &copy; 2024 The Phoenix Hotel Saigon. To&agrave;n bộ quyền &dstrok;ược bảo lưu.
+     </p>
+     <div class="flex items-center gap-space-md font-label-sm text-label-sm uppercase tracking-wider">
+      <a class="text-on-tertiary-container hover:text-on-primary transition-colors" href="#">
+       &Dstrok;iều Khoản Sử Dụng
+      </a>
+      <span class="text-on-tertiary-fixed-variant">
+       &middot;
+      </span>
+      <a class="text-on-tertiary-container hover:text-on-primary transition-colors" href="#">
+       Ch&iacute;nh S&aacute;ch Bảo Mật
+      </a>
+      <span class="text-on-tertiary-fixed-variant">
+       &middot;
+      </span>
+      <a class="text-on-tertiary-container hover:text-on-primary transition-colors" href="#">
+       Chứng Nhận Di Sản Indochine
+      </a>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script id="phoenix-user-profile-script">
+function togglePhoenixProfileDropdown(forceState) {
+  var dropdown = document.getElementById('profile-dropdown');
+  if (!dropdown) return;
+  if (typeof forceState === 'boolean') {
+    if (forceState) {
+      dropdown.classList.remove('hidden');
+    } else {
+      dropdown.classList.add('hidden');
+    }
+  } else {
+    dropdown.classList.toggle('hidden');
+  }
+}
+
+function openPhoenixModal(modalType) {
+  togglePhoenixProfileDropdown(false);
+  var targetModal = document.getElementById('modal-' + modalType);
+  if (targetModal) {
+    targetModal.classList.remove('hidden');
+    targetModal.classList.add('flex');
+  }
+}
+
+function closePhoenixModal(modalType) {
+  var targetModal = document.getElementById('modal-' + modalType);
+  if (targetModal) {
+    targetModal.classList.add('hidden');
+    targetModal.classList.remove('flex');
+  }
+}
+
+function switchPhoenixTab(tabName) {
+  var tabs = ['profile', 'signin', 'signup'];
+  tabs.forEach(function(t) {
+    var btn = document.getElementById('tab-btn-' + t);
+    var content = document.getElementById('tab-content-' + t);
+    if (btn && content) {
+      if (t === tabName) {
+        btn.className = 'flex-1 py-3 font-title-sm text-xs uppercase tracking-wider text-secondary border-b-2 border-secondary font-semibold cursor-pointer';
+        content.classList.remove('hidden');
+        content.classList.add('flex');
+      } else {
+        btn.className = 'flex-1 py-3 font-title-sm text-xs uppercase tracking-wider text-on-surface-variant hover:text-primary cursor-pointer';
+        content.classList.add('hidden');
+        content.classList.remove('flex');
+      }
+    }
+  });
+}
+
+function handlePhoenixLogout() {
+  togglePhoenixProfileDropdown(false);
+  var confirmed = confirm('Quý khách có chắc chắn muốn đăng xuất khỏi tài khoản của Nguyễn Minh Anh?');
+  if (confirmed) {
+    openPhoenixModal('login');
+    switchPhoenixTab('signin');
+  }
+}
+
+document.addEventListener('click', function(e) {
+  var avatarBtn = document.getElementById('profile-avatar-btn');
+  var dropdown = document.getElementById('profile-dropdown');
+  if (avatarBtn && avatarBtn.contains(e.target)) {
+    togglePhoenixProfileDropdown();
+    return;
+  }
+  if (dropdown && !dropdown.contains(e.target)) {
+    togglePhoenixProfileDropdown(false);
+  }
+  ['my-bookings', 'vip-member', 'login'].forEach(function(modalType) {
+    var modal = document.getElementById('modal-' + modalType);
+    if (modal && e.target === modal) {
+      closePhoenixModal(modalType);
+    }
+  });
+});
+</script><script id="phoenix-header-search-script">
+const PHOENIX_CATALOG = [
+  { id: 'deluxe', name: 'Deluxe King Room', category: 'Phòng Nghỉ', desc: '45m² · Giường King · Tầm nhìn thành phố hoa lệ', price: 'Từ 4.200.000₫/đêm', actionText: 'Đặt phòng', target: '#rooms-showcase', roomName: 'Deluxe King' },
+  { id: 'executive', name: 'Executive Suite', category: 'Phòng Nghỉ', desc: '65m² · Bồn tắm cẩm thạch · Đặc quyền Lounge', price: 'Từ 6.800.000₫/đêm', actionText: 'Đặt phòng', target: '#rooms-showcase', roomName: 'Premier Suite' },
+  { id: 'penthouse', name: 'The Phoenix Presidential Penthouse', category: 'Phòng Nghỉ', desc: '180m² · Tầng thượng · Quản gia riêng 24/7', price: 'Từ 24.500.000₫/đêm', actionText: 'Đặt penthouse', target: '#rooms-showcase', roomName: 'Presidential Penthouse' },
+  { id: 'balcony', name: 'Heritage Balcony Suite', category: 'Phòng Nghỉ', desc: '55m² · Ban công di sản view vườn nhiệt đới', price: 'Từ 5.500.000₫/đêm', actionText: 'Đặt phòng', target: '#rooms-showcase', roomName: 'Heritage Balcony' },
+  { id: 'villa', name: 'Grand Family Villa', category: 'Phòng Nghỉ', desc: '90m² · 2 Phòng ngủ · Không gian sum vầy', price: 'Từ 9.200.000₫/đêm', actionText: 'Đặt villa', target: '#rooms-showcase', roomName: 'Grand Family Villa' },
+  { id: 'spa', name: 'The Phoenix Spa & Trị Liệu Thảo Mộc', category: 'Dịch Vụ 5 Sao', desc: 'Liệu pháp Đông Y, đá nóng Bazan, hoa sen thanh lọc', price: 'Mở cửa: 08:00 - 22:00', actionText: 'Khám phá', target: '#services-track' },
+  { id: 'pool', name: 'Hồ Bơi Vô Cực & Sky Bar', category: 'Dịch Vụ 5 Sao', desc: 'Hồ bơi tầng 28 ngắm sông Sài Gòn và cocktail cao cấp', price: 'Mở cửa: 06:00 - 23:30', actionText: 'Khám phá', target: '#services-track' },
+  { id: 'gym', name: 'Phòng Gym Technogym & Yoga 24/7', category: 'Dịch Vụ 5 Sao', desc: 'Trang thiết bị Ý tân tiến, PT cá nhân và lớp thiền', price: 'Hoạt động: 24/7', actionText: 'Khám phá', target: '#services-track' },
+  { id: 'golf', name: 'Sân Golf 3D Hoàng Gia 18 Hố', category: 'Dịch Vụ 5 Sao', desc: 'Hệ thống mô phỏng 3D hiện đại và đối tác sân golf Q1', price: 'Phòng VIP Private', actionText: 'Khám phá', target: '#services-track' },
+  { id: 'kids', name: 'Khu Vui Chơi Trẻ Em Montessori', category: 'Dịch Vụ 5 Sao', desc: 'Không gian sáng tạo với bảo mẫu chuyên nghiệp', price: 'Miễn phí cho khách lưu trú', actionText: 'Khám phá', target: '#services-track' },
+  { id: 'buffet', name: 'Buffet Hải Sản Hoàng Gia Nha Trang & Phú Quốc', category: 'Ẩm Thực & Nhà Hàng', desc: 'Tôm hùm, hào biển, cua hoàng đế chế biến trực tiếp', price: '1.250.000₫/khách', actionText: 'Xem ẩm thực', target: 'nav a[data-path="an-uong"]' },
+  { id: 'skybar', name: 'Sky Wine Cellar & Cigar Lounge Hạng Nhất', category: 'Ẩm Thực & Nhà Hàng', desc: 'Tuyển tập hơn 500 loại vang niên vụ hiếm từ Pháp & Ý', price: 'Từ 350.000₫/ly', actionText: 'Xem ẩm thực', target: 'nav a[data-path="an-uong"]' },
+  { id: 'tea', name: 'Trà Chiều Indochine Cổ Điển & Bánh Ngọt Pháp', category: 'Ẩm Thực & Nhà Hàng', desc: 'Trà thảo mộc cung đình cùng 12 loại pastry tinh xảo', price: '580.000₫/set 2 khách', actionText: 'Xem ẩm thực', target: 'nav a[data-path="an-uong"]' },
+  { id: 'contact', name: 'Thông Tin Liên Hệ & Đặt Bàn / Xe Đón', category: 'Thông Tin & Liên Hệ', desc: '138 Đồng Khởi, Q.1 · Hotline: (+84) 28 3823 8888', price: 'Hỗ trợ 24/7', actionText: 'Gọi ngay', target: 'tel:+842838238888' }
+];
+
+function openSearchDropdown() {
+  const dropdown = document.getElementById('search-results-dropdown');
+  if (dropdown) {
+    dropdown.classList.remove('hidden');
+    const inputVal = document.getElementById('header-search-input').value;
+    renderSearchResults(inputVal);
+  }
+}
+
+function closeSearchDropdown() {
+  const dropdown = document.getElementById('search-results-dropdown');
+  if (dropdown) dropdown.classList.add('hidden');
+}
+
+function clearHeaderSearch() {
+  const input = document.getElementById('header-search-input');
+  if (input) {
+    input.value = '';
+    input.focus();
+    handleHeaderSearch('');
+  }
+}
+
+function setPopularTag(query) {
+  const input = document.getElementById('header-search-input');
+  if (input) {
+    input.value = query;
+    input.focus();
+    handleHeaderSearch(query);
+  }
+}
+
+function handleHeaderSearch(query) {
+  const clearBtn = document.getElementById('clear-search-btn');
+  if (clearBtn) {
+    if (query.trim().length > 0) {
+      clearBtn.classList.remove('hidden');
+      clearBtn.classList.add('flex');
+    } else {
+      clearBtn.classList.add('hidden');
+      clearBtn.classList.remove('flex');
+    }
+  }
+  renderSearchResults(query);
+}
+
+function renderSearchResults(query) {
+  const container = document.getElementById('search-dropdown-content');
+  if (!container) return;
+  const cleanQuery = (query || '').trim().toLowerCase();
+
+  if (!cleanQuery) {
+    container.innerHTML = `
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center justify-between pb-2 border-b border-surface-container-high">
+          <span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-semibold flex items-center gap-1">
+            <span class="material-symbols-outlined text-base">local_fire_department</span> Từ Khóa Phổ Biến
+          </span>
+          <button type="button" onclick="closeSearchDropdown()" class="text-outline hover:text-primary transition-colors text-xs"><span class="material-symbols-outlined text-sm">close</span></button>
+        </div>
+        <div class="flex flex-wrap gap-2 pt-1">
+          <button type="button" onclick="setPopularTag('Spa & Trị liệu')" class="px-3 py-1.5 rounded-full bg-surface-container-low hover:bg-secondary-container hover:text-on-secondary-container text-xs text-primary font-body-md transition-all border border-secondary-fixed/30 cursor-pointer">Spa & Trị liệu</button>
+          <button type="button" onclick="setPopularTag('Hồ bơi vô cực')" class="px-3 py-1.5 rounded-full bg-surface-container-low hover:bg-secondary-container hover:text-on-secondary-container text-xs text-primary font-body-md transition-all border border-secondary-fixed/30 cursor-pointer">Hồ bơi vô cực</button>
+          <button type="button" onclick="setPopularTag('Penthouse')" class="px-3 py-1.5 rounded-full bg-surface-container-low hover:bg-secondary-container hover:text-on-secondary-container text-xs text-primary font-body-md transition-all border border-secondary-fixed/30 cursor-pointer">Phòng Đôi Hoàng Gia</button>
+          <button type="button" onclick="setPopularTag('Buffet Hải Sản')" class="px-3 py-1.5 rounded-full bg-surface-container-low hover:bg-secondary-container hover:text-on-secondary-container text-xs text-primary font-body-md transition-all border border-secondary-fixed/30 cursor-pointer">Đại tiệc Hải Sản</button>
+          <button type="button" onclick="setPopularTag('Golf')" class="px-3 py-1.5 rounded-full bg-surface-container-low hover:bg-secondary-container hover:text-on-secondary-container text-xs text-primary font-body-md transition-all border border-secondary-fixed/30 cursor-pointer">Sân Golf 18 Hố</button>
+          <button type="button" onclick="setPopularTag('Family Villa')" class="px-3 py-1.5 rounded-full bg-surface-container-low hover:bg-secondary-container hover:text-on-secondary-container text-xs text-primary font-body-md transition-all border border-secondary-fixed/30 cursor-pointer">Phòng Gia Đình</button>
+        </div>
+        <div class="mt-2 pt-3 border-t border-surface-container-high flex items-center justify-between text-xs text-on-surface-variant font-body-md">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-secondary">info</span> Nhập tên phòng, dịch vụ hoặc tiện ích</span>
+          <button type="button" onclick="openBookingModal()" class="text-secondary font-semibold hover:underline cursor-pointer">Đặt phòng nhanh »</button>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  const filtered = PHOENIX_CATALOG.filter(item => 
+    item.name.toLowerCase().includes(cleanQuery) ||
+    item.desc.toLowerCase().includes(cleanQuery) ||
+    item.category.toLowerCase().includes(cleanQuery)
+  );
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div class="py-8 text-center flex flex-col items-center justify-center gap-2 text-on-surface-variant">
+        <span class="material-symbols-outlined text-4xl text-outline">search_off</span>
+        <p class="font-title-sm text-sm text-primary">Không tìm thấy kết quả phù hợp cho "${query}"</p>
+        <p class="text-xs text-on-surface-variant max-w-xs">Quý khách vui lòng thử từ khóa khác như 'Deluxe', 'Spa', 'Hải sản', 'Penthouse'</p>
+        <button type="button" onclick="openBookingModal()" class="mt-3 px-5 py-2 rounded-full bg-secondary text-on-secondary text-xs font-semibold uppercase hover:bg-secondary-container hover:text-on-secondary-container transition-all cursor-pointer">Mở Đặt Phòng Trực Tuyến</button>
+      </div>
+    `;
+    return;
+  }
+
+  // Group by category
+  const groups = {};
+  filtered.forEach(item => {
+    if (!groups[item.category]) groups[item.category] = [];
+    groups[item.category].push(item);
+  });
+
+  let html = `
+    <div class="flex items-center justify-between pb-2 border-b border-surface-container-high">
+      <span class="text-xs text-on-surface-variant font-body-md">Tìm thấy <strong class="text-primary">${filtered.length}</strong> kết quả cho "<span class="text-secondary font-semibold">${query}</span>"</span>
+      <button type="button" onclick="closeSearchDropdown()" class="text-outline hover:text-primary transition-colors text-xs flex items-center"><span class="material-symbols-outlined text-sm">close</span></button>
+    </div>
+    <div class="flex flex-col gap-4 py-1">
+  `;
+
+  for (const cat in groups) {
+    html += `
+      <div class="flex flex-col gap-2">
+        <div class="font-label-sm text-[11px] uppercase tracking-wider text-secondary font-semibold px-1">${cat}</div>
+        <div class="flex flex-col gap-1.5">
+    `;
+    groups[cat].forEach(item => {
+      html += `
+        <div onclick="executeSearchResult('${item.id}')" class="p-3 rounded-lg hover:bg-surface-container cursor-pointer transition-colors flex items-center justify-between gap-3 border border-transparent hover:border-secondary-fixed/40 group">
+          <div class="flex flex-col min-w-0">
+            <div class="font-title-sm text-sm text-primary group-hover:text-secondary font-semibold truncate">${item.name}</div>
+            <div class="text-xs text-on-surface-variant line-clamp-1">${item.desc}</div>
+            <div class="text-xs text-secondary font-medium mt-0.5">${item.price}</div>
+          </div>
+          <button type="button" class="shrink-0 px-3 py-1 rounded-full bg-surface-container-low group-hover:bg-primary group-hover:text-on-primary text-primary text-xs font-title-sm transition-all">
+            ${item.actionText} →
+          </button>
+        </div>
+      `;
+    });
+    html += `</div></div>`;
+  }
+
+  html += `</div>`;
+  container.innerHTML = html;
+}
+
+function executeSearchResult(itemId) {
+  const item = PHOENIX_CATALOG.find(i => i.id === itemId);
+  if (!item) return;
+  closeSearchDropdown();
+
+  if (item.target.startsWith('tel:')) {
+    window.location.href = item.target;
+    return;
+  }
+
+  if (item.roomName) {
+    openBookingModal(item.roomName);
+    return;
+  }
+
+  const el = document.querySelector(item.target);
+  if (el) {
+    if (el.tagName.toLowerCase() === 'a') {
+      el.click();
+    } else {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      el.classList.add('ring-2', 'ring-secondary');
+      setTimeout(() => el.classList.remove('ring-2', 'ring-secondary'), 2500);
+    }
+  }
+}
+
+// Close search dropdown on click outside or escape
+document.addEventListener('click', function(e) {
+  const searchContainer = document.querySelector('header div.flex-1.max-w-xl.mx-space-lg');
+  if (searchContainer && !searchContainer.contains(e.target)) {
+    closeSearchDropdown();
+  }
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeSearchDropdown();
+  }
+});
+</script>
+  <!-- ==================== FLOATING VIEWPORT SWITCHER ==================== -->
+  <div id="phoenix-viewport-switcher" style="position: fixed; bottom: 20px; left: 20px; z-index: 99999; display: flex; align-items: center; gap: 6px; background: rgba(0, 34, 26, 0.95); backdrop-filter: blur(12px); border: 1.5px solid #ffdea5; padding: 6px 10px; border-radius: 9999px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); font-family: 'Montserrat', sans-serif;">
+   <div style="display: flex; align-items: center; gap: 4px; margin-right: 4px; border-right: 1px solid rgba(255,222,165,0.3); padding-right: 8px;">
+    <span class="" style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: #ffdea5; font-weight: 600;">
+     Chế &dstrok;ộ xem
+    </span>
+   </div>
+   <button class="" id="btn-mode-desktop" onclick="setPhoenixViewportMode('desktop')" style="display: flex; align-items: center; gap: 5px; padding: 6px 12px; border-radius: 9999px; font-size: 12px; font-weight: 600; cursor: pointer; border: none; transition: all 0.2s; background: #775a19; color: #ffffff;" type="button">
+    <span class="">
+     🖥️
+    </span>
+    Desktop 1440px
+   </button>
+   <button class="" id="btn-mode-mobile" onclick="setPhoenixViewportMode('mobile')" style="display: flex; align-items: center; gap: 5px; padding: 6px 12px; border-radius: 9999px; font-size: 12px; font-weight: 600; cursor: pointer; border: none; transition: all 0.2s; background: transparent; color: #c5ebdc;" type="button">
+    <span class="">
+     📱
+    </span>
+    Mobile 390px (iPhone 16 Pro)
+   </button>
+  </div>
+  <script id="phoenix-viewport-controller-script">function setPhoenixViewportMode(mode) { var body = document.body; var btnDesktop = document.getElementById('btn-mode-desktop'); var btnMobile = document.getElementById('btn-mode-mobile'); if (mode === 'mobile') { body.classList.add('mobile-mode'); if (!document.getElementById('phone-wrapper')) { var wrapper = document.createElement('div'); wrapper.id = 'phone-wrapper'; while (body.firstChild) { if (body.firstChild.id === 'phoenix-viewport-switcher') break; wrapper.appendChild(body.firstChild); } body.insertBefore(wrapper, document.getElementById('phoenix-viewport-switcher')); } if (btnDesktop) { btnDesktop.style.background = 'transparent'; btnDesktop.style.color = '#c5ebdc'; } if (btnMobile) { btnMobile.style.background = '#775a19'; btnMobile.style.color = '#ffffff'; } } else { body.classList.remove('mobile-mode'); var wrapper = document.getElementById('phone-wrapper'); if (wrapper) { while (wrapper.firstChild) { body.insertBefore(wrapper.firstChild, wrapper); } wrapper.remove(); } if (btnDesktop) { btnDesktop.style.background = '#775a19'; btnDesktop.style.color = '#ffffff'; } if (btnMobile) { btnMobile.style.background = 'transparent'; btnMobile.style.color = '#c5ebdc'; } } } function toggleMobileSearch() { var bar = document.getElementById('mobile-search-bar'); if (bar) { bar.classList.toggle('hidden'); } } function toggleMobileDrawer(open) { var drawer = document.getElementById('mobile-nav-drawer'); if (drawer) { if (open) { drawer.classList.remove('hidden'); drawer.classList.add('flex'); } else { drawer.classList.add('hidden'); drawer.classList.remove('flex'); } } }</script>
+ </body>
+</html>

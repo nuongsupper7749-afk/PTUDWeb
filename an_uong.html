@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="vi">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Montserrat:ital,wght@0,300..900;1,300..900&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-surface-variant":"#414845","background":"#fdf9f3","tertiary-fixed":"#beedda","surface-container":"#f1ede7","tertiary-fixed-dim":"#a2d0bf","on-background":"#1c1c18","outline":"#717975","on-secondary":"#ffffff","surface-dim":"#dddad4","outline-variant":"#c1c8c4","on-surface":"#1c1c18","error-container":"#ffdad6","primary":"#00221a","primary-container":"#16382e","tertiary":"#002219","on-secondary-fixed":"#261900","surface":"#fdf9f3","on-tertiary-container":"#77a393","inverse-surface":"#31302d","on-secondary-container":"#785a1a","on-primary-container":"#7ea294","on-tertiary-fixed":"#002118","inverse-primary":"#aacec0","on-primary-fixed":"#002018","error":"#ba1a1a","secondary":"#775a19","on-error":"#ffffff","secondary-fixed-dim":"#e9c176","on-secondary-fixed-variant":"#5d4201","secondary-fixed":"#ffdea5","surface-container-highest":"#e6e2dc","on-primary":"#ffffff","tertiary-container":"#09392d","surface-variant":"#e6e2dc","surface-bright":"#fdf9f3","surface-container-low":"#f7f3ed","on-error-container":"#93000a","primary-fixed":"#c5ebdc","surface-container-high":"#ebe8e2","on-tertiary-fixed-variant":"#234e41","surface-tint":"#436559","on-tertiary":"#ffffff","surface-container-lowest":"#ffffff","inverse-on-surface":"#f4f0ea","on-primary-fixed-variant":"#2c4d42","primary-fixed-dim":"#aacec0","secondary-container":"#fed488"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"gutter":"1.5rem","margin":"3rem","space-xl":"3.5rem","gutter-mobile":"1rem","space-lg":"2rem","space-sm":"0.75rem","space-xs":"0.375rem","margin-tablet":"2rem","margin-mobile":"1.25rem","space-md":"1.25rem"},fontFamily:{"headline-sm":["EB Garamond"],"label-sm":["Montserrat"],"headline-lg-mobile":["EB Garamond"],"body-md":["Montserrat"],"headline-md":["EB Garamond"],"label-lg":["Montserrat"],"display-lg-mobile":["EB Garamond"],"body-lg":["Montserrat"],"headline-lg":["EB Garamond"],"title-sm":["Montserrat"],"title-lg":["Montserrat"],"display-lg":["EB Garamond"]},fontSize:{"headline-sm":["24px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"500"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.15em","fontWeight":"600"}],"headline-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"0em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-md":["32px",{"lineHeight":"40px","letterSpacing":"0em","fontWeight":"400"}],"label-lg":["12px",{"lineHeight":"16px","letterSpacing":"0.12em","fontWeight":"600"}],"display-lg-mobile":["40px",{"lineHeight":"48px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-lg":["44px",{"lineHeight":"52px","letterSpacing":"-0.01em","fontWeight":"400"}],"title-sm":["14px",{"lineHeight":"20px","letterSpacing":"0.05em","fontWeight":"600"}],"title-lg":["18px",{"lineHeight":"26px","letterSpacing":"0.02em","fontWeight":"600"}],"display-lg":["64px",{"lineHeight":"72px","letterSpacing":"-0.01em","fontWeight":"400"}]}}}};</script>
+ </head>
+ <body class="bg-background font-body-md text-on-surface antialiased">
+  <header class="fixed top-0 left-0 w-full z-50 shadow-[0_4px_24px_rgba(0,34,26,0.18)]">
+   <div class="h-24 bg-primary px-margin flex items-center justify-between">
+    <div class="flex items-center gap-space-md">
+   <img src="./img/phoenix-bird.png"
+     alt="The Phoenix"
+     class="h-28 w-28 object-contain">
+     <div class="flex flex-col">
+      <span class="font-headline-md text-headline-md tracking-wider text-secondary-fixed">
+       The Phoenix
+      </span>
+      <span class="font-label-sm text-label-sm uppercase tracking-widest text-on-tertiary-container">
+       Hotel &middot; Saigon
+      </span>
+     </div>
+    </div>
+    <div class="flex-1 max-w-xl mx-space-lg">
+     <div class="relative flex items-center w-full">
+      <span class="material-symbols-outlined absolute left-4 text-on-tertiary-container">
+       search
+      </span>
+      <input class="w-full bg-primary-container text-on-primary pl-12 pr-4 py-2.5 rounded-full font-body-md text-body-md placeholder:text-on-tertiary-container focus:outline-none focus:ring-1 focus:ring-secondary-container transition-all" placeholder="T&igrave;m kiếm ph&ograve;ng nghỉ, nh&agrave; h&agrave;ng, dịch vụ..." type="text"/>
+     </div>
+    </div>
+    <div class="flex items-center gap-space-md">
+     <button class="flex items-center gap-2 bg-secondary text-on-secondary px-space-md py-2.5 rounded-lg hover:bg-secondary-container hover:text-on-secondary-container transition-all shadow-md" onclick="openTableBookingModal('Nh&agrave; H&agrave;ng The Phoenix', '19:00', '2')" type="button">
+      <span class="material-symbols-outlined text-secondary-fixed">
+       calendar_month
+      </span>
+      <span class="font-title-sm text-title-sm tracking-wide uppercase">
+       Lịch &Dstrok;ặt
+      </span>
+     </button>
+     <div class="relative" id="profile-dropdown-wrapper">
+      <button aria-expanded="false" aria-haspopup="true" class="focus:outline-none focus:ring-2 focus:ring-secondary-fixed rounded-full transition-transform active:scale-95 block" id="header-avatar-btn" onclick="toggleProfileDropdown()" title="Hồ Sơ Kh&aacute;ch H&agrave;ng VIP" type="button">
+       <img alt="Profile" class="w-9 h-9 rounded-full object-cover ring-2 ring-secondary-container hover:ring-secondary-fixed cursor-pointer shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUarHO2jTqBdRel5MnSbWVmqEkTJKb7TJiY1A0eikUMb7f-7R5WRjkUVFPAUpA3JetkZWzvOxY3_k0vIP28cTorm6mUND5-gwB-0VyQ0dS023KNCbotEx92IkfrPaNtlOY3UhZlmdzCoJMCVXuCplZe4Y0RiAWNAnh1hrI4tfvJ3aV1pantKhfJrexz8MmAwIATAamM_Z8ZBeAvVVuBT0Nyaymxg99JZv3cKuka0pQMY4TwvnPR2Zv"/>
+      </button>
+      <!-- Guest Profile Dropdown Menu -->
+      <div class="hidden absolute right-0 mt-3 w-80 bg-surface-container-lowest rounded-2xl shadow-2xl border border-secondary/30 py-2 z-50 text-on-surface transform transition-all duration-200" id="profile-dropdown-menu">
+       <div class="px-5 py-4 border-b border-outline-variant/30 bg-surface-container-low rounded-t-2xl">
+        <div class="flex items-center gap-3">
+         <div class="relative">
+          <img alt="Avatar" class="w-12 h-12 rounded-full object-cover ring-2 ring-secondary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUarHO2jTqBdRel5MnSbWVmqEkTJKb7TJiY1A0eikUMb7f-7R5WRjkUVFPAUpA3JetkZWzvOxY3_k0vIP28cTorm6mUND5-gwB-0VyQ0dS023KNCbotEx92IkfrPaNtlOY3UhZlmdzCoJMCVXuCplZe4Y0RiAWNAnh1hrI4tfvJ3aV1pantKhfJrexz8MmAwIATAamM_Z8ZBeAvVVuBT0Nyaymxg99JZv3cKuka0pQMY4TwvnPR2Zv"/>
+          <span class="absolute -bottom-1 -right-1 bg-secondary text-on-secondary text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold">
+           &checkmark;
+          </span>
+         </div>
+         <div class="flex-1 min-w-0">
+          <div class="flex items-center gap-1.5">
+           <span class="font-title-sm text-primary font-bold truncate">
+            Nguyễn Minh Anh
+           </span>
+          </div>
+          <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-secondary-fixed-variant bg-secondary-container/40 px-2 py-0.5 rounded-full mt-1 border border-secondary/30">
+           👑 Phoenix Gold (2.450 &dstrok;iểm)
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="py-2">
+        <button class="w-full px-5 py-3 text-left flex items-center gap-3.5 hover:bg-surface-container transition-colors group" onclick="openMyBookingsModal(); closeProfileDropdown();" type="button">
+         <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+          <span class="material-symbols-outlined text-lg">
+           calendar_month
+          </span>
+         </div>
+         <div>
+          <div class="font-title-sm text-sm text-primary font-semibold flex items-center gap-2">
+           Lịch Sử &Dstrok;ặt Chỗ Của T&ocirc;i
+           <span class="bg-secondary text-on-secondary text-[10px] px-1.5 py-0.2 rounded-full font-bold">
+            3
+           </span>
+          </div>
+          <p class="font-body-md text-xs text-on-surface-variant">
+           Ph&ograve;ng nghỉ, Nh&agrave; h&agrave;ng &amp; Spa
+          </p>
+         </div>
+        </button>
+        <button class="w-full px-5 py-3 text-left flex items-center gap-3.5 hover:bg-surface-container transition-colors group" onclick="openVipMemberModal(); closeProfileDropdown();" type="button">
+         <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+          <span class="material-symbols-outlined text-lg">
+           workspace_premium
+          </span>
+         </div>
+         <div>
+          <div class="font-title-sm text-sm text-primary font-semibold">
+           &Dstrok;ặc Quyền Hội Vi&ecirc;n VIP
+          </div>
+          <p class="font-body-md text-xs text-on-surface-variant">
+           Thẻ Gold &amp; T&iacute;ch l&utilde;y &dstrok;iểm thưởng
+          </p>
+         </div>
+        </button>
+        <button class="w-full px-5 py-3 text-left flex items-center gap-3.5 hover:bg-surface-container transition-colors group" onclick="openLoginModal('profile'); closeProfileDropdown();" type="button">
+         <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+          <span class="material-symbols-outlined text-lg">
+           manage_accounts
+          </span>
+         </div>
+         <div>
+          <div class="font-title-sm text-sm text-primary font-semibold">
+           Th&ocirc;ng Tin C&aacute; Nh&acirc;n &amp; T&agrave;i Khoản
+          </div>
+          <p class="font-body-md text-xs text-on-surface-variant">
+           Quản l&yacute; hồ sơ &amp; &Dstrok;ổi t&agrave;i khoản
+          </p>
+         </div>
+        </button>
+       </div>
+       <div class="border-t border-outline-variant/30 pt-2 pb-1 px-3">
+        <button class="w-full px-3 py-2 rounded-lg text-left flex items-center gap-3 text-error hover:bg-error-container/30 transition-colors font-title-sm text-xs font-semibold" onclick="handleLogout(); closeProfileDropdown();" type="button">
+         <span class="material-symbols-outlined text-base">
+          logout
+         </span>
+         <span>
+          &Dstrok;&abreve;ng Xuất / &Dstrok;ổi Kh&aacute;ch
+         </span>
+        </button>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="h-[60px] bg-primary-container px-margin flex items-center justify-center">
+    <nav class="flex items-center gap-space-xl" data-active-classes="text-secondary-fixed border-b-2 border-secondary-fixed pb-1">
+     <a class="font-label-lg text-label-lg uppercase tracking-wider text-on-tertiary-container hover:text-on-primary transition-colors" data-path="trang-chu" href="index.html">
+      Trang Chủ
+     </a>
+     <a class="font-label-lg text-label-lg uppercase tracking-wider text-on-tertiary-container hover:text-on-primary transition-colors" data-path="dich-vu" href="dich_vu.html">
+      Dịch Vụ
+     </a>
+     <a class="font-label-lg text-label-lg uppercase tracking-wider text-on-tertiary-container hover:text-on-primary transition-colors" data-path="phong-nghi" href="phong_nghi.html">
+      Ph&ograve;ng Nghỉ
+     </a>
+     <a class="font-label-lg text-label-lg uppercase tracking-wider text-secondary-fixed border-b-2 border-secondary-fixed pb-1" data-path="an-uong" href="an_uong.html">
+      &Abreve;n Uống
+     </a>
+     <a class="font-label-lg text-label-lg uppercase tracking-wider text-on-tertiary-container hover:text-on-primary transition-colors" data-path="lien-he" href="lien_he.html">
+      Li&ecirc;n Hệ
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main class="w-full pt-[156px] min-h-screen bg-background">
+   <div class="flex flex-col w-full">
+    <!-- 1. EDITORIAL INTRO HEADER -->
+    <section class="w-full bg-surface py-[70px] px-6 text-center relative overflow-hidden">
+     <div class="absolute inset-0 pointer-events-none opacity-40">
+      <svg class="w-full h-full text-secondary-fixed/30" preserveaspectratio="none" viewbox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+       <path d="M0,50 Q200,120 400,60 T800,90 L800,0 L0,0 Z" fill="currentColor">
+       </path>
+       <circle cx="400" cy="300" fill="none" r="280" stroke="currentColor" stroke-dasharray="4 6" stroke-width="0.5">
+       </circle>
+      </svg>
+     </div>
+     <div class="max-w-4xl mx-auto relative z-10">
+      <span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-secondary font-bold inline-block mb-3">
+       CULINARY EXCELLENCE
+      </span>
+      <h1 class="font-headline-lg text-headline-lg text-primary tracking-tight font-serif mb-4">
+       Tinh Hoa Ẩm Thực &Aacute; &ndash; &Acirc;u
+      </h1>
+      <div class="w-20 h-[1.5px] bg-secondary mx-auto mb-6">
+      </div>
+      <p class="font-headline-sm text-headline-sm italic text-on-surface-variant max-w-2xl mx-auto font-serif leading-relaxed">
+       &ldquo;H&ograve;a quyện tinh hoa ẩm thực truyền thống Việt Nam v&agrave; nghệ thuật ẩm thực Ph&aacute;p cổ &dstrok;iển, mang &dstrok;ến những bữa tiệc buffet thịnh soạn, rượu vang hảo hạng v&agrave; trải nghiệm vị gi&aacute;c th&abreve;ng hoa.&rdquo;
+      </p>
+     </div>
+    </section>
+    <!-- 2. INTERACTIVE TABLE RESERVATION BAR -->
+    <section class="w-full px-6 -mt-8 relative z-20">
+     <div class="max-w-[1240px] mx-auto bg-surface-container-lowest rounded-2xl shadow-xl p-6 border border-secondary/30">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+       <!-- Left Title -->
+       <div class="flex flex-col border-b lg:border-b-0 lg:border-r border-outline-variant/30 pb-4 lg:pb-0 lg:pr-8">
+        <span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-secondary font-bold">
+         TABLE RESERVATION
+        </span>
+        <h2 class="font-headline-sm text-headline-sm text-primary font-serif">
+         T&igrave;m &amp; &Dstrok;ặt B&agrave;n Trực Tuyến
+        </h2>
+       </div>
+       <!-- Right Interactive Controls -->
+       <div class="flex flex-wrap items-center gap-3 flex-1 justify-start lg:justify-end">
+        <!-- Date Pill -->
+        <div class="flex items-center gap-2 bg-surface-container-low px-4 py-2.5 rounded-full border border-secondary/20 hover:border-secondary transition-colors cursor-pointer">
+         <span class="material-symbols-outlined text-secondary text-base">
+          calendar_month
+         </span>
+         <span class="font-label-lg text-label-lg text-on-surface">
+          Ng&agrave;y:
+         </span>
+         <input class="bg-transparent font-title-sm text-title-sm text-primary w-24 outline-none cursor-pointer" id="res-date" type="text" value="25/10/2025"/>
+        </div>
+        <!-- Time Pill -->
+        <div class="flex items-center gap-2 bg-surface-container-low px-4 py-2.5 rounded-full border border-secondary/20 hover:border-secondary transition-colors cursor-pointer relative">
+         <span class="material-symbols-outlined text-secondary text-base">
+          schedule
+         </span>
+         <span class="font-label-lg text-label-lg text-on-surface">
+          Giờ:
+         </span>
+         <select class="bg-transparent font-title-sm text-title-sm text-primary outline-none cursor-pointer pr-2" id="res-time">
+          <option value="11:30">
+           11:30
+          </option>
+          <option value="12:30">
+           12:30
+          </option>
+          <option value="18:00">
+           18:00
+          </option>
+          <option selected="" value="19:00">
+           19:00
+          </option>
+          <option value="20:00">
+           20:00
+          </option>
+         </select>
+        </div>
+        <!-- Guests Pill -->
+        <div class="flex items-center gap-2 bg-surface-container-low px-4 py-2.5 rounded-full border border-secondary/20 hover:border-secondary transition-colors cursor-pointer">
+         <span class="material-symbols-outlined text-secondary text-base">
+          group
+         </span>
+         <select class="bg-transparent font-title-sm text-title-sm text-primary outline-none cursor-pointer" id="res-guests">
+          <option value="1">
+           1 Kh&aacute;ch
+          </option>
+          <option selected="" value="2">
+           2 Kh&aacute;ch
+          </option>
+          <option value="4">
+           4 Kh&aacute;ch
+          </option>
+          <option value="6">
+           6 Kh&aacute;ch
+          </option>
+          <option value="8">
+           8 Kh&aacute;ch
+          </option>
+          <option value="10">
+           10+ Kh&aacute;ch
+          </option>
+         </select>
+        </div>
+        <!-- Pill Filter Button -->
+        <button class="flex items-center gap-2 bg-surface-container-high px-4 py-2.5 rounded-full text-primary hover:bg-secondary-fixed transition-all font-title-sm text-title-sm" onclick="toggleFilterDrawer(true)" type="button">
+         <span class="material-symbols-outlined text-primary text-base">
+          tune
+         </span>
+         <span class="">
+          Bộ lọc
+         </span>
+         <span class="bg-secondary text-on-secondary text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
+          4
+         </span>
+        </button>
+        <!-- Gold CTA Button -->
+        <button class="bg-secondary text-on-secondary hover:bg-secondary-container hover:text-on-secondary-container px-6 py-3 rounded-full flex items-center gap-2 shadow-md transition-all font-title-sm text-title-sm uppercase tracking-wider" onclick="openTableBookingModal('Nh&agrave; H&agrave;ng The Phoenix', getReservationBarTime(), getReservationBarGuests())" type="button">
+         <span class="material-symbols-outlined text-lg">
+          restaurant
+         </span>
+         <span class="">
+          &Dstrok;ặt B&agrave;n Ngay
+         </span>
+        </button>
+       </div>
+      </div>
+     </div>
+    </section>
+    <!-- 3. THREE CULINARY VENUES OVERVIEW -->
+    <section class="w-full bg-surface-container py-20 px-6 mt-16">
+     <div class="max-w-[1320px] mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+       <span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-secondary font-bold block mb-2">
+        SPACES &amp; ATMOSPHERE
+       </span>
+       <h2 class="font-headline-md text-headline-md text-primary font-serif">
+        3 Kh&ocirc;ng Gian Ẩm Thực &Dstrok;ộc Bản
+       </h2>
+       <div class="w-16 h-0.5 bg-secondary/40 mx-auto mt-3">
+       </div>
+      </div>
+      <!-- 3-Column Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+       <!-- Venue 1 -->
+       <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+        <div class="relative h-64 overflow-hidden">
+         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Exquisite breakfast buffet at The Phoenix Hotel Saigon with freshly baked artisanal croissants, tropical dragon fruit, passionfruit, French pressed coffee and delicate porcelain teaware illuminated by warm morning sunlight entering through French colonial louvered windows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8n-yjHqKwXYxVTJEUAwJUsRgWpNIqVsnfUzXaSOY2I6mhYRuQEgJM5HneN9GhTzIQPHJdRTmw4-bRFu-vPGCDpYShXCZ_S6D4yP3yPS2R2jEJvz5BGfiXKHvC87cqFDrDbJ5VSiWn-l_R3qeUWq11nZFb8Zk-isjOcusBsebJeBVeLaQX-hH42tQ6TLqBJonYWrFUxBIVLHs_XQZRzBr85fq5qvbGtTlaMcD8GNkDsXaLm7nIcSho"/>
+         <span class="absolute top-4 right-4 bg-primary text-on-primary px-3.5 py-1 rounded-full font-label-sm text-label-sm uppercase tracking-wider">
+          06:30 &ndash; 10:00
+         </span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+         <div>
+          <div class="mb-3">
+           <span class="inline-block bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold px-3 py-1 rounded-md">
+            &checkmark; Miễn ph&iacute; cho kh&aacute;ch lưu tr&uacute;
+           </span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary font-serif mb-3">
+           Buffet S&aacute;ng Quốc Tế
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+           Bữa s&aacute;ng thịnh soạn khởi &dstrok;ầu ng&agrave;y mới với phở b&ograve; truyền thống, b&aacute;nh m&igrave; Ph&aacute;p gi&ograve;n rụm v&agrave; hoa quả nhiệt &dstrok;ới tươi m&aacute;t tuyển chọn.
+          </p>
+         </div>
+         <div class="pt-6 mt-4 border-t border-outline-variant/20 flex items-center justify-between">
+          <button class="text-secondary font-title-sm text-title-sm hover:underline flex items-center gap-1 group-hover:translate-x-1 transition-transform" onclick="openDishModal('Buffet S&aacute;ng Quốc Tế')" type="button">
+           <span class="">
+            Kh&aacute;m Ph&aacute; Thực &Dstrok;ơn
+           </span>
+           <span class="material-symbols-outlined text-sm">
+            arrow_forward
+           </span>
+          </button>
+          <button class="bg-primary-container text-on-primary px-3 py-1.5 rounded-lg font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary transition-colors" onclick="openTableBookingModal('Buffet S&aacute;ng Quốc Tế', '07:00', '2')" type="button">
+           Giữ Chỗ Buffet S&aacute;ng
+          </button>
+         </div>
+        </div>
+       </div>
+       <!-- Venue 2 -->
+       <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-secondary/20">
+        <div class="relative h-64 overflow-hidden">
+         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Grand fine dining ballroom at The Phoenix Hotel Saigon with crystal chandeliers glowing softly over polished dark teakwood, immaculate white linen tablecloths, sparkling wine flutes, and private leather booth seating with Indochine architectural flourishes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLajEdHkR3oQolSVrZRIPVBvlRj0AWkRr5er1iPtBrE9CymPWtis8dKDEaS-5CmgC-hD6l6HG-h1GNyCXsmT89NFRbgmBuFOVk4-l8o1KQdj68mdMF6gdMu9KYfCfqG6-5sBWsu13ZCG49IyJpCDBdBKsfoefCtielWUH-h-M8438yfvpV6IilJSZmjCtPbKMYfd4aQSZjafEJyhBuZuVlcONYVuE8Nqxr0GV5DHjQGeep4j9YYgIr"/>
+         <span class="absolute top-4 right-4 bg-primary text-on-primary px-3.5 py-1 rounded-full font-label-sm text-label-sm uppercase tracking-wider">
+          10:30 &ndash; 22:30
+         </span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+         <div>
+          <div class="mb-3">
+           <span class="inline-block bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold px-3 py-1 rounded-md">
+            Gọi m&oacute;n A La Carte &amp; Buffet Tối
+           </span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary font-serif mb-3">
+           Nh&agrave; H&agrave;ng The Phoenix
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+           Kh&ocirc;ng gian ẩm thực &dstrok;ỉnh cao với hải sản Nha Trang tươi sống, b&ograve; Wagyu nướng than hoa v&agrave; bộ sưu tập rượu vang Grand Cru danh tiếng.
+          </p>
+         </div>
+         <div class="pt-6 mt-4 border-t border-outline-variant/20 flex items-center justify-between">
+          <button class="text-secondary font-title-sm text-title-sm hover:underline flex items-center gap-1 group-hover:translate-x-1 transition-transform" onclick="openDishModal('Nh&agrave; H&agrave;ng The Phoenix')" type="button">
+           <span class="">
+            Thực &Dstrok;ơn Buổi Tối
+           </span>
+           <span class="material-symbols-outlined text-sm">
+            arrow_forward
+           </span>
+          </button>
+          <button class="bg-secondary text-on-secondary px-3 py-1.5 rounded-lg font-label-sm text-label-sm uppercase tracking-wider hover:bg-secondary-container hover:text-on-secondary-container transition-colors shadow-sm" onclick="openTableBookingModal('Nh&agrave; H&agrave;ng The Phoenix', '19:00', '2')" type="button">
+           &Dstrok;ặt B&agrave;n Buổi Tối
+          </button>
+         </div>
+        </div>
+       </div>
+       <!-- Venue 3 -->
+       <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+        <div class="relative h-64 overflow-hidden">
+         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Lush botanical greenhouse rooftop sky lounge at The Phoenix Hotel Saigon with bespoke rattan furniture, bronze planters with tropical palms, elegant silver tiered afternoon tea platters with French pastries, and panoramic twilight skyline of Ho Chi Minh City." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzrzVeHrISl5toJnlGKjc_jKEGyWGpx4j8CbjopLP8WBkcppLhYzmA4fFW8TMsf_qK7QnyUmCmXbnpNyQNwclaclOXMRMh-vUYK-6JHCIsgvXkyrSMgJPmw8L1yXvW68LAIKgto7j-wvHXE1LuIomJWAUOM6FT-teicPyvJxfx3HNd6NyqFTgL5a_Vc59FOvcw52tH-PqjmAF756wHEjZjA8iZrNPJclBQ_oJ0rGdK9I0v8Im4o3CZ"/>
+         <span class="absolute top-4 right-4 bg-primary text-on-primary px-3.5 py-1 rounded-full font-label-sm text-label-sm uppercase tracking-wider">
+          Mở cửa 24/7
+         </span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+         <div>
+          <div class="mb-3">
+           <span class="inline-block bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold px-3 py-1 rounded-md">
+            Tr&agrave; Chiều &amp; Cocktail Ho&agrave;ng H&ocirc;n
+           </span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary font-serif mb-3">
+           C&agrave; Ph&ecirc; Vườn &amp; Sky Lounge
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+           Thưởng thức set tr&agrave; chiều thượng hạng phong c&aacute;ch &Dstrok;&ocirc;ng Dương v&agrave; những ly cocktail s&aacute;ng tạo ngắm nh&igrave;n phố phường S&agrave;i G&ograve;n lung linh về &dstrok;&ecirc;m.
+          </p>
+         </div>
+         <div class="pt-6 mt-4 border-t border-outline-variant/20 flex items-center justify-between">
+          <button class="text-secondary font-title-sm text-title-sm hover:underline flex items-center gap-1 group-hover:translate-x-1 transition-transform" onclick="openDishModal('C&agrave; Ph&ecirc; Vườn &amp; Sky Lounge')" type="button">
+           <span class="">
+            Xem Menu &Dstrok;ồ Uống
+           </span>
+           <span class="material-symbols-outlined text-sm">
+            arrow_forward
+           </span>
+          </button>
+          <button class="bg-primary-container text-on-primary px-3 py-1.5 rounded-lg font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary transition-colors" onclick="openTableBookingModal('Quầy Bar &amp; Bộ Sưu Tập Rượu Vang', '18:00', '2')" type="button">
+           &Dstrok;ặt B&agrave;n Lounge
+          </button>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <!-- 4. CURATED DINING OCCASIONS -->
+    <section class="w-full bg-surface py-[90px] px-6">
+     <div class="max-w-[1320px] mx-auto">
+      <!-- Section Heading -->
+      <div class="text-center mb-16">
+       <span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-secondary font-bold block mb-2">
+        CURATED EXPERIENCES
+       </span>
+       <h2 class="font-headline-lg text-headline-lg text-primary font-serif">
+        Bộ Sưu Tập Tiệc &amp; Kh&ocirc;ng Gian Thưởng Thức
+       </h2>
+       <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto mt-2">
+        Mỗi kh&ocirc;ng gian l&agrave; một bản giao hưởng vị gi&aacute;c &dstrok;ược thiết kế ri&ecirc;ng cho những dịp hội ngộ trọng &dstrok;ại.
+       </p>
+      </div>
+      <!-- OCCASION 1: SEAFOOD & BANQUET -->
+      <div class="bg-surface-container-lowest rounded-2xl p-8 mb-12 border border-secondary/25 shadow-sm">
+       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 mb-8 border-b border-outline-variant/30">
+        <div class="flex items-center gap-3">
+         <span class="bg-secondary text-on-secondary px-3.5 py-1 rounded-full font-label-sm text-label-sm uppercase tracking-wider font-bold">
+          KH&Ocirc;NG GIAN 01
+         </span>
+         <h3 class="font-title-lg text-title-lg text-primary uppercase tracking-wide">
+          &Dstrok;ặt Tiệc &amp; Hải Sản Thượng Hạng
+         </h3>
+        </div>
+        <button class="bg-primary-container text-on-primary hover:bg-primary px-6 py-2 rounded-full font-title-sm text-title-sm uppercase tracking-wider self-start sm:self-auto transition-colors" onclick="openTableBookingModal('&Dstrok;ại Tiệc Hải Sản Ho&agrave;ng Gia', '18:30', '4')" type="button">
+         &Dstrok;ặt B&agrave;n Khu N&agrave;y
+        </button>
+       </div>
+       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Dish Card 1A -->
+        <div class="flex flex-col sm:flex-row bg-surface-container-low rounded-xl overflow-hidden hover:shadow-md transition-shadow">
+         <div class="sm:w-[230px] sm:h-[230px] shrink-0 overflow-hidden">
+          <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Luxurious buffet spread with steaming bowls of traditional Vietnamese Pho, cured meats, artisan cheeses, exotic fruits, and fresh French pastries displayed on polished brass risers and dark wood counters." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrADJtbP7qmu-GcCG0HkW7UB1_1lW5Waf_3hgE6TORjD_DdG_jMC_wOloqNahdUVkjd2PWWpRfEy-GwE6XL9dvAhSxUuYPHzkpHn1fI6i9y_JFUiDUbDRUp5-8FQYsF1wfDEwaIze1mIjKGGvvvVczRD04PMZYS5txLso9JRlWgP5yjB53sgvRdhwAYm6ohsZHLAcmLIWUPA-M8BPhjy4PaaTPEryUCyac1wisqLoAIyDScpt4b0Yx"/>
+         </div>
+         <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+           <div class="flex items-center gap-2 mb-1.5">
+            <span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2.5 py-0.5 rounded">
+             Buffet
+            </span>
+            <span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2.5 py-0.5 rounded">
+             &Aacute; - &Acirc;u
+            </span>
+           </div>
+           <h4 class="font-headline-sm text-headline-sm text-primary font-serif">
+            Buffet S&aacute;ng &amp; Quốc Tế
+           </h4>
+           <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-1">
+            Hơn 80 m&oacute;n &abreve;n &dstrok;ặc sắc thay &dstrok;ổi theo ng&agrave;y, quầy nấu tại chỗ phục vụ n&oacute;ng hổi chuẩn 5 sao.
+           </p>
+           <div class="flex items-center gap-1.5 text-secondary text-sm font-semibold mt-2">
+            <span class="material-symbols-outlined text-base">
+             star
+            </span>
+            <span class="">
+             5.0
+            </span>
+            <span class="text-on-surface-variant font-normal text-xs">
+             (1.240 lượt &dstrok;ặt)
+            </span>
+           </div>
+          </div>
+          <div class="flex items-center justify-between mt-4 pt-3 border-t border-outline-variant/30">
+           <span class="font-title-sm text-title-sm text-primary font-bold">
+            650.000 VN&Dstrok; / Kh&aacute;ch
+           </span>
+           <button class="text-secondary border border-secondary px-3 py-1.5 rounded-lg hover:bg-secondary hover:text-on-secondary font-label-lg text-label-lg uppercase tracking-wider transition-colors" onclick="openTableBookingModal('Buffet S&aacute;ng Quốc Tế', '07:00', '2')" type="button">
+            &Dstrok;ặt B&agrave;n Ngay
+           </button>
+          </div>
+         </div>
+        </div>
+        <!-- Dish Card 1B -->
+        <div class="flex flex-col sm:flex-row bg-surface-container-low rounded-xl overflow-hidden hover:shadow-md transition-shadow">
+         <div class="sm:w-[230px] sm:h-[230px] shrink-0 overflow-hidden">
+          <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Lavish seafood platter featuring Alaskan King Crab legs on cracked ice, grilled Canadian lobster with garlic butter herbs, fresh sashimi salmon and sea urchin, with lime wedges and golden French cocktail sauces." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8SSESoFCb1f7GQTwA8CbB3gLVyr_OgX3xuJ_CQ1ALFdPrvpfsbo2Koyj9sfBCcbTvpIXR4_nIBd-oYULO3UtxvmgqDvpA_QEu2_fKQeMrKTpt-W1-inIcBXil0_1ycG5hncIxxULWLDT4sWOb48stGgf7VLcmoi3HrdfNM1zKmz8BJldWO7rThsF-2Mohyq70ywmFR_e4svfzc7n2y-QGDGw7akB1TfR_qGZQ1rkRv2VjHGiGARiZ"/>
+         </div>
+         <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+           <div class="flex items-center gap-2 mb-1.5">
+            <span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-2.5 py-0.5 rounded font-bold">
+             B&aacute;n chạy
+            </span>
+            <span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2.5 py-0.5 rounded">
+             Hải Sản Tươi Sống
+            </span>
+           </div>
+           <h4 class="font-headline-sm text-headline-sm text-primary font-serif">
+            &Dstrok;ại Tiệc Hải Sản Ho&agrave;ng Gia
+           </h4>
+           <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-1">
+            Cua ho&agrave;ng &dstrok;ế hấp gừng, t&ocirc;m h&ugrave;m nướng ph&ocirc; mai, c&aacute; hồi sashimi tươi ngon hảo hạng nhập khẩu.
+           </p>
+           <div class="flex items-center gap-1.5 text-secondary text-sm font-semibold mt-2">
+            <span class="material-symbols-outlined text-base">
+             star
+            </span>
+            <span class="">
+             5.0
+            </span>
+            <span class="text-on-surface-variant font-normal text-xs">
+             (2.180 lượt &dstrok;ặt)
+            </span>
+           </div>
+          </div>
+          <div class="flex items-center justify-between mt-4 pt-3 border-t border-outline-variant/30">
+           <span class="font-title-sm text-title-sm text-primary font-bold">
+            1.450.000 VN&Dstrok; / Kh&aacute;ch
+           </span>
+           <button class="text-secondary border border-secondary px-3 py-1.5 rounded-lg hover:bg-secondary hover:text-on-secondary font-label-lg text-label-lg uppercase tracking-wider transition-colors" onclick="openTableBookingModal('&Dstrok;ại Tiệc Hải Sản Ho&agrave;ng Gia', '19:00', '2')" type="button">
+            &Dstrok;ặt B&agrave;n Ngay
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <!-- OCCASION 2: ROMANTIC & FINE DINING -->
+      <div class="bg-surface-container-lowest rounded-2xl p-8 mb-12 border border-secondary/25 shadow-sm">
+       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 mb-8 border-b border-outline-variant/30">
+        <div class="flex items-center gap-3">
+         <span class="bg-secondary text-on-secondary px-3.5 py-1 rounded-full font-label-sm text-label-sm uppercase tracking-wider font-bold">
+          KH&Ocirc;NG GIAN 02
+         </span>
+         <h3 class="font-title-lg text-title-lg text-primary uppercase tracking-wide">
+          Kh&ocirc;ng Gian Hẹn H&ograve; L&atilde;ng Mạn
+         </h3>
+        </div>
+        <button class="bg-primary-container text-on-primary hover:bg-primary px-6 py-2 rounded-full font-title-sm text-title-sm uppercase tracking-wider self-start sm:self-auto transition-colors" onclick="openTableBookingModal('B&agrave;n Hẹn H&ograve; &Aacute;nh Nến L&atilde;ng Mạn', '19:00', '2')" type="button">
+         &Dstrok;ặt B&agrave;n Hẹn H&ograve;
+        </button>
+       </div>
+       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Dish Card 2A -->
+        <div class="flex flex-col sm:flex-row bg-surface-container-low rounded-xl overflow-hidden hover:shadow-md transition-shadow">
+         <div class="sm:w-[230px] sm:h-[230px] shrink-0 overflow-hidden">
+          <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Gourmet Vietnamese heritage dish of braised sea bass in antique glazed ceramic pot with lotus seed rice wrapped in fresh green lotus leaf, accompanied by fragile micro herbs and rich caramelized reduction sauce." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVUlZqhlTBYuOa-OsOPJ_IN4QluOk8GLwet04rnyt1Hh_0OCVmVft18CFy9v7MtlyQ2ZaHxFsYxzNbVG-4KiUBJ3A7cpIMCQrRwwQYWb2vXtE_yzh4e92VNHKwOxzzZc63TF_zTik7fnZKR2TOaVENB4KKLzGtkPuaS8L5xZrr88bwqEjTfRSOi-aQDYwnGUgnSToQeuwvLRyl9r1XMCC0quTsddLjpaIeeZzKJiaf1TKMDLhxLbGm"/>
+         </div>
+         <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+           <div class="flex items-center gap-2 mb-1.5">
+            <span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2.5 py-0.5 rounded">
+             Truyền Thống
+            </span>
+            <span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2.5 py-0.5 rounded">
+             &Dstrok;ậm &Dstrok;&agrave;
+            </span>
+           </div>
+           <h4 class="font-headline-sm text-headline-sm text-primary font-serif">
+            M&oacute;n Ngon Di Sản Việt Nam
+           </h4>
+           <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-1">
+            C&aacute; chẽm kho tộ men gốm cổ, cơm sen ng&utilde; sắc v&agrave; canh b&oacute;ng bồ c&acirc;u hầm hạt sen thơm ngọt.
+           </p>
+           <div class="flex items-center gap-1.5 text-secondary text-sm font-semibold mt-2">
+            <span class="material-symbols-outlined text-base">
+             star
+            </span>
+            <span class="">
+             4.9
+            </span>
+            <span class="text-on-surface-variant font-normal text-xs">
+             (890 lượt &dstrok;ặt)
+            </span>
+           </div>
+          </div>
+          <div class="flex items-center justify-between mt-4 pt-3 border-t border-outline-variant/30">
+           <span class="font-title-sm text-title-sm text-primary font-bold">
+            480.000 VN&Dstrok; / M&oacute;n
+           </span>
+           <button class="text-secondary border border-secondary px-3 py-1.5 rounded-lg hover:bg-secondary hover:text-on-secondary font-label-lg text-label-lg uppercase tracking-wider transition-colors" onclick="openTableBookingModal('Ẩm Thực Di Sản Việt Nam', '19:00', '2')" type="button">
+            &Dstrok;ặt B&agrave;n Ngay
+           </button>
+          </div>
+         </div>
+        </div>
+        <!-- Dish Card 2B -->
+        <div class="flex flex-col sm:flex-row bg-surface-container-low rounded-xl overflow-hidden hover:shadow-md transition-shadow">
+         <div class="sm:w-[230px] sm:h-[230px] shrink-0 overflow-hidden">
+          <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Seared Japanese Wagyu A5 beef tenderloin steak with charred rosemary, black winter truffle jus, buttery French glazed baby carrots, and grilled green asparagus served on handcrafted ceramic plate in candlelight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH_SHEKAq55FZJyeN9lTudaBNpCutWlfbEvMjyFpuYdI_S6NEvfHHgn2l_A8vO44GLlZrquTvbKYQBzAgKcsr2ygXPSRZ7jCM8HXub5s3xw8YEx-bXYuOvuIkMGPQW7GREkYNl2PNA-9NGz1d-ELPCxgXrOQOHfFF_whnsT88FYZO2kOlBIWWQzMYKBjLb15plMcKYDnH5NeuHYd4n7VS314Pk-ws95yLUP-zM04pApKRmQJMyLYpr"/>
+         </div>
+         <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+           <div class="flex items-center gap-2 mb-1.5">
+            <span class="bg-secondary text-on-secondary font-label-sm text-label-sm px-2.5 py-0.5 rounded font-bold">
+             Chef Signature
+            </span>
+            <span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2.5 py-0.5 rounded">
+             Fine Dining
+            </span>
+           </div>
+           <h4 class="font-headline-sm text-headline-sm text-primary font-serif">
+            Ẩm Thực Quốc Tế &amp; B&ograve; Wagyu A5
+           </h4>
+           <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-1">
+            B&ograve; Wagyu v&acirc;n mỡ tuyệt mỹ nướng t&aacute;i vừa, sốt nấm Truffle &dstrok;en v&agrave; m&abreve;ng t&acirc;y x&agrave;o bơ thảo mộc.
+           </p>
+           <div class="flex items-center gap-1.5 text-secondary text-sm font-semibold mt-2">
+            <span class="material-symbols-outlined text-base">
+             star
+            </span>
+            <span class="">
+             5.0
+            </span>
+            <span class="text-on-surface-variant font-normal text-xs">
+             (1.650 lượt &dstrok;ặt)
+            </span>
+           </div>
+          </div>
+          <div class="flex items-center justify-between mt-4 pt-3 border-t border-outline-variant/30">
+           <span class="font-title-sm text-title-sm text-primary font-bold">
+            1.850.000 VN&Dstrok; / M&oacute;n
+           </span>
+           <button class="text-secondary border border-secondary px-3 py-1.5 rounded-lg hover:bg-secondary hover:text-on-secondary font-label-lg text-label-lg uppercase tracking-wider transition-colors" onclick="openTableBookingModal('B&ograve; Wagyu A5 &amp; Truffle &Dstrok;en', '20:00', '2')" type="button">
+            &Dstrok;ặt B&agrave;n Ngay
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <!-- OCCASION 3: FAMILY & DESSERTS -->
+      <div class="bg-surface-container-lowest rounded-2xl p-8 border border-secondary/25 shadow-sm">
+       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 mb-8 border-b border-outline-variant/30">
+        <div class="flex items-center gap-3">
+         <span class="bg-secondary text-on-secondary px-3.5 py-1 rounded-full font-label-sm text-label-sm uppercase tracking-wider font-bold">
+          KH&Ocirc;NG GIAN 03
+         </span>
+         <h3 class="font-title-lg text-title-lg text-primary uppercase tracking-wide">
+          Sum Họp Gia &Dstrok;&igrave;nh &amp; Tr&aacute;ng Miệng
+         </h3>
+        </div>
+        <button class="bg-primary-container text-on-primary hover:bg-primary px-6 py-2 rounded-full font-title-sm text-title-sm uppercase tracking-wider self-start sm:self-auto transition-colors" onclick="openTableBookingModal('B&agrave;n Sum Họp Gia &Dstrok;&igrave;nh', '12:30', '6')" type="button">
+         &Dstrok;ặt B&agrave;n Gia &Dstrok;&igrave;nh
+        </button>
+       </div>
+       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Dish Card 3A -->
+        <div class="flex flex-col sm:flex-row bg-surface-container-low rounded-xl overflow-hidden hover:shadow-md transition-shadow">
+         <div class="sm:w-[230px] sm:h-[230px] shrink-0 overflow-hidden">
+          <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Grand selection of vintage Bordeaux wine bottles in an atmospheric mahogany wine cellar, flanked by bespoke Phoenix fire craft cocktails garnished with dehydrated orange slices and smoked star anise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWo3vYWwcjaKQtPHl_-4duYWN0DCY5LYVd2YLjVCwj21Twac1Jr9bGay8Tdl2cVGnXZBP1Tfn27Bx5TC_Mj1j3cetwIlxPkZlLMvCAADcky0cuG0WojTdtuLndWKU4IWJ00kr__WCvt7NdHj7riXrDdngnbXDlUgGc6ULLTscQZgmZyeEn66WgcK0sMBm9dPIpFhSSV3tZeOn57OK6n2ZnCkofu77BAyuAYd40tcWlQRcr8Tcbvtwa"/>
+         </div>
+         <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+           <div class="flex items-center gap-2 mb-1.5">
+            <span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2.5 py-0.5 rounded">
+             Hầm Rượu Vang
+            </span>
+            <span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2.5 py-0.5 rounded">
+             Cocktail Bar
+            </span>
+           </div>
+           <h4 class="font-headline-sm text-headline-sm text-primary font-serif">
+            &Dstrok;ồ Uống Thượng Hạng &amp; Rượu Vang
+           </h4>
+           <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-1">
+            Vang &dstrok;ỏ Bordeaux thượng phẩm, cocktail Phượng Ho&agrave;ng lửa v&agrave; nước &eacute;p thanh nhiệt tr&aacute;i c&acirc;y hữu cơ.
+           </p>
+           <div class="flex items-center gap-1.5 text-secondary text-sm font-semibold mt-2">
+            <span class="material-symbols-outlined text-base">
+             star
+            </span>
+            <span class="">
+             4.9
+            </span>
+            <span class="text-on-surface-variant font-normal text-xs">
+             (740 lượt &dstrok;ặt)
+            </span>
+           </div>
+          </div>
+          <div class="flex items-center justify-between mt-4 pt-3 border-t border-outline-variant/30">
+           <span class="font-title-sm text-title-sm text-primary font-bold">
+            Từ 180.000 VN&Dstrok; / Ly
+           </span>
+           <button class="text-secondary border border-secondary px-3 py-1.5 rounded-lg hover:bg-secondary hover:text-on-secondary font-label-lg text-label-lg uppercase tracking-wider transition-colors" onclick="openTableBookingModal('Quầy Bar &amp; Bộ Sưu Tập Rượu Vang', '20:00', '4')" type="button">
+            &Dstrok;ặt B&agrave;n Ngay
+           </button>
+          </div>
+         </div>
+        </div>
+        <!-- Dish Card 3B -->
+        <div class="flex flex-col sm:flex-row bg-surface-container-low rounded-xl overflow-hidden hover:shadow-md transition-shadow">
+         <div class="sm:w-[230px] sm:h-[230px] shrink-0 overflow-hidden">
+          <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Artisanal French chocolate mousse topped with edible 24k gold leaf, passion fruit cr&egrave;me br&ucirc;l&eacute;e with caramelized sugar crust, accompanied by handmade pistachio gelato and fresh raspberries." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUk0O2e-kafQbzBoIIFrCCdvfrEuKpqRfHJRDXWL3Oiq78MRfPNJygkYRZJj2PPAhCjPmZGRelt-zm8MCwt4UEhDzDdTe_HcE-2SOF1u-InTKcfhSNHP17jSft0fgOMS3uGpyRJkwnBbB5Pwr4QjgEqpOPbrbg589gw5St68jsVPQUYVTFDvv3D4BDnaKUe5PP-Q49_ATFHmRAvFNiVhQrGxLTU-Y2eZXM39g4DrFEWc53YHlXhPIa"/>
+         </div>
+         <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+           <div class="flex items-center gap-2 mb-1.5">
+            <span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2.5 py-0.5 rounded">
+             B&aacute;nh Thủ C&ocirc;ng
+            </span>
+            <span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2.5 py-0.5 rounded">
+             Hảo Hạng
+            </span>
+           </div>
+           <h4 class="font-headline-sm text-headline-sm text-primary font-serif">
+            B&aacute;nh Ngọt &amp; Tr&aacute;ng Miệng Ph&aacute;p
+           </h4>
+           <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-1">
+            B&aacute;nh mousse chocolate Bỉ &dstrok;ậm vị, kem hoa quả tươi nh&agrave; l&agrave;m v&agrave; tr&agrave; &dstrok;&agrave;o mật ong cam sả thanh tao.
+           </p>
+           <div class="flex items-center gap-1.5 text-secondary text-sm font-semibold mt-2">
+            <span class="material-symbols-outlined text-base">
+             star
+            </span>
+            <span class="">
+             5.0
+            </span>
+            <span class="text-on-surface-variant font-normal text-xs">
+             (910 lượt &dstrok;ặt)
+            </span>
+           </div>
+          </div>
+          <div class="flex items-center justify-between mt-4 pt-3 border-t border-outline-variant/30">
+           <span class="font-title-sm text-title-sm text-primary font-bold">
+            Từ 150.000 VN&Dstrok; / M&oacute;n
+           </span>
+           <button class="text-secondary border border-secondary px-3 py-1.5 rounded-lg hover:bg-secondary hover:text-on-secondary font-label-lg text-label-lg uppercase tracking-wider transition-colors" onclick="openTableBookingModal('B&agrave;n Sum Họp Gia &Dstrok;&igrave;nh', '18:00', '3')" type="button">
+            &Dstrok;ặt B&agrave;n Ngay
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <!-- 5. CHEF'S SIGNATURE SECTION -->
+    <section class="w-full bg-surface-container py-24 px-6 relative overflow-hidden">
+     <div class="max-w-[1320px] mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+       <!-- Left: Tall portrait photo -->
+       <div class="lg:col-span-5 relative flex justify-center">
+        <div class="relative w-full max-w-[440px] aspect-[440/520] rounded-2xl overflow-hidden shadow-2xl border border-secondary/40">
+         <img class="w-full h-full object-cover" data-alt="Distinguished executive French chef in pristine white tailored uniform with gold embroidered Phoenix emblem delicately garnishing a haute cuisine dish with tweezers in a state-of-the-art hotel kitchen with warm Indochine ambient lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS4XZ1PGy7p1BeOS6Dvc1k0An6P8uT-b64nDVCS0QyN7BwRXvxUPf82ooIYjcwVUHRaJCAMzoQtxa0naGOhsDrsTYwz4gsAuv-xoe2tRse1ljIdR5Z_A2rs3SoIXLOJc9WXx4bfXMY3fSxNf829QoHPYdL-9rJwU3S7lmbTwuBNADZHfJPnE1YyAg_AMutoNwKgjBcrlSNwUWsX_csB7XJvDfZsFD7NyebcZYZ-Vrh0jTvZrcbpd9B"/>
+         <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-primary via-primary/60 to-transparent p-6 text-on-primary">
+          <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">
+           Executive Chef
+          </span>
+          <h4 class="font-headline-sm text-headline-sm font-serif">
+           Jean-Fran&ccedil;ois Laurent
+          </h4>
+          <p class="font-body-md text-body-md text-on-tertiary-container mt-1">
+           25 n&abreve;m t&ocirc;n vinh di sản ẩm thực &Dstrok;&ocirc;ng Dương
+          </p>
+         </div>
+        </div>
+       </div>
+       <!-- Right: Content & 4 Feature Cards -->
+       <div class="lg:col-span-7 flex flex-col justify-center">
+        <span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-secondary font-bold mb-2">
+         CULINARY ARTISTRY
+        </span>
+        <h2 class="font-headline-lg text-headline-lg text-primary font-serif font-bold mb-4">
+         Dấu Ấn Của Bếp Trưởng
+        </h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+         Mỗi thực &dstrok;ơn tại The Phoenix Hotel l&agrave; một h&agrave;nh tr&igrave;nh &dstrok;i&ecirc;u khắc hương vị, nơi nguy&ecirc;n bản ẩm thực Việt Nam giao h&ograve;a c&ugrave;ng kỹ ph&aacute;p cổ &dstrok;iển nước Ph&aacute;p dưới b&agrave;n tay của c&aacute;c nghệ nh&acirc;n ẩm thực từng &dstrok;ạt chuẩn sao Michelin danh gi&aacute;.
+        </p>
+        <!-- 4 Feature Cards -->
+        <div class="space-y-3.5">
+         <!-- Feature 1 -->
+         <div class="bg-surface-container-lowest rounded-xl p-4 border-l-4 border-secondary shadow-sm flex items-start gap-4 hover:translate-x-1.5 transition-transform">
+          <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 mt-0.5">
+           <span class="material-symbols-outlined text-secondary">
+            workspace_premium
+           </span>
+          </div>
+          <div>
+           <h4 class="font-title-sm text-title-sm text-primary font-bold">
+            Thực hiện bởi &dstrok;ội ng&utilde; Bếp trưởng chuẩn sao Michelin
+           </h4>
+           <p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+            Với hơn 20 n&abreve;m kinh nghiệm tại c&aacute;c kh&aacute;ch sạn &amp; resort 5 sao quốc tế danh tiếng.
+           </p>
+          </div>
+         </div>
+         <!-- Feature 2 -->
+         <div class="bg-surface-container-lowest rounded-xl p-4 border-l-4 border-secondary shadow-sm flex items-start gap-4 hover:translate-x-1.5 transition-transform">
+          <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 mt-0.5">
+           <span class="material-symbols-outlined text-secondary">
+            restaurant_menu
+           </span>
+          </div>
+          <div>
+           <h4 class="font-title-sm text-title-sm text-primary font-bold">
+            Kỹ thuật chế biến chuẩn x&aacute;c &ndash; tr&igrave;nh b&agrave;y tinh tế
+           </h4>
+           <p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+            Sự kết hợp chuẩn mực ẩm thực Ph&aacute;p cổ &dstrok;iển v&agrave; chiều s&acirc;u khẩu vị &Aacute; &Dstrok;&ocirc;ng phong ph&uacute;.
+           </p>
+          </div>
+         </div>
+         <!-- Feature 3 -->
+         <div class="bg-surface-container-lowest rounded-xl p-4 border-l-4 border-secondary shadow-sm flex items-start gap-4 hover:translate-x-1.5 transition-transform">
+          <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 mt-0.5">
+           <span class="material-symbols-outlined text-secondary">
+            eco
+           </span>
+          </div>
+          <div>
+           <h4 class="font-title-sm text-title-sm text-primary font-bold">
+            Nguy&ecirc;n liệu hữu cơ tươi sống tuyển chọn mỗi s&aacute;ng
+           </h4>
+           <p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+            Hải sản tươi trực tiếp từ ngư trường vịnh Nha Trang v&agrave; n&ocirc;ng sản cao nguy&ecirc;n &Dstrok;&agrave; Lạt organic.
+           </p>
+          </div>
+         </div>
+         <!-- Feature 4 -->
+         <div class="bg-surface-container-lowest rounded-xl p-4 border-l-4 border-secondary shadow-sm flex items-start gap-4 hover:translate-x-1.5 transition-transform">
+          <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 mt-0.5">
+           <span class="material-symbols-outlined text-secondary">
+            auto_awesome
+           </span>
+          </div>
+          <div>
+           <h4 class="font-title-sm text-title-sm text-primary font-bold">
+            Mỗi m&oacute;n &abreve;n l&agrave; một t&aacute;c phẩm nghệ thuật &dstrok;ộc bản
+           </h4>
+           <p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+            &Dstrok;&aacute;nh thức trọn vẹn cả 5 gi&aacute;c quan của thực kh&aacute;ch qua từng tầng hương vị bất ngờ.
+           </p>
+          </div>
+         </div>
+        </div>
+        <div class="mt-8 flex items-center gap-4">
+         <button class="bg-primary text-on-primary hover:bg-primary-container px-6 py-3 rounded-lg font-title-sm text-title-sm uppercase tracking-wider transition-colors shadow-sm" onclick="openTableBookingModal('Chef\'s Table &Dstrok;ặc Biệt', '19:00', '2')" type="button">
+          &Dstrok;ặt B&agrave;n Chef's Table
+         </button>
+         <button class="border border-secondary text-secondary hover:bg-secondary/10 px-6 py-3 rounded-lg font-title-sm text-title-sm uppercase tracking-wider transition-colors" onclick="openDishModal('Thực &Dstrok;ơn Signature Bếp Trưởng')" type="button">
+          Xem To&agrave;n Bộ 31 M&oacute;n &Dstrok;ộc Bản
+         </button>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <!-- ================= INTERACTIVE PROTOTYPE OVERLAYS ================= -->
+    <!-- LUXURY TABLE RESERVATION MODAL (Quiet Luxury: Deep Emerald #16382E, Warm Alabaster #FAF6F0, Champagne Gold #C5A059) -->
+    <div aria-modal="true" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6" id="table-reservation-modal" role="dialog" style="display: none;">
+     <!-- Backdrop -->
+     <div class="fixed inset-0 bg-[#0A1814]/75 backdrop-blur-md transition-opacity duration-300" onclick="closeTableBookingModal()">
+     </div>
+     <!-- Modal Card -->
+     <div class="relative bg-[#FAF6F0] text-[#1C1C18] rounded-2xl w-full max-w-[560px] max-h-[92vh] flex flex-col shadow-[0_25px_60px_rgba(0,34,26,0.35)] border-[1.5px] border-[#C5A059] z-10 overflow-hidden transform transition-all duration-300">
+      <!-- Header -->
+      <div class="px-6 py-5 bg-[#16382E] text-white flex items-center justify-between border-b border-[#C5A059]/40 relative">
+       <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-[#C5A059]/20 border border-[#C5A059] flex items-center justify-center text-[#FED488] shadow-inner">
+         <span class="material-symbols-outlined text-2xl">
+          table_restaurant
+         </span>
+        </div>
+        <div>
+         <span class="font-label-sm text-[10px] uppercase tracking-[0.2em] text-[#FED488] font-bold block">
+          THE PHOENIX HOTEL &middot; SAIGON
+         </span>
+         <h3 class="font-headline-sm text-[21px] text-white font-serif tracking-wide leading-tight">
+          &Dstrok;ặt B&agrave;n Nh&agrave; H&agrave;ng &amp; Ẩm Thực
+         </h3>
+        </div>
+       </div>
+       <button aria-label="&Dstrok;&oacute;ng modal" class="w-8 h-8 rounded-full flex items-center justify-center text-[#AACEC0] hover:text-white hover:bg-white/10 transition-colors" onclick="closeTableBookingModal()" type="button">
+        <span class="material-symbols-outlined text-xl">
+         close
+        </span>
+       </button>
+      </div>
+      <!-- Active Zone Highlight Badge -->
+      <div class="px-6 py-2.5 bg-[#FAF6F0] border-b border-[#C5A059]/25 flex items-center justify-between">
+       <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-[#775A19] text-base">
+         stars
+        </span>
+        <span class="font-label-sm text-[11px] uppercase tracking-wider text-[#775A19] font-bold">
+         Trải nghiệm &dstrok;ang chọn:
+        </span>
+       </div>
+       <span class="font-title-sm text-xs px-3 py-1 rounded-full bg-[#16382E] text-[#FED488] border border-[#C5A059]/40 font-semibold" id="table-modal-badge">
+        Nh&agrave; H&agrave;ng The Phoenix
+       </span>
+      </div>
+      <!-- Modal Form Body (Scrollable) -->
+      <form class="px-6 py-5 overflow-y-auto space-y-4 text-left" id="table-reservation-form" onsubmit="handleTableBookingSubmit(event)">
+       <!-- 1. Dropdown: Dining Zone -->
+       <div class="space-y-1.5">
+        <label class="font-label-sm text-[11px] uppercase tracking-wider text-[#775A19] font-bold flex items-center gap-1.5" for="form-dining-zone">
+         <span class="material-symbols-outlined text-sm">
+          room_service
+         </span>
+         <span>
+          Khu Vực &amp; Thực &Dstrok;ơn Ưu Ti&ecirc;n
+         </span>
+        </label>
+        <div class="relative">
+         <select class="w-full bg-white text-[#1C1C18] border border-[#C5A059]/50 rounded-xl px-4 py-2.5 font-body-md text-sm outline-none focus:ring-2 focus:ring-[#C5A059] focus:border-[#C5A059] appearance-none pr-10 shadow-sm transition-all cursor-pointer" id="form-dining-zone" onchange="syncSelectedBadge(this.value)">
+          <option value="Buffet S&aacute;ng Quốc Tế">
+           Buffet S&aacute;ng Quốc Tế (06:30 - 10:00)
+          </option>
+          <option selected="" value="Nh&agrave; H&agrave;ng The Phoenix">
+           Nh&agrave; H&agrave;ng The Phoenix (A La Carte &amp; Buffet Tối)
+          </option>
+          <option value="&Dstrok;ại Tiệc Hải Sản Ho&agrave;ng Gia">
+           &Dstrok;ại Tiệc Hải Sản Ho&agrave;ng Gia (T&ocirc;m H&ugrave;m &amp; Cua Alaska)
+          </option>
+          <option value="B&agrave;n Hẹn H&ograve; &Aacute;nh Nến L&atilde;ng Mạn">
+           B&agrave;n Hẹn H&ograve; &Aacute;nh Nến L&atilde;ng Mạn (Khu Cặp &Dstrok;&ocirc;i)
+          </option>
+          <option value="Ẩm Thực Di Sản Việt Nam">
+           Ẩm Thực Di Sản Việt Nam (C&aacute; Chẽm Cổ &Dstrok;iển &amp; Cơm Sen)
+          </option>
+          <option value="B&ograve; Wagyu A5 &amp; Truffle &Dstrok;en">
+           B&ograve; Wagyu A5 &amp; Truffle &Dstrok;en (Fine Dining Signature)
+          </option>
+          <option value="Quầy Bar &amp; Bộ Sưu Tập Rượu Vang">
+           C&agrave; Ph&ecirc; Vườn &amp; Sky Lounge (Tr&agrave; Chiều &amp; Cocktail)
+          </option>
+          <option value="B&agrave;n Sum Họp Gia &Dstrok;&igrave;nh">
+           B&agrave;n Sum Họp Gia &Dstrok;&igrave;nh &amp; Tr&aacute;ng Miệng Ph&aacute;p
+          </option>
+          <option value="Chef's Table &Dstrok;ặc Biệt">
+           Chef's Table &Dstrok;ặc Biệt (Jean-Fran&ccedil;ois Laurent)
+          </option>
+         </select>
+         <span class="material-symbols-outlined absolute right-3.5 top-2.5 text-[#775A19] pointer-events-none">
+          expand_more
+         </span>
+        </div>
+       </div>
+       <!-- 2. Date + Time + Guests (3 Columns) -->
+       <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <!-- Date -->
+        <div class="space-y-1.5">
+         <label class="font-label-sm text-[11px] uppercase tracking-wider text-[#775A19] font-bold flex items-center gap-1" for="form-dining-date">
+          <span class="material-symbols-outlined text-sm">
+           calendar_month
+          </span>
+          <span>
+           Ng&agrave;y D&ugrave;ng Bữa
+          </span>
+         </label>
+         <input class="w-full bg-white text-[#1C1C18] border border-[#C5A059]/50 rounded-xl px-3 py-2 font-body-md text-sm outline-none focus:ring-2 focus:ring-[#C5A059] shadow-sm transition-all" id="form-dining-date" required="" type="text" value="25/10/2025"/>
+        </div>
+        <!-- Time Select -->
+        <div class="space-y-1.5">
+         <label class="font-label-sm text-[11px] uppercase tracking-wider text-[#775A19] font-bold flex items-center gap-1" for="form-dining-time">
+          <span class="material-symbols-outlined text-sm">
+           schedule
+          </span>
+          <span>
+           Giờ D&ugrave;ng Bữa
+          </span>
+         </label>
+         <div class="relative">
+          <select class="w-full bg-white text-[#1C1C18] border border-[#C5A059]/50 rounded-xl px-3 py-2 font-body-md text-sm outline-none focus:ring-2 focus:ring-[#C5A059] appearance-none pr-8 shadow-sm transition-all cursor-pointer" id="form-dining-time">
+           <option value="07:00">
+            07:00 S&aacute;ng
+           </option>
+           <option value="11:30">
+            11:30 Trưa
+           </option>
+           <option value="12:30">
+            12:30 Trưa
+           </option>
+           <option value="18:00">
+            18:00 Tối
+           </option>
+           <option selected="" value="19:00">
+            19:00 Tối
+           </option>
+           <option value="20:00">
+            20:00 Tối
+           </option>
+           <option value="21:00">
+            21:00 Tối
+           </option>
+          </select>
+          <span class="material-symbols-outlined absolute right-2.5 top-2 text-[#775A19] text-base pointer-events-none">
+           expand_more
+          </span>
+         </div>
+        </div>
+        <!-- Guest Stepper -->
+        <div class="space-y-1.5">
+         <label class="font-label-sm text-[11px] uppercase tracking-wider text-[#775A19] font-bold flex items-center gap-1">
+          <span class="material-symbols-outlined text-sm">
+           group
+          </span>
+          <span>
+           Số Thực Kh&aacute;ch
+          </span>
+         </label>
+         <div class="flex items-center justify-between bg-white border border-[#C5A059]/50 rounded-xl px-2 py-1 shadow-sm">
+          <button aria-label="Giảm số kh&aacute;ch" class="w-7 h-7 rounded-lg bg-[#FAF6F0] text-[#16382E] hover:bg-[#C5A059]/20 active:scale-95 flex items-center justify-center font-bold text-base transition-colors" onclick="changeGuestCount(-1)" type="button">
+           &minus;
+          </button>
+          <span class="font-title-sm text-sm text-[#16382E] font-bold px-2" id="form-guest-display">
+           2 Kh&aacute;ch
+          </span>
+          <button aria-label="T&abreve;ng số kh&aacute;ch" class="w-7 h-7 rounded-lg bg-[#FAF6F0] text-[#16382E] hover:bg-[#C5A059]/20 active:scale-95 flex items-center justify-center font-bold text-base transition-colors" onclick="changeGuestCount(1)" type="button">
+           +
+          </button>
+          <input id="form-guest-val" type="hidden" value="2"/>
+         </div>
+        </div>
+       </div>
+       <!-- 3. Seating Preference Radio Pills -->
+       <div class="space-y-1.5">
+        <label class="font-label-sm text-[11px] uppercase tracking-wider text-[#775A19] font-bold flex items-center gap-1.5">
+         <span class="material-symbols-outlined text-sm">
+          chair
+         </span>
+         <span>
+          Kh&ocirc;ng Gian B&agrave;n Ưa Th&iacute;ch
+         </span>
+        </label>
+        <div class="grid grid-cols-3 gap-2">
+         <label class="relative flex flex-col items-center justify-center p-2.5 text-center bg-white border border-[#C5A059]/40 rounded-xl cursor-pointer hover:border-[#C5A059] transition-all has-[:checked]:bg-[#16382E] has-[:checked]:text-white has-[:checked]:border-[#16382E] shadow-sm">
+          <input checked="" class="hidden" name="seating-pref" type="radio" value="Trong nh&agrave; m&aacute;y lạnh"/>
+          <span class="material-symbols-outlined text-base mb-0.5">
+           ac_unit
+          </span>
+          <span class="font-title-sm text-xs">
+           Trong Nh&agrave;
+          </span>
+         </label>
+         <label class="relative flex flex-col items-center justify-center p-2.5 text-center bg-white border border-[#C5A059]/40 rounded-xl cursor-pointer hover:border-[#C5A059] transition-all has-[:checked]:bg-[#16382E] has-[:checked]:text-white has-[:checked]:border-[#16382E] shadow-sm">
+          <input class="hidden" name="seating-pref" type="radio" value="S&acirc;n vườn ngo&agrave;i trời"/>
+          <span class="material-symbols-outlined text-base mb-0.5">
+           yard
+          </span>
+          <span class="font-title-sm text-xs">
+           S&acirc;n Vườn
+          </span>
+         </label>
+         <label class="relative flex flex-col items-center justify-center p-2.5 text-center bg-white border border-[#C5A059]/40 rounded-xl cursor-pointer hover:border-[#C5A059] transition-all has-[:checked]:bg-[#16382E] has-[:checked]:text-white has-[:checked]:border-[#16382E] shadow-sm">
+          <input class="hidden" name="seating-pref" type="radio" value="Ph&ograve;ng VIP ri&ecirc;ng tư"/>
+          <span class="material-symbols-outlined text-base mb-0.5">
+           shield_person
+          </span>
+          <span class="font-title-sm text-xs">
+           Ph&ograve;ng VIP
+          </span>
+         </label>
+        </div>
+       </div>
+       <!-- 4. Contact Fields (2 Columns) -->
+       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div class="space-y-1.5">
+         <label class="font-label-sm text-[11px] uppercase tracking-wider text-[#775A19] font-bold" for="form-cust-name">
+          T&ecirc;n Người &Dstrok;ặt B&agrave;n
+          <span class="text-rose-600">
+           *
+          </span>
+         </label>
+         <input class="w-full bg-white text-[#1C1C18] border border-[#C5A059]/50 rounded-xl px-3.5 py-2 font-body-md text-sm outline-none focus:ring-2 focus:ring-[#C5A059] shadow-sm" id="form-cust-name" placeholder="&Ocirc;ng / B&agrave; Nguyễn V&abreve;n A" required="" type="text" value="Nguyễn Ho&agrave;ng Nam"/>
+        </div>
+        <div class="space-y-1.5">
+         <label class="font-label-sm text-[11px] uppercase tracking-wider text-[#775A19] font-bold" for="form-cust-phone">
+          Số &Dstrok;iện Thoại Li&ecirc;n Hệ
+          <span class="text-rose-600">
+           *
+          </span>
+         </label>
+         <input class="w-full bg-white text-[#1C1C18] border border-[#C5A059]/50 rounded-xl px-3.5 py-2 font-body-md text-sm outline-none focus:ring-2 focus:ring-[#C5A059] shadow-sm" id="form-cust-phone" placeholder="0909 xxx xxx" required="" type="tel" value="0918 368 999"/>
+        </div>
+       </div>
+       <!-- 5. Chef Notes / Special Requests -->
+       <div class="space-y-1.5">
+        <label class="font-label-sm text-[11px] uppercase tracking-wider text-[#775A19] font-bold flex items-center gap-1.5" for="form-cust-notes">
+         <span class="material-symbols-outlined text-sm">
+          edit_note
+         </span>
+         <span>
+          Ghi Ch&uacute; Cho Bếp Trưởng &amp; Quản Gia
+         </span>
+        </label>
+        <textarea class="w-full bg-white text-[#1C1C18] border border-[#C5A059]/50 rounded-xl px-3.5 py-2 font-body-md text-xs outline-none focus:ring-2 focus:ring-[#C5A059] resize-none shadow-sm" id="form-cust-notes" placeholder="V&iacute; dụ: Trang tr&iacute; hoa kỷ niệm ng&agrave;y cưới, nến lung linh, kh&ocirc;ng &abreve;n h&agrave;nh t&acirc;y, dị ứng &dstrok;ậu phộng, chuẩn bị ghế trẻ em..." rows="2"></textarea>
+       </div>
+       <!-- Actions -->
+       <div class="pt-3 border-t border-[#C5A059]/30 flex items-center justify-end gap-3">
+        <button class="px-5 py-2.5 rounded-xl border border-[#717975]/40 text-[#414845] hover:bg-black/5 font-title-sm text-xs uppercase tracking-wider transition-colors" onclick="closeTableBookingModal()" type="button">
+         Hủy
+        </button>
+        <button class="px-6 py-2.5 rounded-xl bg-[#C5A059] hover:bg-[#775A19] text-white font-title-sm text-xs uppercase tracking-widest font-bold shadow-md hover:shadow-lg transition-all flex items-center gap-2" type="submit">
+         <span class="material-symbols-outlined text-base">
+          check_circle
+         </span>
+         <span>
+          X&aacute;c Nhận Giữ B&agrave;n
+         </span>
+        </button>
+       </div>
+      </form>
+     </div>
+    </div>
+    <!-- OVERLAY A: RIGHT-SIDE FILTER DRAWER -->
+    <div class="fixed inset-0 z-50 pointer-events-none transition-opacity duration-300 opacity-0" id="filter-drawer" style="display: none;">
+     <!-- Backdrop Scrim -->
+     <div class="absolute inset-0 bg-primary/60 backdrop-blur-sm pointer-events-auto" onclick="toggleFilterDrawer(false)">
+     </div>
+     <!-- Drawer Body -->
+     <div class="absolute top-0 right-0 h-full w-full max-w-md bg-surface-container-lowest shadow-2xl p-6 overflow-y-auto pointer-events-auto flex flex-col justify-between transform translate-x-full transition-transform duration-300" id="filter-drawer-panel">
+      <div>
+       <div class="flex items-center justify-between pb-4 border-b border-outline-variant/30">
+        <div>
+         <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">
+          T&Ugrave;Y CHỌN TRẢI NGHIỆM
+         </span>
+         <h3 class="font-title-lg text-title-lg text-primary font-bold">
+          BỘ LỌC ẨM THỰC N&Acirc;NG CAO
+         </h3>
+        </div>
+        <button class="text-on-surface-variant hover:text-primary p-2" onclick="toggleFilterDrawer(false)" type="button">
+         <span class="material-symbols-outlined text-2xl">
+          close
+         </span>
+        </button>
+       </div>
+       <!-- Filter Groups -->
+       <div class="space-y-6 mt-6">
+        <!-- Group 1: Loại hình -->
+        <div>
+         <h4 class="font-title-sm text-title-sm text-primary uppercase tracking-wider mb-2.5">
+          Loại H&igrave;nh Trải Nghiệm
+         </h4>
+         <div class="space-y-2">
+          <label class="flex items-center gap-3 font-body-md text-body-md text-on-surface cursor-pointer">
+           <input checked="" class="w-4 h-4 rounded text-secondary focus:ring-secondary cursor-pointer" type="checkbox"/>
+           <span class="">
+            Tất cả kh&ocirc;ng gian
+           </span>
+          </label>
+          <label class="flex items-center gap-3 font-body-md text-body-md text-on-surface cursor-pointer">
+           <input class="w-4 h-4 rounded text-secondary focus:ring-secondary cursor-pointer" type="checkbox"/>
+           <span class="">
+            Nh&agrave; h&agrave;ng gọi m&oacute;n (A La Carte)
+           </span>
+          </label>
+          <label class="flex items-center gap-3 font-body-md text-body-md text-on-surface cursor-pointer">
+           <input class="w-4 h-4 rounded text-secondary focus:ring-secondary cursor-pointer" type="checkbox"/>
+           <span class="">
+            Buffet tự chọn quốc tế
+           </span>
+          </label>
+          <label class="flex items-center gap-3 font-body-md text-body-md text-on-surface cursor-pointer">
+           <input class="w-4 h-4 rounded text-secondary focus:ring-secondary cursor-pointer" type="checkbox"/>
+           <span class="">
+            Bar &amp; Sky Lounge l&atilde;ng mạn
+           </span>
+          </label>
+          <label class="flex items-center gap-3 font-body-md text-body-md text-on-surface cursor-pointer">
+           <input class="w-4 h-4 rounded text-secondary focus:ring-secondary cursor-pointer" type="checkbox"/>
+           <span class="">
+            Set Tr&agrave; chiều &Dstrok;&ocirc;ng Dương
+           </span>
+          </label>
+         </div>
+        </div>
+        <!-- Group 2: Khung giờ -->
+        <div>
+         <h4 class="font-title-sm text-title-sm text-primary uppercase tracking-wider mb-2.5">
+          Khung Giờ Ẩm Thực
+         </h4>
+         <div class="grid grid-cols-2 gap-2">
+          <label class="flex items-center gap-2 p-2 bg-surface-container rounded-lg font-body-md text-body-md cursor-pointer">
+           <input class="rounded text-secondary" type="checkbox"/>
+           <span class="">
+            S&aacute;ng (06:30 - 10:00)
+           </span>
+          </label>
+          <label class="flex items-center gap-2 p-2 bg-surface-container rounded-lg font-body-md text-body-md cursor-pointer">
+           <input class="rounded text-secondary" type="checkbox"/>
+           <span class="">
+            Trưa (11:00 - 14:00)
+           </span>
+          </label>
+          <label class="flex items-center gap-2 p-2 bg-surface-container rounded-lg font-body-md text-body-md cursor-pointer">
+           <input class="rounded text-secondary" type="checkbox"/>
+           <span class="">
+            Chiều (14:30 - 17:00)
+           </span>
+          </label>
+          <label class="flex items-center gap-2 p-2 bg-surface-container rounded-lg font-body-md text-body-md cursor-pointer">
+           <input checked="" class="rounded text-secondary" type="checkbox"/>
+           <span class="">
+            Tối (18:00 - 22:30)
+           </span>
+          </label>
+         </div>
+        </div>
+        <!-- Group 3: Món nổi bật -->
+        <div>
+         <h4 class="font-title-sm text-title-sm text-primary uppercase tracking-wider mb-2.5">
+          M&oacute;n Nổi Bật Ưa Th&iacute;ch
+         </h4>
+         <div class="space-y-2">
+          <label class="flex items-center gap-3 font-body-md text-body-md text-on-surface cursor-pointer">
+           <input checked="" class="w-4 h-4 rounded text-secondary cursor-pointer" type="checkbox"/>
+           <span class="">
+            Hải sản tươi sống (T&ocirc;m h&ugrave;m, Cua ho&agrave;ng &dstrok;ế)
+           </span>
+          </label>
+          <label class="flex items-center gap-3 font-body-md text-body-md text-on-surface cursor-pointer">
+           <input class="w-4 h-4 rounded text-secondary cursor-pointer" type="checkbox"/>
+           <span class="">
+            B&ograve; Wagyu A5 thượng hạng
+           </span>
+          </label>
+          <label class="flex items-center gap-3 font-body-md text-body-md text-on-surface cursor-pointer">
+           <input class="w-4 h-4 rounded text-secondary cursor-pointer" type="checkbox"/>
+           <span class="">
+            M&oacute;n Việt di sản truyền thống
+           </span>
+          </label>
+          <label class="flex items-center gap-3 font-body-md text-body-md text-on-surface cursor-pointer">
+           <input class="w-4 h-4 rounded text-secondary cursor-pointer" type="checkbox"/>
+           <span class="">
+            Rượu vang Grand Cru &amp; Cocktail
+           </span>
+          </label>
+         </div>
+        </div>
+        <!-- Group 4: Mức giá -->
+        <div>
+         <h4 class="font-title-sm text-title-sm text-primary uppercase tracking-wider mb-2.5">
+          Mức Gi&aacute; Dự Kiến / Người
+         </h4>
+         <div class="flex items-center gap-2">
+          <label class="flex-1 text-center p-2 rounded-lg border border-secondary/30 text-xs font-semibold cursor-pointer has-[:checked]:bg-secondary has-[:checked]:text-on-secondary">
+           <input class="hidden" name="price-range" type="radio"/>
+           <span class="">
+            &lt; 500k
+           </span>
+          </label>
+          <label class="flex-1 text-center p-2 rounded-lg border border-secondary/30 text-xs font-semibold cursor-pointer has-[:checked]:bg-secondary has-[:checked]:text-on-secondary">
+           <input checked="" class="hidden" name="price-range" type="radio"/>
+           <span class="">
+            500k - 1tr
+           </span>
+          </label>
+          <label class="flex-1 text-center p-2 rounded-lg border border-secondary/30 text-xs font-semibold cursor-pointer has-[:checked]:bg-secondary has-[:checked]:text-on-secondary">
+           <input class="hidden" name="price-range" type="radio"/>
+           <span class="">
+            &gt; 1tr
+           </span>
+          </label>
+         </div>
+        </div>
+        <!-- Group 5: Tiện ích đi kèm -->
+        <div>
+         <h4 class="font-title-sm text-title-sm text-primary uppercase tracking-wider mb-2.5">
+          Tiện &Iacute;ch &amp; Kh&ocirc;ng Gian
+         </h4>
+         <div class="space-y-2">
+          <label class="flex items-center gap-3 font-body-md text-body-md text-on-surface cursor-pointer">
+           <input checked="" class="w-4 h-4 rounded text-secondary cursor-pointer" type="checkbox"/>
+           <span class="">
+            Ph&ograve;ng VIP ri&ecirc;ng tư (Private Dining)
+           </span>
+          </label>
+          <label class="flex items-center gap-3 font-body-md text-body-md text-on-surface cursor-pointer">
+           <input class="w-4 h-4 rounded text-secondary cursor-pointer" type="checkbox"/>
+           <span class="">
+            Ghế trẻ em &amp; Menu gia &dstrok;&igrave;nh
+           </span>
+          </label>
+          <label class="flex items-center gap-3 font-body-md text-body-md text-on-surface cursor-pointer">
+           <input class="w-4 h-4 rounded text-secondary cursor-pointer" type="checkbox"/>
+           <span class="">
+            Nhạc sống Jazz / Acoustic mỗi tối
+           </span>
+          </label>
+          <label class="flex items-center gap-3 font-body-md text-body-md text-on-surface cursor-pointer">
+           <input class="w-4 h-4 rounded text-secondary cursor-pointer" type="checkbox"/>
+           <span class="">
+            View ngắm ph&aacute;o hoa &amp; Ban c&ocirc;ng tho&aacute;ng
+           </span>
+          </label>
+         </div>
+        </div>
+       </div>
+      </div>
+      <!-- Drawer Bottom Action Buttons -->
+      <div class="pt-6 mt-6 border-t border-outline-variant/30 flex items-center gap-3">
+       <button class="flex-1 py-3 rounded-lg border border-outline text-on-surface-variant font-title-sm text-title-sm uppercase hover:bg-surface-container transition-colors" onclick="toggleFilterDrawer(false)" type="button">
+        &Dstrok;ặt Lại
+       </button>
+       <button class="flex-[2] py-3 rounded-lg bg-secondary text-on-secondary font-title-sm text-title-sm uppercase tracking-wider hover:bg-secondary-container hover:text-on-secondary-container transition-colors" onclick="applyFiltersAndShowDishes()" type="button">
+        &Aacute;p Dụng (31 M&oacute;n)
+       </button>
+      </div>
+     </div>
+    </div>
+    <!-- OVERLAY B: 31-DISH SEARCH & FILTER MODAL -->
+    <div class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 md:p-10 pointer-events-none" id="dish-modal" style="display: none;">
+     &lt;div class="fixed inset-0 bg-primary/75 backdrop-blur-md
+    </div>
+   </div>
+  </main>
+ 
+<script>
+  // Mở bảng đặt bàn nhanh từ nút "Lịch Đặt" trên header.
+  function openTableBookingModal(zone, time, guests) {
+    const modal = document.getElementById('table-reservation-modal');
+    if (!modal) return;
+
+    const zoneSelect = document.getElementById('form-dining-zone');
+    const timeSelect = document.getElementById('form-dining-time');
+    const guestValue = document.getElementById('form-guest-val');
+    const guestDisplay = document.getElementById('form-guest-display');
+    const badge = document.getElementById('table-modal-badge');
+    const dateInput = document.getElementById('form-dining-date');
+
+    if (zoneSelect && zone) {
+      const matchingOption = Array.from(zoneSelect.options).find(option =>
+        option.value === zone || option.text.includes(zone)
+      );
+      if (matchingOption) zoneSelect.value = matchingOption.value;
+    }
+
+    if (timeSelect && time) {
+      timeSelect.value = time;
+    }
+
+    if (guestValue && guests) {
+      guestValue.value = guests;
+      if (guestDisplay) guestDisplay.textContent = guests + ' Khách';
+    }
+
+    if (badge && zoneSelect) {
+      badge.textContent = zoneSelect.options[zoneSelect.selectedIndex].text.split('(')[0].trim();
+    }
+
+    if (dateInput && (!dateInput.value || dateInput.value === '25/10/2025')) {
+      const today = new Date();
+      dateInput.value = String(today.getDate()).padStart(2, '0') + '/' +
+        String(today.getMonth() + 1).padStart(2, '0') + '/' + today.getFullYear();
+    }
+
+    modal.style.display = 'flex';
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeTableBookingModal() {
+    const modal = document.getElementById('table-reservation-modal');
+    if (!modal) return;
+
+    modal.style.display = 'none';
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  function changeGuestCount(change) {
+    const guestValue = document.getElementById('form-guest-val');
+    const guestDisplay = document.getElementById('form-guest-display');
+    if (!guestValue || !guestDisplay) return;
+
+    const nextValue = Math.max(1, Math.min(20, Number(guestValue.value || 2) + change));
+    guestValue.value = nextValue;
+    guestDisplay.textContent = nextValue + ' Khách';
+  }
+
+  // Đồng bộ huy hiệu khi người dùng đổi khu vực đặt bàn.
+  document.addEventListener('DOMContentLoaded', function () {
+    const zoneSelect = document.getElementById('form-dining-zone');
+    const badge = document.getElementById('table-modal-badge');
+
+    if (zoneSelect && badge) {
+      zoneSelect.addEventListener('change', function () {
+        badge.textContent = zoneSelect.options[zoneSelect.selectedIndex].text.split('(')[0].trim();
+      });
+    }
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeTableBookingModal();
+    });
+  });
+</script>
+
+</body>
+</html>
